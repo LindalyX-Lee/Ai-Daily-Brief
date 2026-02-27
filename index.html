@@ -6,166 +6,45 @@
     <title>AI Daily Brief Archive</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0f;
-            color: #e4e4e7;
-            line-height: 1.6;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0f; color: #e4e4e7; line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        header {
-            text-align: center;
-            padding: 3rem 0;
-            border-bottom: 1px solid #27272a;
-            margin-bottom: 2rem;
-        }
+        header { text-align: center; padding: 3rem 0; border-bottom: 1px solid #27272a; margin-bottom: 2rem; }
         h1 { font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, #22d3ee, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .subtitle { color: #71717a; margin-top: 0.5rem; }
-        
-        /* Controls */
-        .controls {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .search-box {
-            flex: 1;
-            min-width: 250px;
-            position: relative;
-        }
-        .search-box input {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid #3f3f46;
-            border-radius: 8px;
-            background: #18181b;
-            color: #e4e4e7;
-            font-size: 0.95rem;
-        }
+        .controls { display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; align-items: center; }
+        .search-box { flex: 1; min-width: 250px; }
+        .search-box input { width: 100%; padding: 0.75rem 1rem; border: 1px solid #3f3f46; border-radius: 8px; background: #18181b; color: #e4e4e7; font-size: 0.95rem; }
         .search-box input:focus { outline: none; border-color: #22d3ee; }
         .filter-group { display: flex; gap: 0.5rem; }
-        .filter-btn {
-            padding: 0.5rem 1rem;
-            border: 1px solid #3f3f46;
-            border-radius: 6px;
-            background: #18181b;
-            color: #a1a1aa;
-            cursor: pointer;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-        }
-        .filter-btn:hover, .filter-btn.active {
-            border-color: #22d3ee;
-            color: #22d3ee;
-            background: rgba(34, 211, 238, 0.1);
-        }
-        
-        /* Brief Cards */
+        .filter-btn { padding: 0.5rem 1rem; border: 1px solid #3f3f46; border-radius: 6px; background: #18181b; color: #a1a1aa; cursor: pointer; font-size: 0.85rem; transition: all 0.2s; }
+        .filter-btn:hover, .filter-btn.active { border-color: #22d3ee; color: #22d3ee; background: rgba(34, 211, 238, 0.1); }
         .brief-list { display: flex; flex-direction: column; gap: 2rem; }
-        .brief-card {
-            background: linear-gradient(145deg, #18181b, #1f1f23);
-            border: 1px solid #27272a;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        .brief-header {
-            padding: 1.25rem 1.5rem;
-            border-bottom: 1px solid #27272a;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        .brief-card { background: linear-gradient(145deg, #18181b, #1f1f23); border: 1px solid #27272a; border-radius: 12px; overflow: hidden; }
+        .brief-header { padding: 1.25rem 1.5rem; border-bottom: 1px solid #27272a; display: flex; justify-content: space-between; align-items: center; }
         .brief-date { font-size: 1.1rem; font-weight: 600; color: #fafafa; }
         .brief-count { font-size: 0.85rem; color: #71717a; }
         .brief-content { padding: 1.5rem; }
-        
-        /* Item Tiers */
         .tier { margin-bottom: 1.5rem; }
         .tier:last-child { margin-bottom: 0; }
-        .tier-header {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+        .tier-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; }
         .tier-must { color: #f87171; }
         .tier-worth { color: #22d3ee; }
         .tier-wild { color: #a78bfa; }
-        
-        /* Items */
-        .item {
-            padding: 1rem;
-            background: rgba(0,0,0,0.2);
-            border-radius: 8px;
-            margin-bottom: 0.75rem;
-            border-left: 3px solid transparent;
-        }
+        .item { padding: 1rem; background: rgba(0,0,0,0.2); border-radius: 8px; margin-bottom: 0.75rem; border-left: 3px solid transparent; }
         .tier-must + .item-list .item { border-left-color: #f87171; }
         .tier-worth + .item-list .item { border-left-color: #22d3ee; }
         .tier-wild + .item-list .item { border-left-color: #a78bfa; }
-        .item-title {
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: #fafafa;
-        }
-        .item-why {
-            font-size: 0.9rem;
-            color: #a1a1aa;
-            margin-bottom: 0.5rem;
-        }
-        .item-url {
-            font-size: 0.85rem;
-            color: #22d3ee;
-            text-decoration: none;
-            word-break: break-all;
-        }
+        .item-title { font-weight: 500; margin-bottom: 0.5rem; color: #fafafa; }
+        .item-why { font-size: 0.9rem; color: #a1a1aa; margin-bottom: 0.5rem; }
+        .item-url { font-size: 0.85rem; color: #22d3ee; text-decoration: none; word-break: break-all; }
         .item-url:hover { text-decoration: underline; }
-        
-        /* Empty State */
-        .empty-state {
-            text-align: center;
-            padding: 4rem 2rem;
-            color: #71717a;
-        }
-        
-        /* JSON Toggle */
-        .json-toggle {
-            margin-top: 1rem;
-            padding: 0.5rem 1rem;
-            background: #27272a;
-            border: none;
-            color: #71717a;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.85rem;
-        }
-        .json-toggle:hover { color: #e4e4e7; }
-        .json-content {
-            display: none;
-            margin-top: 1rem;
-            padding: 1rem;
-            background: #0a0a0f;
-            border-radius: 6px;
-            font-family: monospace;
-            font-size: 0.8rem;
-            color: #a1a1aa;
-            overflow-x: auto;
-            white-space: pre-wrap;
-            word-break: break-all;
-        }
-        .json-content.show { display: block; }
+        .empty-state { text-align: center; padding: 4rem 2rem; color: #71717a; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🦞 AI Daily Brief</h1>
+            <h1>AI Daily Brief</h1>
             <p class="subtitle">AI 创业者每日简报归档</p>
         </header>
         
@@ -181,34 +60,28 @@
             </div>
         </div>
         
-        <div class="brief-list" id="briefList">
-            <div class="empty-state">
-                <p>暂无简报数据</p>
-                <p style="font-size: 0.9rem; margin-top: 0.5rem;">等待第一次 Daily Brief 生成...</p>
-            </div>
-        </div>
+        <div class="brief-list" id="briefList"></div>
     </div>
 
     <script>
-        // Data will be populated here
         const BRIEFS = [
-  {
-    "date": "2026-02-27",
-    "items": [
-      {"id": "20260227-1", "category": "must", "title": "Claude Code's "Build vs Buy" Patterns Revealed", "why": "这项研究揭示了AI编码代理正在塑造下一代技术栈的默认值。开发者可能不会主动选择工具，而是接受AI推荐的工具——这意味着控制AI代理的偏好就等于控制开发者的选择。", "url": "https://amplifying.ai/research/claude-code-picks"},
-      {"id": "20260227-2", "category": "must", "title": "Anthropic vs. Department of War: The Safeguard Standoff", "why": "这是AI公司首次公开对抗美国政府的安全要求，标志着"国家安全"与"AI安全"之间的界限之争正式爆发。Anthropic愿意牺牲数亿美元收入来维护其原则。", "url": "https://www.anthropic.com/news/statement-department-of-war"},
-      {"id": "20260227-3", "category": "must", "title": "Cloudflare + AI Rebuilt Next.js in One Week", "why": "这不仅是一个技术成就，更是AI改变软件开发成本结构的典型案例。一个工程师一周重建最流行的前端框架，成本仅1100美元——这意味着传统软件公司的护城河正在消失。", "url": "https://blog.cloudflare.com/vinext/"},
-      {"id": "20260227-4", "category": "worth", "title": "Perplexity Launches "Computer" — Orchestration-First Agent Platform", "why": "这标志着AI代理从"单模型对话"向"多模型编排"的演进。当模型变成可替换的商品时，编排层成为新的价值所在。", "url": "https://perplexity.ai"},
-      {"id": "20260227-5", "category": "worth", "title": "Cardboard (YC W26) — Agentic Video Editor", "why": "视频编辑是创意AI的下一个前沿。代理式视频工作流可能彻底改变内容创作者的生产方式，从"手动剪辑"变为"指导AI导演"。", "url": "https://www.usecardboard.com/"},
-      {"id": "20260227-6", "category": "worth", "title": "MiniMax M2.5 Open Source — Agent-Native RL", "why": "中国实验室继续在开源领域领先。MiniMax的"Agent-Native"训练方法可能是实现真正自主代理的关键突破，而非简单的对话能力。", "url": "https://github.com/MiniMax-AI"},
-      {"id": "20260227-7", "category": "wild", "title": "Anthropic Accuses Chinese Labs of "Industrial-Scale Distillation", "why": "这场争议揭示了AI竞赛的肮脏秘密：蒸馏攻击可能比从头训练更经济有效。API商业模式的根本脆弱性暴露无遗。", "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks"},
-      {"id": "20260227-8", "category": "wild", "title": "Test Suites as IP: tldraw Moves Tests to Closed Source", "why": "这是AI时代知识产权的新战场。当AI可以读取测试用例并重构整个代码库时，测试套件本身成为最有价值的知识产权。", "url": "https://github.com/tldraw/tldraw/issues/8082"},
-      {"id": "20260227-9", "category": "wild", "title": "Karpathy: "Coding Agents Didn't Work Before December", "why": "为什么12月成为临界点？这可能不是单一突破，而是多个因素的结合。对于开发者来说，"AI辅助编程"和"AI代理编程"之间的界限已经模糊。", "url": "https://twitter.com/karpathy/status/2026731645169185220"},
-      {"id": "20260227-10", "category": "wild", "title": "Google's Gemini API Keys Share Infrastructure with Maps", "why": "这是权限升级的典型案例：原本无害的公开密钥突然变成具有账单和隐私风险的敏感凭证。谷歌的基础设施债务正在成为AI时代的新攻击面。", "url": "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules"},
-      {"id": "20260227-11", "category": "wild", "title": "parakeet.cpp: On-Device ASR in Pure C++ — 96x Faster", "why": "边缘AI正在从"实验"变为"生产级"。96倍的速度提升和本地运行能力，可能让语音交互成为下一个被"脱云化"的应用场景。", "url": "https://github.com/Frikallo/parakeet.cpp"}
-    ]
-  }
-];
+            {
+                date: "2026-02-27",
+                items: [
+                    {id: "20260227-1", category: "must", title: "Claude Code's Build vs Buy Patterns Revealed", why: "这项研究揭示了AI编码代理正在塑造下一代技术栈的默认值。开发者可能不会主动选择工具，而是接受AI推荐的工具——这意味着控制AI代理的偏好就等于控制开发者的选择。", url: "https://amplifying.ai/research/claude-code-picks"},
+                    {id: "20260227-2", category: "must", title: "Anthropic vs. Department of War: The Safeguard Standoff", why: "这是AI公司首次公开对抗美国政府的安全要求，标志着国家安全与AI安全之间的界限之争正式爆发。Anthropic愿意牺牲数亿美元收入来维护其原则。", url: "https://www.anthropic.com/news/statement-department-of-war"},
+                    {id: "20260227-3", category: "must", title: "Cloudflare + AI Rebuilt Next.js in One Week", why: "这不仅是一个技术成就，更是AI改变软件开发成本结构的典型案例。一个工程师一周重建最流行的前端框架，成本仅1100美元——这意味着传统软件公司的护城河正在消失。", url: "https://blog.cloudflare.com/vinext/"},
+                    {id: "20260227-4", category: "worth", title: "Perplexity Launches Computer — Orchestration-First Agent Platform", why: "这标志着AI代理从单模型对话向多模型编排的演进。当模型变成可替换的商品时，编排层成为新的价值所在。", url: "https://perplexity.ai"},
+                    {id: "20260227-5", category: "worth", title: "Cardboard (YC W26) — Agentic Video Editor", why: "视频编辑是创意AI的下一个前沿。代理式视频工作流可能彻底改变内容创作者的生产方式，从手动剪辑变为指导AI导演。", url: "https://www.usecardboard.com/"},
+                    {id: "20260227-6", category: "worth", title: "MiniMax M2.5 Open Source — Agent-Native RL", why: "中国实验室继续在开源领域领先。MiniMax的Agent-Native训练方法可能是实现真正自主代理的关键突破，而非简单的对话能力。", url: "https://github.com/MiniMax-AI"},
+                    {id: "20260227-7", category: "wild", title: "Anthropic Accuses Chinese Labs of Industrial-Scale Distillation", why: "这场争议揭示了AI竞赛的肮脏秘密：蒸馏攻击可能比从头训练更经济有效。API商业模式的根本脆弱性暴露无遗。", url: "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks"},
+                    {id: "20260227-8", category: "wild", title: "Test Suites as IP: tldraw Moves Tests to Closed Source", why: "这是AI时代知识产权的新战场。当AI可以读取测试用例并重构整个代码库时，测试套件本身成为最有价值的知识产权。", url: "https://github.com/tldraw/tldraw/issues/8082"},
+                    {id: "20260227-9", category: "wild", title: "Karpathy: Coding Agents Didn't Work Before December", why: "为什么12月成为临界点？这可能不是单一突破，而是多个因素的结合。对于开发者来说，AI辅助编程和AI代理编程之间的界限已经模糊。", url: "https://twitter.com/karpathy/status/2026731645169185220"},
+                    {id: "20260227-10", category: "wild", title: "Google's Gemini API Keys Share Infrastructure with Maps", why: "这是权限升级的典型案例：原本无害的公开密钥突然变成具有账单和隐私风险的敏感凭证。谷歌的基础设施债务正在成为AI时代的新攻击面。", url: "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules"},
+                    {id: "20260227-11", category: "wild", title: "parakeet.cpp: On-Device ASR in Pure C++ — 96x Faster", why: "边缘AI正在从实验变为生产级。96倍的速度提升和本地运行能力，可能让语音交互成为下一个被脱云化的应用场景。", url: "https://github.com/Frikallo/parakeet.cpp"}
+                ]
+            }
+        ];
         
         let currentTier = 'all';
         let searchTerm = '';
@@ -217,12 +90,7 @@
             const list = document.getElementById('briefList');
             
             if (BRIEFS.length === 0) {
-                list.innerHTML = `
-                    <div class="empty-state">
-                        <p>暂无简报数据</p>
-                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">等待第一次 Daily Brief 生成...</p>
-                    </div>
-                `;
+                list.innerHTML = '<div class="empty-state"><p>暂无简报数据</p><p style="font-size: 0.9rem; margin-top: 0.5rem;">等待第一次 Daily Brief 生成...</p></div>';
                 return;
             }
             
@@ -252,7 +120,7 @@
                         <div class="brief-content">
                             ${mustItems.length > 0 ? `
                                 <div class="tier">
-                                    <div class="tier-header tier-must">🔴 MUST READ</div>
+                                    <div class="tier-header tier-must">MUST READ</div>
                                     <div class="item-list">
                                         ${mustItems.map(item => renderItem(item)).join('')}
                                     </div>
@@ -260,7 +128,7 @@
                             ` : ''}
                             ${worthItems.length > 0 ? `
                                 <div class="tier">
-                                    <div class="tier-header tier-worth">🔵 WORTH A LOOK</div>
+                                    <div class="tier-header tier-worth">WORTH A LOOK</div>
                                     <div class="item-list">
                                         ${worthItems.map(item => renderItem(item)).join('')}
                                     </div>
@@ -268,14 +136,12 @@
                             ` : ''}
                             ${wildItems.length > 0 ? `
                                 <div class="tier">
-                                    <div class="tier-header tier-wild">🟣 WILDCARD</div>
+                                    <div class="tier-header tier-wild">WILDCARD</div>
                                     <div class="item-list">
                                         ${wildItems.map(item => renderItem(item)).join('')}
                                     </div>
                                 </div>
                             ` : ''}
-                            <button class="json-toggle" onclick="toggleJson(this)">📋 查看 JSON</button>
-                            <div class="json-content">${JSON.stringify(brief, null, 2)}</div>
                         </div>
                     </div>
                 `;
@@ -310,13 +176,6 @@
             renderBriefs();
         }
         
-        function toggleJson(btn) {
-            const content = btn.nextElementSibling;
-            content.classList.toggle('show');
-            btn.textContent = content.classList.contains('show') ? '📋 隐藏 JSON' : '📋 查看 JSON';
-        }
-        
-        // Initial render
         renderBriefs();
     </script>
 </body>
