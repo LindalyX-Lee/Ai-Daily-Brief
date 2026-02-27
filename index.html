@@ -64,7 +64,23 @@
     </div>
 
     <script>
-        const BRIEFS = [
+const BRIEFS = [
+            {
+                date: "2026-02-28",
+                items: [
+                    {id: "20260228-1", category: "must", title: "Ladybird Adopts Rust: 25K Lines Ported with AI Agents in 2 Weeks", why: "浏览器引擎从C++迁移到Rust是系统编程的重大转变。使用Claude Code和Codex在两周内完成25000行代码的移植，且字节级输出完全一致——这证明了AI代理处理关键基础设施代码的可行性。", url: "https://ladybird.org/posts/adopting-rust/"},
+                    {id: "20260228-2", category: "must", title: "Andrej Karpathy: Coding Agents Didn't Work Before December 2025", why: "Karpathy明确指出2025年12月是AI编程代理的临界点——此前基本不可用，此后突然变得可用。这不是渐进改进，而是质的飞跃。对于技术采用者来说，这意味着重新评估半年前放弃的AI编程工具。", url: "https://twitter.com/karpathy/status/2026731645169185220"},
+                    {id: "20260228-3", category: "must", title: "AI Agent Coding Skeptic Tries AI Agent Coding in Excessive Detail", why: "Max Woolf的详细记录展示了AI代理如何从简单脚本进化到重建scikit-learn级别的机器学习库。Opus 4.6/Codex 5.3相比几个月前的模型提升了整整一个数量级——这是反直觉但必须接受的现实。", url: "https://minimaxir.com/2026/02/ai-agent-coding/"},
+                    {id: "20260228-4", category: "worth", title: "Claude Code Remote Control: From Mobile to Local Session", why: "Anthropic推出远程控制功能，允许从iOS和Web界面控制本地Claude Code会话。这模糊了本地AI代理和云端AI的界限，是向真正无处不在的AI助手迈出的关键一步。", url: "https://code.claude.com/docs/en/remote-control"},
+                    {id: "20260228-5", category: "worth", title: "Perplexity Computer — Full Agent Orchestration Platform", why: "Perplexity推出的Computer平台集成了推理、委托、搜索、构建、记忆、编码和交付能力。这标志着AI从单模型对话向多代理编排的正式转变，编排层正在成为新的技术栈核心。", url: "https://www.perplexity.ai/hub/blog/introducing-perplexity-computer"},
+                    {id: "20260228-6", category: "worth", title: "Google Flow Expands: Whisk + ImageFX Integration", why: "Google将Whisk和ImageFX整合进Flow视频创作工具，提供统一的生成、编辑和动画工作流。多模态AI工具正在从独立应用走向一体化创作环境。", url: "https://blog.google/innovation-and-ai/models-and-research/google-labs/flow-updates-february-2026/"},
+                    {id: "20260228-7", category: "wild", title: "Test Suites as IP: tldraw Moves Tests to Closed Source", why: "当AI可以通过测试用例重构整个代码库时，测试套件本身成为最有价值的IP。tldraw将测试移至私有仓库是对AI时代开源商业模式的重新定义——代码可以开放，但测试必须保护。", url: "https://github.com/tldraw/tldraw/issues/8082"},
+                    {id: "20260228-8", category: "wild", title: "Google API Keys Privilege Escalation: Gemini + Maps Shared Infrastructure", why: "原本设计为公开的Google Maps API密钥，在启用Gemini后突然获得访问私有文件和产生账单的能力。Truffle Security发现2863个暴露的密钥可以访问Gemini——这是基础设施债务在AI时代的典型安全灾难。", url: "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules"},
+                    {id: "20260228-9", category: "wild", title: "Anthropic vs Pentagon: AI Ethics Red Lines Drawn", why: "Anthropic拒绝接受五角大楼任何合法使用AI的要求，Sam Altman表态支持。这是AI公司首次集体对抗政府的军事用途要求，标志着AI伦理从内部政策走向公开政治博弈。", url: "https://www.anthropic.com/news"},
+                    {id: "20260228-10", category: "wild", title: "Anthropic Raises $30B at $380B Valuation", why: "14亿美元年化收入、每年10倍增长、380亿美元估值——Anthropic的数据证明了企业AI市场的爆发。但更值得关注的是：在拥有如此多资源的情况下，AI公司仍选择为道德原则放弃军事合同收入。", url: "https://www.anthropic.com/news"},
+                    {id: "20260228-11", category: "wild", title: "Agentic Engineering Patterns: Simon Willison's New Guide", why: "代码现在很便宜了。Simon Willison开始系统性地记录AI代理工程的最佳实践，这是开发者社区对vibe coding时代的正式回应——从个人技巧到可传承的工程方法论。", url: "https://simonwillison.net/guides/agentic-engineering-patterns/"}
+                ]
+            },
             {
                 date: "2026-02-27",
                 items: [
