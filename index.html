@@ -66,6 +66,22 @@
     <script>
 const BRIEFS = [
             {
+                date: "2026-03-01",
+                items: [
+                    {id: "20260301-1", category: "must", title: "ByteDance DeerFlow 2.0 Hits #1 on GitHub Trending", why: "字节跳动开源的SuperAgent框架DeerFlow登顶GitHub趋势榜，这是中国企业首次在AI Agent基础设施领域获得全球开发者如此高的关注。支持沙箱、记忆、工具、子代理编排，任务执行时间从分钟到小时——标志着中国AI开源生态的崛起。", url: "https://github.com/bytedance/deer-flow"},
+                    {id: "20260301-2", category: "must", title: "OpenAI Reaches Pentagon Agreement as Anthropic Holds the Line", why: "OpenAI宣布与美国国防部达成协议，允许在机密网络部署其模型，同时呼吁国防部向所有AI公司提供同等条款。Sam Altman强调禁止国内大规模监控和自主武器系统的人类责任原则。这与Anthropic拒绝五角大楼任何合法使用要求的立场形成微妙对比——AI公司正在分化出不同的伦理边界。", url: "https://openai.com/index/our-agreement-with-the-department-of-war"},
+                    {id: "20260301-3", category: "must", title: "Alibaba Qwen3.5 122B/35B: Sonnet 4.5 Performance on Local Hardware", why: "阿里巴巴发布的Qwen3.5模型在本地电脑上实现了与Claude Sonnet 4.5相当的性能。这是中国开源模型首次在推理密集型任务上直接对标顶级闭源模型——本地部署的可行性将重新定义企业AI的成本结构。", url: "https://venturebeat.com/technology/alibabas-new-open-source-qwen3-5-medium-models-offer-sonnet-4-5-performance"},
+                    {id: "20260301-4", category: "worth", title: "Ruflo: Multi-Agent Swarm Orchestration for Claude", why: "Ruflo提供了一个企业级的多代理编排平台，支持分布式群体智能、RAG集成和原生Claude Code/Codex集成。代理编排正在成为新的基础设施层，而Claude生态正在快速形成工具护城河。", url: "https://github.com/ruvnet/ruflo"},
+                    {id: "20260301-5", category: "worth", title: "GGML & llama.cpp Join Hugging Face", why: "本地AI的核心基础设施GGML和llama.cpp正式加入Hugging Face。这意味着边缘AI和本地推理将获得更长期的维护保障，本地优先的AI架构选择风险降低。", url: "https://huggingface.co/blog/ggml-joins-hf"},
+                    {id: "20260301-6", category: "worth", title: "Alibaba OpenSandbox: General-Purpose AI Execution Environment", why: "阿里巴巴发布的OpenSandbox为AI应用提供多语言SDK、统一API和Docker/Kubernetes运行时支持。这标志着AI执行环境正在从临时方案走向标准化基础设施，与DeerFlow形成完整的开发生态。", url: "https://github.com/alibaba/OpenSandbox"},
+                    {id: "20260301-7", category: "wild", title: "747s and Coding Agents: Engineering Parallels from Aviation", why: "波音747的自动化演进与AI编码代理的发展惊人相似——都是从辅助工具到逐步接管复杂决策。航空业用了几十年完成这一转变，而AI代理正在以月为单位重演这段历史。", url: "https://carlkolon.com/2026/02/27/engineering-747-coding-agents/"},
+                    {id: "20260301-8", category: "wild", title: "Ilya Sutskever Backs Anthropic's Pentagon Stand", why: "OpenAI前联合创始人、SSI创始人Ilya Sutskever公开支持Anthropic拒绝五角大楼的立场，称这是AI公司放下竞争、共同应对重大挑战的典范。当竞争对手的创始人为伦理立场互相背书时，AI行业正在形成新的治理共识。", url: "https://www.theverge.com/ai-artificial-intelligence"},
+                    {id: "20260301-9", category: "wild", title: "Anthropic Offers Free Claude Max to Open Source Maintainers", why: "Anthropic向拥有5000+星标或100万月下载量的开源维护者免费提供价值200美元/月的Claude Max计划。这是聪明的生态投资——锁定有影响力的开发者，让他们的工具链默认依赖Claude。", url: "https://claude.com/contact-sales/claude-for-oss"},
+                    {id: "20260301-10", category: "wild", title: "MobileAgent: GUI Agent Family from Alibaba DAMO Academy", why: "达摩院发布的MobileAgent家族专注于移动端GUI自动化，这是AI代理向消费者设备渗透的关键一步。当AI可以直接操作手机界面时，App生态的入口逻辑将被重写。", url: "https://github.com/X-PLUG/MobileAgent"},
+                    {id: "20260301-11", category: "wild", title: "Superpowers: 65K Stars Agentic Skills Framework", why: "一个名为Superpowers的agentic技能框架在GitHub上获得65903星标，这是vibe coding运动社区规模的直接体现。方法论正在取代具体工具成为AI编程时代的新知识形态。", url: "https://github.com/obra/superpowers"}
+                ]
+            },
+            {
                 date: "2026-02-28",
                 items: [
                     {id: "20260228-1", category: "must", title: "Ladybird Adopts Rust: 25K Lines Ported with AI Agents in 2 Weeks", why: "浏览器引擎从C++迁移到Rust是系统编程的重大转变。使用Claude Code和Codex在两周内完成25000行代码的移植，且字节级输出完全一致——这证明了AI代理处理关键基础设施代码的可行性。", url: "https://ladybird.org/posts/adopting-rust/"},
