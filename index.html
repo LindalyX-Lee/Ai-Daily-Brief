@@ -66,6 +66,21 @@
     <script>
 const BRIEFS = [
             {
+                date: "2026-03-04",
+                items: [
+                    {id: "20260304-1", category: "must", title: "Anthropic's Parallel Claude Agents Build C Compiler from Scratch", why: "16个Claude代理并行工作，花费20000美元API费用，在2000次会话中生成了10万行Rust代码的C编译器，可编译Linux 6.9内核。这是AI代理团队工程的里程碑——当多个AI可以在没有人类干预的情况下协同完成如此复杂的系统级项目时，软件开发的组织范式将被彻底重写。", url: "https://www.anthropic.com/engineering/building-c-compiler"},
+                    {id: "20260304-2", category: "must", title: "OpenAI GPT-5.3 Instant Launches: More Context, Less Overbearing", why: "OpenAI推出GPT-5.3 Instant，修复了5.2 Instant过于强势和假设用户意图的问题。新模型在保持响应速度的同时增加了搜索结果的上下文深度——当模型开始优化'对话流畅度'而非单纯追求准确率时，人机交互的设计哲学正在发生微妙但重要的转变。", url: "https://openai.com/index/gpt-5-3-instant/"},
+                    {id: "20260304-3", category: "must", title: "Claude Code Voice Mode Rolls Out to 5% of Users", why: "Anthropic开始向5%的用户推出Claude Code语音模式，支持通过语音指令进行编码。这是向免提交互式编程工作流的关键一步——当开发者可以用自然语言描述需求而无需打字时，编码的门槛和速度将再次发生重大变化。", url: "https://techcrunch.com/2026/03/03/claude-code-rolls-out-a-voice-mode-capability/"},
+                    {id: "20260304-4", category: "worth", title: "Cursor Surpasses $2B Annualized Revenue", why: "Cursor年化收入突破20亿美元，过去3个月翻倍，企业客户占比达60%。尽管有部分开发者转向Claude Code，但高价值企业客户的留存抵消了流失——这证明了AI编码工具市场已进入企业级采用阶段，个人用户的偏好不再是唯一指标。", url: "https://techcrunch.com/2026/03/02/cursor-has-reportedly-surpassed-2b-in-annualized-revenue/"},
+                    {id: "20260304-5", category: "worth", title: "Cekura (YC F24): Testing and Monitoring for AI Agents", why: "YC最新批次的AI代理测试平台Cekura正式亮相，通过合成用户模拟真实对话来测试代理行为。这是AI代理生态成熟的关键基础设施——当代理变得复杂到无法手动QA时，自动化测试成为生产级部署的必要条件。", url: "https://www.cekura.ai"},
+                    {id: "20260304-6", category: "worth", title: "Gemini 3.1 Flash-Lite: $0.25/1M Input Tokens with 4 Thinking Levels", why: "Google发布Gemini 3.1 Flash-Lite，价格仅为Pro的1/8，支持4级思考深度调节。在Arena.ai获得1432 Elo评分，超越更大规模的2.5 Flash——性价比战争正在将AI模型的差异化从'能力'转向'可控的成本-质量权衡'。", url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/"},
+                    {id: "20260304-7", category: "wild", title: "When AI Writes Software, Who Verifies It? — by leodemoura", why: "Lean定理证明器创始人leodemoura深入探讨AI生成代码的验证困境。当AI可以编写比人类更复杂的系统时，传统的代码审查流程失效——我们需要新的形式化验证方法，而不仅仅是更多的测试。", url: "https://leodemoura.github.io/blog/2026/02/28/when-ai-writes-the-worlds-software.html"},
+                    {id: "20260304-8", category: "wild", title: "OpenAI $110B Funding Round: Largest Private Round in History", why: "OpenAI完成1100亿美元融资，估值达到3000亿美元，由亚马逊、英伟达、软银等领投。这是史上最大规模的私人融资——当单个AI公司可以筹集接近某些国家GDP的资金时，权力结构正在发生根本性转移。", url: "https://techcrunch.com/2026/02/27/openai-raises-110b-in-one-of-the-largest-private-funding-rounds-in-history/"},
+                    {id: "20260304-9", category: "wild", title: "Claude is an Electron App Because We've Lost Native", why: "一个引人深思的技术观察：Claude Desktop选择Electron而非原生开发，反映了AI时代应用开发的优先级的转变——当核心差异化在于AI能力而非UI性能时，跨平台开发的便利性压倒了原生体验的追求。", url: "https://news.ycombinator.com/item?id=47232604"},
+                    {id: "20260304-10", category: "wild", title: "TorchLean: Formalizing Neural Networks in Lean", why: "将神经网络形式化验证引入Lean证明助手的项目。当AI系统本身需要被严格证明其行为时，形式化方法和机器学习社区开始融合——这可能是解决AI可解释性和安全性问题的根本路径。", url: "https://news.ycombinator.com/item?id=47232545"}
+                ]
+            },
+            {
                 date: "2026-03-03",
                 items: [
                     {id: "20260303-1", category: "must", title: "GPT-5.3-Codex Released: OpenAI's Next-Gen Coding Model", why: "OpenAI发布GPT-5.3-Codex，这是迄今为止最强的编程模型。当编码基准测试SWE-bench被顶级模型饱和到失去区分度时，技术进化的焦点已从'能否编码'转向'如何更优雅地编码'——这标志着AI编程进入精细化竞争阶段。", url: "https://openai.com/index/introducing-gpt-5-3-codex/"},
