@@ -66,6 +66,18 @@
     <script>
 const BRIEFS = [
             {
+                date: "2026-03-05",
+                items: [
+                    {id: "20260305-1", category: "must", title: "Grantex — Open authorization protocol for AI agents (IETF draft submitted)", why: "把 agent 权限从 API key + 自定义 RBAC 拉到可移植/可撤销/可审计的标准协议（更像 OAuth2 的 delegated grants）。做多工具/多代理的生产系统时，授权、审计、级联撤销会很快变成比模型更难的那部分。", url: "https://github.com/mishrasanjeev/grantex"},
+                    {id: "20260305-2", category: "must", title: "Show HN: Athena Flow – a workflow runtime for Claude Code with a terminal UI", why: "把 Claude Code hooks 的事件流变成可复用的 workflow+插件；同时用语义化 page snapshot 的 MCP 浏览器层来省 token（作者早期对比：~19% token 下降、~33% 更快）。反直觉但很实用：更‘抽象’的页面表示反而更省、更稳。", url: "https://github.com/lespaceman/athena-flow"},
+                    {id: "20260305-3", category: "must", title: "VSearcher: Long-Horizon Multimodal Search Agent via Reinforcement Learning", why: "用 SFT→RL 把静态多模态模型训练成能做文本/图像搜索+网页浏览的长程工具调用代理，并提出更难的 multimodal search 评测。对 builder 的启示：想要稳定的多步检索/浏览 agent，可能需要 RL 而不是更长的 prompt。", url: "https://arxiv.org/abs/2603.02795"},
+                    {id: "20260305-4", category: "worth", title: "CGL: Advancing Continual GUI Learning via Reinforcement Fine-Tuning", why: "GUI agent 的持续学习里，SFT 适应快但容易覆盖旧技能；RL 更抗遗忘。论文用熵调节 SFT/RL 比例 + 梯度手术减少干扰，并给出 AndroidControl-CL 基准。对做 UI 自动化/手机 agent 的人很关键：产品更新是常态。", url: "https://arxiv.org/abs/2603.02951"},
+                    {id: "20260305-5", category: "worth", title: "Show HN: A runtime authorization layer for AI agents", why: "把工具调用的‘是否执行’前置到 policy engine（OPA）：从 fail-open 变 fail-closed，并产出可重放的 trace/哈希/策略摘要。对生产级 agent：最小权限 + 可追责不是靠日志补救能解决的。", url: "https://news.ycombinator.com/item?id=47235484"},
+                    {id: "20260305-6", category: "worth", title: "My MCP Server Setup: A Practical Guide to Wiring AI Into Everything", why: "作者分享自己把 25+ MCP servers、500+ tools 接入 Claude Code 的真实架构（容器、端口、共享目录、systemd user services、skills/memory/guardrails）。适合想把 agent 从 demo 接到真实系统的人直接抄作业。", url: "https://crunchtools.com/my-mcp-server-setup-practical-guide/"},
+                    {id: "20260305-7", category: "wild", title: "Show HN: Open-source scanner finds 97% of AI agent code non-compliant EU AI Act", why: "AIR Blackbox 扫了 11 个主流开源 agent 项目（5754 个 Python 文件），只有 0.4% 文件通过 6 条技术要求；97% 卡在风险管理、89% 记录留存不达标。反直觉但现实：‘能跑’和‘可合规’是两套工程。", url: "https://github.com/air-blackbox/air-blackbox-mcp"}
+                ]
+            },
+            {
                 date: "2026-03-04",
                 items: [
                     {id: "20260304-1", category: "must", title: "Anthropic's Parallel Claude Agents Build C Compiler from Scratch", why: "16个Claude代理并行工作，花费20000美元API费用，在2000次会话中生成了10万行Rust代码的C编译器，可编译Linux 6.9内核。这是AI代理团队工程的里程碑——当多个AI可以在没有人类干预的情况下协同完成如此复杂的系统级项目时，软件开发的组织范式将被彻底重写。", url: "https://www.anthropic.com/engineering/building-c-compiler"},
