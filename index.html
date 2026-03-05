@@ -66,6 +66,19 @@
     <script>
 const BRIEFS = [
             {
+                date: "2026-03-06",
+                items: [
+                    {id: "20260306-1", category: "must", title: "9 Observations from Building with AI Agents", why: "反直觉但很实用：模型更强不是终点，闭环（trace→评估→自动优化prompt）才是把 agent 变稳定的关键；把 traces 当‘真正的文档’。", url: "https://tomtunguz.com/9-observations-using-ai-agents/"},
+                    {id: "20260306-2", category: "must", title: "Memex(RL): Scaling Long-Horizon LLM Agents via Indexed Experience Memory", why: "别硬拼更长上下文：把证据外置成可索引的全量档案，让 agent 通过 RL 学会写/读记忆（何时总结、何时取回证据），长任务更稳也更省 token。", url: "https://arxiv.org/abs/2603.04257"},
+                    {id: "20260306-3", category: "must", title: "Develop Native Multimodal Agents with Qwen3.5 VLM Using NVIDIA GPU-Accelerated Endpoints", why: "给多模态 agent 一条‘可上线’路径：Qwen3.5 MoE VLM + OpenAI 兼容 tool calling + NIM 端点/容器化部署，适合做 UI/视觉理解+动作的产品化。", url: "https://developer.nvidia.com/blog/develop-native-multimodal-agents-with-qwen3-5-vlm-using-nvidia-gpu-accelerated-endpoints/"},
+                    {id: "20260306-4", category: "worth", title: "LangWatch (open-source): eval + simulations + tracing for AI agents", why: "把 agent 的回归测试做成一等公民：端到端仿真 + OTel/OTLP-native traces + 数据集评测 + prompt 版本与 traces 绑定，适合‘改一次 prompt 就翻车’的团队。", url: "https://github.com/langwatch/langwatch"},
+                    {id: "20260306-5", category: "worth", title: "Introducing EVMbench (OpenAI × Paradigm)", why: "评测从‘会不会说’升级到‘能不能真的 exploit/patch’：detect/patch/exploit 三模式，用可重放的链上状态打分；非常 agent-native 的 benchmark 设计。", url: "https://openai.com/index/introducing-evmbench/"},
+                    {id: "20260306-6", category: "worth", title: "HackerBot-Claw: An AI-Assisted Campaign Targeting GitHub Actions Pipelines", why: "AI 在进攻侧先落地：自动扫 workflow + PR 触发偷 token 接管仓库。对 builder 的警报：CI 权限/trigger 规则就是生产级攻击面。", url: "https://orca.security/resources/blog/hackerbot-claw-github-actions-attack/"},
+                    {id: "20260306-7", category: "wild", title: "Five AI Agents Walk Into a Group Chat", why: "多 agent 协作里最大的坑不是能力而是组织：默认‘过度帮忙’，权限、规则变更的审批流程、@mention 解析这类‘社交问题’最后都得靠基础设施解决。", url: "https://every.to/context-window/five-ai-agents-walk-into-a-group-chat"},
+                    {id: "20260306-8", category: "wild", title: "I Built a GitHub MCP Server in 20 Minutes and Never Pasted a Token Again", why: "一个很可抄的模式：当某服务没有官方托管 connector，就自己用无状态 MCP server 做‘私有连接器’，把 PAT 放在 Vercel env var 里，彻底消灭在聊天里粘 token 的仪式。", url: "https://dev.to/devolivers/i-built-a-github-mcp-server-in-20-minutes-and-never-pasted-a-token-again-2ehj"}
+                ]
+            },
+            {
                 date: "2026-03-05",
                 items: [
                     {id: "20260305-1", category: "must", title: "Grantex — Open authorization protocol for AI agents (IETF draft submitted)", why: "把 agent 权限从 API key + 自定义 RBAC 拉到可移植/可撤销/可审计的标准协议（更像 OAuth2 的 delegated grants）。做多工具/多代理的生产系统时，授权、审计、级联撤销会很快变成比模型更难的那部分。", url: "https://github.com/mishrasanjeev/grantex"},
