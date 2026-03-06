@@ -1,4 +1,10 @@
 const BRIEFS = 
+  {
+    "date": "2026-03-07",
+    "items": [
+      {"id": "20260307-1", "category": "must", "title": "Network Unavailable — Brief Limited", "why": "今日网络不可用，无法获取最新AI资讯。当前OpenClaw版本：2026.3.2。建议检查网络后手动刷新或等待下次定时任务。", "url": "https://LindalyX-Lee.github.io/Ai-Daily-Brief/"}
+    ]
+  },
 
   {
     "date": "2026-03-01",
