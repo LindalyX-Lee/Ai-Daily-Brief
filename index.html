@@ -66,6 +66,19 @@
     <script>
 const BRIEFS = [
             {
+                date: "2026-03-08",
+                items: [
+                    {id: "20260308-1", category: "must", title: "Towards Multimodal Lifelong Understanding: A Dataset and Agentic Baseline", why: "长视频/生活流任务的真实瓶颈不是模型不够大，而是工作记忆饱和+全局定位崩溃；ReMA用递归信念状态+动态记忆管理给了可复用baseline。", url: "https://arxiv.org/abs/2603.05484"},
+                    {id: "20260308-2", category: "must", title: "RoboPocket: Improve Robot Policies Instantly with Your Phone", why: "用手机AR把policy未来轨迹可视化，让数据采集从盲录变成‘针对弱点采集’；几分钟闭环微调，把DAgger的好处搬到低成本。", url: "https://arxiv.org/abs/2603.05504"},
+                    {id: "20260308-3", category: "must", title: "Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought", why: "反直觉：模型很早就‘知道’答案但CoT还在演；activation probe做early-exit可省最多80% tokens且几乎不掉准。", url: "https://arxiv.org/abs/2603.05488"},
+                    {id: "20260308-4", category: "worth", title: "Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation", why: "把‘审查模型’当天然隐瞒知识实验台：few-shot/去模板采样能显著提升真实回答；但没有银弹，真实性仍需多层验证。", url: "https://arxiv.org/abs/2603.05494"},
+                    {id: "20260308-5", category: "worth", title: "Codex Security: now in research preview", why: "安全agent的关键不在多报漏洞，而在‘系统上下文+沙箱验证’提升信噪比，减少误报/过报，把修复变成可审阅patch。", url: "https://openai.com/index/codex-security-now-in-research-preview/"},
+                    {id: "20260308-6", category: "worth", title: "Yuan3.0 Ultra (MoE) multimodal model open-sourced", why: "企业向多模态+工具调用的开源大MoE迈一步：1T总参/68.8B激活，主打RAG/文档/表格/工具调用，给私有部署与定制留空间。", url: "https://github.com/Yuan-lab-LLM/Yuan3.0-Ultra"},
+                    {id: "20260308-7", category: "wild", title: "LTX Desktop: open-source local/API video generation + editor", why: "多模态创作工具开始本地化：把T2V/I2V/A2V+时间线编辑打包到桌面端；适合做可控的视频素材流水线（部分硬件可本地跑）。", url: "https://github.com/Lightricks/LTX-Desktop"},
+                    {id: "20260308-8", category: "wild", title: "The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks", why: "Attention sink/激活离群值看似bug，其实像‘隐式参数’与局部依赖调制器；理解它能更理性地处理长上下文与稳定性问题。", url: "https://arxiv.org/abs/2603.05498"}
+                ]
+            },
+            {
                 date: "2026-03-07",
                 items: [
                     {id: "20260307-1", category: "must", title: "Network Unavailable — Brief Limited", why: "今日网络不可用，无法获取最新AI资讯。当前OpenClaw版本：2026.3.2。建议检查网络后手动刷新或等待下次定时任务。", url: "https://LindalyX-Lee.github.io/Ai-Daily-Brief/"}
