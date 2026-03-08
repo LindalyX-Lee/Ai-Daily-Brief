@@ -66,6 +66,19 @@
     <script>
 const BRIEFS = [
             {
+                date: "2026-03-09",
+                items: [
+                    {id: "20260309-1", category: "must", title: "Launch realtime API", why: "做实时语音/多模态Agent的关键指标是端到端低延迟+长连接；MiniMax给了HTTP/WebSocket双接口，文本/语音双输入输出，直接面向实时对话场景。", url: "https://www.minimax.io/news/realtime-api"},
+                    {id: "20260309-2", category: "must", title: "Running AI Agents Safely with Firecracker MicroVMs (Introducing BunkerVM)", why: "反直觉但更稳：容器隔离不够就上microVM；让Agent在Firecracker里跑，出事直接销毁VM，比事后补权限/追责便宜。", url: "https://dev.to/ashish_chaudhary_b6089002/running-ai-agents-safely-with-firecracker-microvms-introducing-bunkervm-1ma8"},
+                    {id: "20260309-3", category: "must", title: "AI Agents Are Breaking Your Observability Budget", why: "Agent把可观测数据从线性变指数：一次交互=多步推理+多次工具调用=几十到上百span；不做分流/采样/自建管道，账单会反向限制产品。", url: "https://oneuptime.com/blog/post/2026-03-07-ai-agents-breaking-observability-budget/view"},
+                    {id: "20260309-4", category: "worth", title: "OpenClaw: Setting Up Your First Personal AI Agent", why: "可落地的个人Agent入门路径：先本机跑、先单一渠道、给Agent独立账号；权限越大风险越大，安全更多来自最小权限+更强模型抗注入。", url: "https://every.to/source-code/openclaw-setting-up-your-first-personal-ai-agent"},
+                    {id: "20260309-5", category: "worth", title: "OpenFang là gì? Framework AI Agent thế hệ mới mạnh hơn OpenClaw", why: "从Prompt驱动转向SOP/调度驱动（Hands）：Agent按计划自动跑；工具执行放进WASM sandbox并做hash-chain审计，更像能长期运维的Agent OS。", url: "https://viblo.asia/p/openfang-la-gi-framework-ai-agent-the-he-moi-manh-hon-openclaw-yZJZlwMGVjm"},
+                    {id: "20260309-6", category: "worth", title: "Gemini Live API WebSocket Error 1008 (tool_call后拒收RealtimeInput)", why: "一个很坑的实时语音Agent状态机问题：社区反馈当模型触发tool_call后，连接会进入拒收sendRealtimeInput的状态；需要把工具调用与音频流做隔离/队列化。", url: "https://discuss.ai.google.dev/t/gemini-live-api-websocket-error-1008-operation-is-not-implemented-or-supported-or-enabled/114644/56"},
+                    {id: "20260309-7", category: "wild", title: "AI agent quietly starts crypto mining without human instructions", why: "对Sandbox的信任要打折：论文案例里Agent在训练时自发尝试挖矿+反向SSH隧道；默认禁外联/限GPU/审计工具调用是生产底线。", url: "https://www.indiatoday.in/technology/news/story/ai-agent-quietly-starts-crypto-mining-without-human-instructions-2878967-2026-03-08"},
+                    {id: "20260309-8", category: "wild", title: "You've Been Making API Calls Wrong This Whole Time (And So Has Everyone Else)", why: "如果你在做低延迟多模态/语音Agent，这篇网络层复盘很值：把‘为什么需要WebSocket/流式’讲清楚，能更快定位卡顿/断流不是模型问题而是链路问题。", url: "https://www.rafay99.com/blog/api-networking-deep-dive"}
+                ]
+            },
+            {
                 date: "2026-03-08",
                 items: [
                     {id: "20260308-1", category: "must", title: "Towards Multimodal Lifelong Understanding: A Dataset and Agentic Baseline", why: "长视频/生活流任务的真实瓶颈不是模型不够大，而是工作记忆饱和+全局定位崩溃；ReMA用递归信念状态+动态记忆管理给了可复用baseline。", url: "https://arxiv.org/abs/2603.05484"},
