@@ -1,5 +1,67 @@
 const BRIEFS = 
   {
+  "date": "2026-03-11",
+  "items": [
+    {
+      "id": "20260311-1",
+      "category": "must",
+      "title": "Under the hood: Security architecture of GitHub Agentic Workflows",
+      "why": "反直觉但很对：别先把 Agent 当“聪明同事”，先把它当不可信 CI job；隔离、约束输出、全量日志，才是能规模化上线的起点。",
+      "url": "https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/"
+    },
+    {
+      "id": "20260311-2",
+      "category": "must",
+      "title": "Secure agentic AI for your Frontier Transformation",
+      "why": "企业真正缺的不是更多 Agent，而是 control plane；先把 registry、identity、risk signal、DLP 做起来，AI 才能进生产环境。",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/03/09/secure-agentic-ai-for-your-frontier-transformation/"
+    },
+    {
+      "id": "20260311-3",
+      "category": "must",
+      "title": "AI Agents, Language, Deep Learning and the Next Revolution in Science",
+      "why": "科研 Agent 给企业一个硬启发：真正可复用的不是 prompt，而是带 traceability 的 DSL + human oversight。",
+      "url": "https://arxiv.org/abs/2603.07940"
+    },
+    {
+      "id": "20260311-4",
+      "category": "worth",
+      "title": "Copilot Cowork: A new way of getting work done",
+      "why": "Agent 产品形态在收敛：不是更会聊，而是能把计划丢进后台持续执行，并且随时 checkpoint、可暂停、可审计。",
+      "url": "https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/09/copilot-cowork-a-new-way-of-getting-work-done/"
+    },
+    {
+      "id": "20260311-5",
+      "category": "worth",
+      "title": "SaiVLA-0: Cerebrum–Pons–Cerebellum Tripartite Architecture for Compute-Aware Vision-Language-Action",
+      "why": "反直觉：把大模型主体冻结，只重训适配层和执行层，往往更快、更便宜，也更容易迁移到新机器人/新场景。",
+      "url": "https://arxiv.org/abs/2603.08124"
+    },
+    {
+      "id": "20260311-6",
+      "category": "worth",
+      "title": "Talk Freely, Execute Strictly: Schema-Gated Agentic AI for Flexible and Reproducible Scientific Workflows",
+      "why": "一个值得抄的架构原则：自然语言负责表达意图，但执行权必须被 schema gate 住；否则灵活性会直接吃掉可复现性。",
+      "url": "https://arxiv.org/abs/2603.06394"
+    },
+    {
+      "id": "20260311-7",
+      "category": "wild",
+      "title": "Mandiant’s founder just raised $190M for his autonomous AI agent security startup",
+      "why": "资本在下注一个现实判断：AI on offense 会先到，所以“agent 守 agent”很可能会比通用安全 Copilot 更早形成刚需市场。",
+      "url": "https://techcrunch.com/2026/03/10/mandiants-founder-just-raised-190m-for-his-autonomous-ai-agent-security-startup/"
+    },
+    {
+      "id": "20260311-8",
+      "category": "wild",
+      "title": "CoCo: Code as CoT for Text-to-Image Preview and Rare Concept Generation",
+      "why": "多模态生成也许该先“写代码出草图”再精修，而不是直接让模型一次性幻想到位；可控性会高很多。",
+      "url": "https://arxiv.org/abs/2603.08652"
+    }
+  ]
+},
+
+  {
     "date": "2026-03-10",
     "items": [
       {
