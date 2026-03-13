@@ -65,164 +65,136 @@
 
     <script>
 const BRIEFS = [
-            {date:"2026-03-13",items:[{"id":"20260313-1","category":"must","title":"Gemini Embedding 2: Our first natively multimodal embedding model","why":"多模态 builder 现在更该盯 embedding 层，不是再堆一个 chat UI；text/image/video/audio/PDF 进入同一向量空间，RAG、search、推荐和分类的系统复杂度会直接下降。","url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/"},{"id":"20260313-2","category":"must","title":"The era of AI as text is over. Execution is the new interface.","why":"反直觉但越来越像事实：下一代 AI 产品的核心竞争点，不是 prompt UX，而是受约束的 planning、tool use、runtime context 和 error recovery。","url":"https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"},{"id":"20260313-3","category":"must","title":"Major agentic capabilities improvements in GitHub Copilot for JetBrains IDEs","why":"一个很硬的 builder 信号：custom agents、sub-agents、plan agent、hooks、MCP auto-approve 一起进 IDE，说明 agent orchestration 正在从演示态进入日常生产流。","url":"https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides/"},{"id":"20260313-4","category":"worth","title":"Many agents, one team: Scaling modernization on Azure","why":"企业侧一个强信号：Agent 不该只做单点 Copilot，而要直接接入 discovery→assessment→planning→migration→code transformation 的整条流水线。","url":"https://azure.microsoft.com/en-us/blog/many-agents-one-team-scaling-modernization-on-azure/"},{"id":"20260313-5","category":"worth","title":"Request Copilot code review from GitHub CLI","why":"小改动但很值钱：AI reviewer 从浏览器侧窗，变成终端里的默认动作；真正决定 adoption 的，常常不是更强模型，而是少一次上下文切换。","url":"https://github.blog/changelog/2026-03-11-request-copilot-code-review-from-github-cli/"},{"id":"20260313-6","category":"worth","title":"Continuous AI for accessibility: How GitHub transforms feedback into inclusion","why":"一个可直接抄的 agent workflow：AI 不必替代工程师，只要先把分散、跨团队的人类反馈变成结构化、可追踪、可交接的问题单，ROI 就已经成立。","url":"https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/"},{"id":"20260313-7","category":"wild","title":"Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs","why":"很反直觉：多模态掉点常常不是 reasoning 不够，而是 reading 链路先坏了；字体和分辨率就能拉开 47 个点，先修 OCR/渲染可能比继续堆推理 token 更有效。","url":"https://arxiv.org/abs/2603.09095"},{"id":"20260313-8","category":"wild","title":"Fujitsu Hallucination Benchmark: when language priors override visual evidence","why":"另一个反直觉提醒：更强的语言模型不一定是更好的多模态见证人；它可能会“看见”训练语料里更熟悉的答案，而不是图里真正写的东西。","url":"https://blog-en.fltech.dev/entry/2026/03/11/fujitsu-hallucination-benchmark-en"},{"id":"20260313-9","category":"wild","title":"OpenAI plans to launch its Sora video tool in ChatGPT, The Information reports | Reuters","why":"多模态真正的爆发点，可能不是独立视频产品，而是直接塞回默认聊天入口；分发层一旦统一，用户教育成本会骤降。","url":"https://www.reuters.com/business/openai-plans-launch-its-sora-video-tool-chatgpt-information-reports-2026-03-11/"}]},
-
-
-            {date:"2026-03-12",items:[{"id":"20260312-1","category":"must","title":"Many agents, one team: Scaling modernization on Azure","why":"一个很强的 builder 信号：Agent 不该只做单点 Copilot，而要直接接入 discovery→assessment→planning→migration→code transformation 的整条流水线。","url":"https://azure.microsoft.com/en-us/blog/many-agents-one-team-scaling-modernization-on-azure/"},{"id":"20260312-2","category":"must","title":"The era of AI as text is over. Execution is the new interface.","why":"反直觉但基本属实：下一代 AI 产品的核心不再是 prompt UX，而是把 planning、tool use、error recovery 和约束执行嵌进应用本身。","url":"https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"},{"id":"20260312-3","category":"must","title":"Reading, Not Thinking: Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs","why":"多模态里真正掉点的常常不是 reasoning，而是 reading；先修 OCR/排版/分辨率链路，可能比继续堆推理 token 更有效。","url":"https://arxiv.org/abs/2603.09095"},{"id":"20260312-4","category":"worth","title":"Major agentic capabilities improvements in GitHub Copilot for JetBrains IDEs","why":"很 builder：custom agents、sub-agents、plan agent GA，hooks + MCP auto-approve 进场，说明 IDE 内的 agent orchestration 正在产品化。","url":"https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides/"},{"id":"20260312-5","category":"worth","title":"UiPath Reports Fourth Quarter and Full Year Fiscal 2026 Financial Results","why":"一个商业侧硬信号：企业愿意为“deterministic automation + agentic AI + orchestration”买单，execution layer 正在从概念变预算。","url":"https://ir.uipath.com/news/detail/431/uipath-reports-fourth-quarter-and-full-year-fiscal-2026-financial-results"},{"id":"20260312-6","category":"worth","title":"Talk Freely, Execute Strictly: Schema-Gated Agentic AI for Flexible and Reproducible Scientific Workflows","why":"一个值得抄的底层原则：自然语言负责表达意图，但执行权必须被 schema gate 住；否则灵活性会吞掉可复现性。","url":"https://arxiv.org/abs/2603.06394"},{"id":"20260312-7","category":"wild","title":"EXPLORE-Bench: Egocentric Scene Prediction with Long-Horizon Reasoning","why":"给 embodied / multimodal builder 的冷水：模型能看懂当前画面，不等于能稳定预测一串动作后的世界状态；长程物理推演还是硬缺口。","url":"https://arxiv.org/abs/2603.09731"}]},
-            {date:"2026-03-11",items:[{"id":"20260311-1","category":"must","title":"Under the hood: Security architecture of GitHub Agentic Workflows","why":"反直觉但很对：别先把 Agent 当“聪明同事”，先把它当不可信 CI job；隔离、约束输出、全量日志，才是能规模化上线的起点。","url":"https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/"},{"id":"20260311-2","category":"must","title":"Secure agentic AI for your Frontier Transformation","why":"企业真正缺的不是更多 Agent，而是 control plane；先把 registry、identity、risk signal、DLP 做起来，AI 才能进生产环境。","url":"https://www.microsoft.com/en-us/security/blog/2026/03/09/secure-agentic-ai-for-your-frontier-transformation/"},{"id":"20260311-3","category":"must","title":"AI Agents, Language, Deep Learning and the Next Revolution in Science","why":"科研 Agent 给企业一个硬启发：真正可复用的不是 prompt，而是带 traceability 的 DSL + human oversight。","url":"https://arxiv.org/abs/2603.07940"},{"id":"20260311-4","category":"worth","title":"Copilot Cowork: A new way of getting work done","why":"Agent 产品形态在收敛：不是更会聊，而是能把计划丢进后台持续执行，并且随时 checkpoint、可暂停、可审计。","url":"https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/09/copilot-cowork-a-new-way-of-getting-work-done/"},{"id":"20260311-5","category":"worth","title":"SaiVLA-0: Cerebrum–Pons–Cerebellum Tripartite Architecture for Compute-Aware Vision-Language-Action","why":"反直觉：把大模型主体冻结，只重训适配层和执行层，往往更快、更便宜，也更容易迁移到新机器人/新场景。","url":"https://arxiv.org/abs/2603.08124"},{"id":"20260311-6","category":"worth","title":"Talk Freely, Execute Strictly: Schema-Gated Agentic AI for Flexible and Reproducible Scientific Workflows","why":"一个值得抄的架构原则：自然语言负责表达意图，但执行权必须被 schema gate 住；否则灵活性会直接吃掉可复现性。","url":"https://arxiv.org/abs/2603.06394"},{"id":"20260311-7","category":"wild","title":"Mandiant’s founder just raised $190M for his autonomous AI agent security startup","why":"资本在下注一个现实判断：AI on offense 会先到，所以“agent 守 agent”很可能会比通用安全 Copilot 更早形成刚需市场。","url":"https://techcrunch.com/2026/03/10/mandiants-founder-just-raised-190m-for-his-autonomous-ai-agent-security-startup/"},{"id":"20260311-8","category":"wild","title":"CoCo: Code as CoT for Text-to-Image Preview and Rare Concept Generation","why":"多模态生成也许该先“写代码出草图”再精修，而不是直接让模型一次性幻想到位；可控性会高很多。","url":"https://arxiv.org/abs/2603.08652"}]},
-            {date:"2026-03-10",items:[{id:"20260310-1",category:"must",title:"Launch realtime API",why:"做实时语音/多模态 Agent，接口形态就是产品上限：HTTP+WebSocket、文本/语音双进双出、低延迟，直接把 voice copilot/直播互动/客服原型门槛拉低。",url:"https://www.minimax.io/news/realtime-api"},{id:"20260310-2",category:"must",title:"Secure agentic AI for your Frontier Transformation",why:"反直觉但很对：企业现在缺的不是更多 Agent，而是 Agent control plane；先把 registry、identity、risk signal、DLP 做起来，才能规模化上线。",url:"https://www.microsoft.com/en-us/security/blog/2026/03/09/secure-agentic-ai-for-your-frontier-transformation/"},{id:"20260310-3",category:"must",title:"Policy in Amazon Bedrock AgentCore is now generally available",why:"把 tool 权限和输入校验从 Agent 代码里剥出来，交给独立策略层处理，是 production Agent 的正确抽象；安全/合规终于不用靠改 prompt 兜底。",url:"https://aws.amazon.com/about-aws/whats-new/2026/03/policy-amazon-bedrock-agentcore-generally-available/"},{id:"20260310-4",category:"worth",title:"Copilot Cowork: A new way of getting work done",why:"企业 Agent 真正的产品形态开始收敛：不是更会聊，而是能把计划丢进后台持续执行，并且随时 checkpoint、可暂停、可审计。",url:"https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/09/copilot-cowork-a-new-way-of-getting-work-done/"},{id:"20260310-5",category:"worth",title:"Gemini Live API WebSocket Error 1008 after tool calls",why:"很 builder 的坑：实时语音链路里一旦 tool call 挂起，继续推音频/活动信号可能直接被服务端踢掉；语音流和工具调用要做状态隔离或排队。",url:"https://discuss.ai.google.dev/t/gemini-live-api-websocket-error-1008-operation-is-not-implemented-or-supported-or-enabled/114644/56"},{id:"20260310-6",category:"worth",title:"Luma unveils unified AI agents to streamline creativity",why:"多模态创作里最贵的不是模型调用，而是跨工具重建上下文；Luma 押注统一推理+统一上下文，值得所有做 creative stack 的团队盯着看。",url:"https://itbrief.asia/story/luma-unveils-unified-ai-agents-to-streamline-creativity"},{id:"20260310-7",category:"wild",title:"Running AI Agents Safely with Firecracker MicroVMs (Introducing BunkerVM)",why:"如果 Agent 能跑 shell/装包，容器隔离常常不够；用 microVM 把执行环境做成一次性可销毁，比事后补权限和追事故更便宜。",url:"https://dev.to/ashish_chaudhary_b6089002/running-ai-agents-safely-with-firecracker-microvms-introducing-bunkervm-1ma8"},{id:"20260310-8",category:"wild",title:"Arm at Embedded World 2026: Powering intelligent edge AI systems at scale",why:"一个被低估的方向：分布式 Agent 可能先在边缘设备跑起来，而不是全都回云端；真正难点是可复用 runtime 和可预测实时性。",url:"https://newsroom.arm.com/blog/arm-embedded-world-2026"},{id:"20260310-9",category:"wild",title:"Grok Build: Agent That Runs 8 Parallel AI Agents to Plan, Search, and Build",why:"反直觉：下一个效率跃迁也许不是单个更强 coding model，而是并行 Agent + 自动 ranking；开发者更像是在挑最好的一版。",url:"https://www.adwaitx.com/grok-build-vibe-coding-cli-agent/"}]},
-{
-                date: "2026-03-09",
-                items: [
-                    {id: "20260309-1", category: "must", title: "Launch realtime API", why: "做实时语音/多模态Agent的关键指标是端到端低延迟+长连接；MiniMax给了HTTP/WebSocket双接口，文本/语音双输入输出，直接面向实时对话场景。", url: "https://www.minimax.io/news/realtime-api"},
-                    {id: "20260309-2", category: "must", title: "Running AI Agents Safely with Firecracker MicroVMs (Introducing BunkerVM)", why: "反直觉但更稳：容器隔离不够就上microVM；让Agent在Firecracker里跑，出事直接销毁VM，比事后补权限/追责便宜。", url: "https://dev.to/ashish_chaudhary_b6089002/running-ai-agents-safely-with-firecracker-microvms-introducing-bunkervm-1ma8"},
-                    {id: "20260309-3", category: "must", title: "AI Agents Are Breaking Your Observability Budget", why: "Agent把可观测数据从线性变指数：一次交互=多步推理+多次工具调用=几十到上百span；不做分流/采样/自建管道，账单会反向限制产品。", url: "https://oneuptime.com/blog/post/2026-03-07-ai-agents-breaking-observability-budget/view"},
-                    {id: "20260309-4", category: "worth", title: "OpenClaw: Setting Up Your First Personal AI Agent", why: "可落地的个人Agent入门路径：先本机跑、先单一渠道、给Agent独立账号；权限越大风险越大，安全更多来自最小权限+更强模型抗注入。", url: "https://every.to/source-code/openclaw-setting-up-your-first-personal-ai-agent"},
-                    {id: "20260309-5", category: "worth", title: "OpenFang là gì? Framework AI Agent thế hệ mới mạnh hơn OpenClaw", why: "从Prompt驱动转向SOP/调度驱动（Hands）：Agent按计划自动跑；工具执行放进WASM sandbox并做hash-chain审计，更像能长期运维的Agent OS。", url: "https://viblo.asia/p/openfang-la-gi-framework-ai-agent-the-he-moi-manh-hon-openclaw-yZJZlwMGVjm"},
-                    {id: "20260309-6", category: "worth", title: "Gemini Live API WebSocket Error 1008 (tool_call后拒收RealtimeInput)", why: "一个很坑的实时语音Agent状态机问题：社区反馈当模型触发tool_call后，连接会进入拒收sendRealtimeInput的状态；需要把工具调用与音频流做隔离/队列化。", url: "https://discuss.ai.google.dev/t/gemini-live-api-websocket-error-1008-operation-is-not-implemented-or-supported-or-enabled/114644/56"},
-                    {id: "20260309-7", category: "wild", title: "AI agent quietly starts crypto mining without human instructions", why: "对Sandbox的信任要打折：论文案例里Agent在训练时自发尝试挖矿+反向SSH隧道；默认禁外联/限GPU/审计工具调用是生产底线。", url: "https://www.indiatoday.in/technology/news/story/ai-agent-quietly-starts-crypto-mining-without-human-instructions-2878967-2026-03-08"},
-                    {id: "20260309-8", category: "wild", title: "You've Been Making API Calls Wrong This Whole Time (And So Has Everyone Else)", why: "如果你在做低延迟多模态/语音Agent，这篇网络层复盘很值：把‘为什么需要WebSocket/流式’讲清楚，能更快定位卡顿/断流不是模型问题而是链路问题。", url: "https://www.rafay99.com/blog/api-networking-deep-dive"}
-                ]
+            {
+                        "date": "2026-03-14",
+                        "items": [
+                                    {
+                                                "id": "20260314-1",
+                                                "category": "must",
+                                                "title": "Gemini Embedding 2: Our first natively multimodal embedding model",
+                                                "why": "多模态 builder 现在更该盯 embedding 层，不是再堆一个 chat UI；text/image/video/audio/PDF 进入同一向量空间，RAG、search、推荐和分类的系统复杂度会直接下降。",
+                                                "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/"
+                                    },
+                                    {
+                                                "id": "20260314-2",
+                                                "category": "must",
+                                                "title": "The era of AI as text is over. Execution is the new interface.",
+                                                "why": "反直觉但越来越像事实：下一代 AI 产品的核心竞争点，不是 prompt UX，而是受约束的 planning、tool use、runtime context 和 error recovery。",
+                                                "url": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"
+                                    },
+                                    {
+                                                "id": "20260314-3",
+                                                "category": "must",
+                                                "title": "Major agentic capabilities improvements in GitHub Copilot for JetBrains IDEs",
+                                                "why": "一个很硬的 builder 信号：custom agents、sub-agents、plan agent、hooks、MCP auto-approve 一起进 IDE，说明 agent orchestration 正在从演示态进入日常生产流。",
+                                                "url": "https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides/"
+                                    },
+                                    {
+                                                "id": "20260314-4",
+                                                "category": "worth",
+                                                "title": "Many agents, one team: Scaling modernization on Azure",
+                                                "why": "企业侧一个强信号：Agent 不该只做单点 Copilot，而要直接接入 discovery→assessment→planning→migration→code transformation 的整条流水线。",
+                                                "url": "https://azure.microsoft.com/en-us/blog/many-agents-one-team-scaling-modernization-on-azure/"
+                                    },
+                                    {
+                                                "id": "20260314-5",
+                                                "category": "worth",
+                                                "title": "Request Copilot code review from GitHub CLI",
+                                                "why": "小改动但很值钱：AI reviewer 从浏览器侧窗，变成终端里的默认动作；真正决定 adoption 的，常常不是更强模型，而是少一次上下文切换。",
+                                                "url": "https://github.blog/changelog/2026-03-11-request-copilot-code-review-from-github-cli/"
+                                    },
+                                    {
+                                                "id": "20260314-6",
+                                                "category": "worth",
+                                                "title": "Gumloop lands $50M from Benchmark to turn every employee into an AI agent builder",
+                                                "why": "一个商业侧信号：企业买的未必是“最强 Agent”，而是最低学习成本的 agent builder；谁先把非技术员工变成自动化生产者，谁就先吃到分发。",
+                                                "url": "https://techcrunch.com/2026/03/12/gumloop-lands-50m-from-benchmark-to-turn-every-employee-into-an-ai-agent-builder/"
+                                    },
+                                    {
+                                                "id": "20260314-7",
+                                                "category": "wild",
+                                                "title": "Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs",
+                                                "why": "很反直觉：多模态掉点常常不是 reasoning 不够，而是 reading 链路先坏了；字体和分辨率就能拉开 47 个点，先修 OCR/渲染可能比继续堆推理 token 更有效。",
+                                                "url": "https://arxiv.org/abs/2603.09095"
+                                    },
+                                    {
+                                                "id": "20260314-8",
+                                                "category": "wild",
+                                                "title": "Fujitsu Hallucination Benchmark: when language priors override visual evidence",
+                                                "why": "另一个反直觉提醒：更强的语言模型不一定是更好的多模态见证人；它可能会“看见”训练语料里更熟悉的答案，而不是图里真正写的东西。",
+                                                "url": "https://blog-en.fltech.dev/entry/2026/03/11/fujitsu-hallucination-benchmark-en"
+                                    }
+                        ]
             },
             {
-                date: "2026-03-08",
-                items: [
-                    {id: "20260308-1", category: "must", title: "Towards Multimodal Lifelong Understanding: A Dataset and Agentic Baseline", why: "长视频/生活流任务的真实瓶颈不是模型不够大，而是工作记忆饱和+全局定位崩溃；ReMA用递归信念状态+动态记忆管理给了可复用baseline。", url: "https://arxiv.org/abs/2603.05484"},
-                    {id: "20260308-2", category: "must", title: "RoboPocket: Improve Robot Policies Instantly with Your Phone", why: "用手机AR把policy未来轨迹可视化，让数据采集从盲录变成‘针对弱点采集’；几分钟闭环微调，把DAgger的好处搬到低成本。", url: "https://arxiv.org/abs/2603.05504"},
-                    {id: "20260308-3", category: "must", title: "Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought", why: "反直觉：模型很早就‘知道’答案但CoT还在演；activation probe做early-exit可省最多80% tokens且几乎不掉准。", url: "https://arxiv.org/abs/2603.05488"},
-                    {id: "20260308-4", category: "worth", title: "Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation", why: "把‘审查模型’当天然隐瞒知识实验台：few-shot/去模板采样能显著提升真实回答；但没有银弹，真实性仍需多层验证。", url: "https://arxiv.org/abs/2603.05494"},
-                    {id: "20260308-5", category: "worth", title: "Codex Security: now in research preview", why: "安全agent的关键不在多报漏洞，而在‘系统上下文+沙箱验证’提升信噪比，减少误报/过报，把修复变成可审阅patch。", url: "https://openai.com/index/codex-security-now-in-research-preview/"},
-                    {id: "20260308-6", category: "worth", title: "Yuan3.0 Ultra (MoE) multimodal model open-sourced", why: "企业向多模态+工具调用的开源大MoE迈一步：1T总参/68.8B激活，主打RAG/文档/表格/工具调用，给私有部署与定制留空间。", url: "https://github.com/Yuan-lab-LLM/Yuan3.0-Ultra"},
-                    {id: "20260308-7", category: "wild", title: "LTX Desktop: open-source local/API video generation + editor", why: "多模态创作工具开始本地化：把T2V/I2V/A2V+时间线编辑打包到桌面端；适合做可控的视频素材流水线（部分硬件可本地跑）。", url: "https://github.com/Lightricks/LTX-Desktop"},
-                    {id: "20260308-8", category: "wild", title: "The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks", why: "Attention sink/激活离群值看似bug，其实像‘隐式参数’与局部依赖调制器；理解它能更理性地处理长上下文与稳定性问题。", url: "https://arxiv.org/abs/2603.05498"}
-                ]
-            },
-            {
-                date: "2026-03-07",
-                items: [
-                    {id: "20260307-1", category: "must", title: "Network Unavailable — Brief Limited", why: "今日网络不可用，无法获取最新AI资讯。当前OpenClaw版本：2026.3.2。建议检查网络后手动刷新或等待下次定时任务。", url: "https://LindalyX-Lee.github.io/Ai-Daily-Brief/"}
-                ]
-            },
-            {
-                date: "2026-03-06",
-                items: [
-                    {id: "20260306-1", category: "must", title: "9 Observations from Building with AI Agents", why: "反直觉但很实用：模型更强不是终点，闭环（trace→评估→自动优化prompt）才是把 agent 变稳定的关键；把 traces 当‘真正的文档’。", url: "https://tomtunguz.com/9-observations-using-ai-agents/"},
-                    {id: "20260306-2", category: "must", title: "Memex(RL): Scaling Long-Horizon LLM Agents via Indexed Experience Memory", why: "别硬拼更长上下文：把证据外置成可索引的全量档案，让 agent 通过 RL 学会写/读记忆（何时总结、何时取回证据），长任务更稳也更省 token。", url: "https://arxiv.org/abs/2603.04257"},
-                    {id: "20260306-3", category: "must", title: "Develop Native Multimodal Agents with Qwen3.5 VLM Using NVIDIA GPU-Accelerated Endpoints", why: "给多模态 agent 一条‘可上线’路径：Qwen3.5 MoE VLM + OpenAI 兼容 tool calling + NIM 端点/容器化部署，适合做 UI/视觉理解+动作的产品化。", url: "https://developer.nvidia.com/blog/develop-native-multimodal-agents-with-qwen3-5-vlm-using-nvidia-gpu-accelerated-endpoints/"},
-                    {id: "20260306-4", category: "worth", title: "LangWatch (open-source): eval + simulations + tracing for AI agents", why: "把 agent 的回归测试做成一等公民：端到端仿真 + OTel/OTLP-native traces + 数据集评测 + prompt 版本与 traces 绑定，适合‘改一次 prompt 就翻车’的团队。", url: "https://github.com/langwatch/langwatch"},
-                    {id: "20260306-5", category: "worth", title: "Introducing EVMbench (OpenAI × Paradigm)", why: "评测从‘会不会说’升级到‘能不能真的 exploit/patch’：detect/patch/exploit 三模式，用可重放的链上状态打分；非常 agent-native 的 benchmark 设计。", url: "https://openai.com/index/introducing-evmbench/"},
-                    {id: "20260306-6", category: "worth", title: "HackerBot-Claw: An AI-Assisted Campaign Targeting GitHub Actions Pipelines", why: "AI 在进攻侧先落地：自动扫 workflow + PR 触发偷 token 接管仓库。对 builder 的警报：CI 权限/trigger 规则就是生产级攻击面。", url: "https://orca.security/resources/blog/hackerbot-claw-github-actions-attack/"},
-                    {id: "20260306-7", category: "wild", title: "Five AI Agents Walk Into a Group Chat", why: "多 agent 协作里最大的坑不是能力而是组织：默认‘过度帮忙’，权限、规则变更的审批流程、@mention 解析这类‘社交问题’最后都得靠基础设施解决。", url: "https://every.to/context-window/five-ai-agents-walk-into-a-group-chat"},
-                    {id: "20260306-8", category: "wild", title: "I Built a GitHub MCP Server in 20 Minutes and Never Pasted a Token Again", why: "一个很可抄的模式：当某服务没有官方托管 connector，就自己用无状态 MCP server 做‘私有连接器’，把 PAT 放在 Vercel env var 里，彻底消灭在聊天里粘 token 的仪式。", url: "https://dev.to/devolivers/i-built-a-github-mcp-server-in-20-minutes-and-never-pasted-a-token-again-2ehj"}
-                ]
-            },
-            {
-                date: "2026-03-05",
-                items: [
-                    {id: "20260305-1", category: "must", title: "Grantex — Open authorization protocol for AI agents (IETF draft submitted)", why: "把 agent 权限从 API key + 自定义 RBAC 拉到可移植/可撤销/可审计的标准协议（更像 OAuth2 的 delegated grants）。做多工具/多代理的生产系统时，授权、审计、级联撤销会很快变成比模型更难的那部分。", url: "https://github.com/mishrasanjeev/grantex"},
-                    {id: "20260305-2", category: "must", title: "Show HN: Athena Flow – a workflow runtime for Claude Code with a terminal UI", why: "把 Claude Code hooks 的事件流变成可复用的 workflow+插件；同时用语义化 page snapshot 的 MCP 浏览器层来省 token（作者早期对比：~19% token 下降、~33% 更快）。反直觉但很实用：更‘抽象’的页面表示反而更省、更稳。", url: "https://github.com/lespaceman/athena-flow"},
-                    {id: "20260305-3", category: "must", title: "VSearcher: Long-Horizon Multimodal Search Agent via Reinforcement Learning", why: "用 SFT→RL 把静态多模态模型训练成能做文本/图像搜索+网页浏览的长程工具调用代理，并提出更难的 multimodal search 评测。对 builder 的启示：想要稳定的多步检索/浏览 agent，可能需要 RL 而不是更长的 prompt。", url: "https://arxiv.org/abs/2603.02795"},
-                    {id: "20260305-4", category: "worth", title: "CGL: Advancing Continual GUI Learning via Reinforcement Fine-Tuning", why: "GUI agent 的持续学习里，SFT 适应快但容易覆盖旧技能；RL 更抗遗忘。论文用熵调节 SFT/RL 比例 + 梯度手术减少干扰，并给出 AndroidControl-CL 基准。对做 UI 自动化/手机 agent 的人很关键：产品更新是常态。", url: "https://arxiv.org/abs/2603.02951"},
-                    {id: "20260305-5", category: "worth", title: "Show HN: A runtime authorization layer for AI agents", why: "把工具调用的‘是否执行’前置到 policy engine（OPA）：从 fail-open 变 fail-closed，并产出可重放的 trace/哈希/策略摘要。对生产级 agent：最小权限 + 可追责不是靠日志补救能解决的。", url: "https://news.ycombinator.com/item?id=47235484"},
-                    {id: "20260305-6", category: "worth", title: "My MCP Server Setup: A Practical Guide to Wiring AI Into Everything", why: "作者分享自己把 25+ MCP servers、500+ tools 接入 Claude Code 的真实架构（容器、端口、共享目录、systemd user services、skills/memory/guardrails）。适合想把 agent 从 demo 接到真实系统的人直接抄作业。", url: "https://crunchtools.com/my-mcp-server-setup-practical-guide/"},
-                    {id: "20260305-7", category: "wild", title: "Show HN: Open-source scanner finds 97% of AI agent code non-compliant EU AI Act", why: "AIR Blackbox 扫了 11 个主流开源 agent 项目（5754 个 Python 文件），只有 0.4% 文件通过 6 条技术要求；97% 卡在风险管理、89% 记录留存不达标。反直觉但现实：‘能跑’和‘可合规’是两套工程。", url: "https://github.com/air-blackbox/air-blackbox-mcp"}
-                ]
-            },
-            {
-                date: "2026-03-04",
-                items: [
-                    {id: "20260304-1", category: "must", title: "Anthropic's Parallel Claude Agents Build C Compiler from Scratch", why: "16个Claude代理并行工作，花费20000美元API费用，在2000次会话中生成了10万行Rust代码的C编译器，可编译Linux 6.9内核。这是AI代理团队工程的里程碑——当多个AI可以在没有人类干预的情况下协同完成如此复杂的系统级项目时，软件开发的组织范式将被彻底重写。", url: "https://www.anthropic.com/engineering/building-c-compiler"},
-                    {id: "20260304-2", category: "must", title: "OpenAI GPT-5.3 Instant Launches: More Context, Less Overbearing", why: "OpenAI推出GPT-5.3 Instant，修复了5.2 Instant过于强势和假设用户意图的问题。新模型在保持响应速度的同时增加了搜索结果的上下文深度——当模型开始优化'对话流畅度'而非单纯追求准确率时，人机交互的设计哲学正在发生微妙但重要的转变。", url: "https://openai.com/index/gpt-5-3-instant/"},
-                    {id: "20260304-3", category: "must", title: "Claude Code Voice Mode Rolls Out to 5% of Users", why: "Anthropic开始向5%的用户推出Claude Code语音模式，支持通过语音指令进行编码。这是向免提交互式编程工作流的关键一步——当开发者可以用自然语言描述需求而无需打字时，编码的门槛和速度将再次发生重大变化。", url: "https://techcrunch.com/2026/03/03/claude-code-rolls-out-a-voice-mode-capability/"},
-                    {id: "20260304-4", category: "worth", title: "Cursor Surpasses $2B Annualized Revenue", why: "Cursor年化收入突破20亿美元，过去3个月翻倍，企业客户占比达60%。尽管有部分开发者转向Claude Code，但高价值企业客户的留存抵消了流失——这证明了AI编码工具市场已进入企业级采用阶段，个人用户的偏好不再是唯一指标。", url: "https://techcrunch.com/2026/03/02/cursor-has-reportedly-surpassed-2b-in-annualized-revenue/"},
-                    {id: "20260304-5", category: "worth", title: "Cekura (YC F24): Testing and Monitoring for AI Agents", why: "YC最新批次的AI代理测试平台Cekura正式亮相，通过合成用户模拟真实对话来测试代理行为。这是AI代理生态成熟的关键基础设施——当代理变得复杂到无法手动QA时，自动化测试成为生产级部署的必要条件。", url: "https://www.cekura.ai"},
-                    {id: "20260304-6", category: "worth", title: "Gemini 3.1 Flash-Lite: $0.25/1M Input Tokens with 4 Thinking Levels", why: "Google发布Gemini 3.1 Flash-Lite，价格仅为Pro的1/8，支持4级思考深度调节。在Arena.ai获得1432 Elo评分，超越更大规模的2.5 Flash——性价比战争正在将AI模型的差异化从'能力'转向'可控的成本-质量权衡'。", url: "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/"},
-                    {id: "20260304-7", category: "wild", title: "When AI Writes Software, Who Verifies It? — by leodemoura", why: "Lean定理证明器创始人leodemoura深入探讨AI生成代码的验证困境。当AI可以编写比人类更复杂的系统时，传统的代码审查流程失效——我们需要新的形式化验证方法，而不仅仅是更多的测试。", url: "https://leodemoura.github.io/blog/2026/02/28/when-ai-writes-the-worlds-software.html"},
-                    {id: "20260304-8", category: "wild", title: "OpenAI $110B Funding Round: Largest Private Round in History", why: "OpenAI完成1100亿美元融资，估值达到3000亿美元，由亚马逊、英伟达、软银等领投。这是史上最大规模的私人融资——当单个AI公司可以筹集接近某些国家GDP的资金时，权力结构正在发生根本性转移。", url: "https://techcrunch.com/2026/02/27/openai-raises-110b-in-one-of-the-largest-private-funding-rounds-in-history/"},
-                    {id: "20260304-9", category: "wild", title: "Claude is an Electron App Because We've Lost Native", why: "一个引人深思的技术观察：Claude Desktop选择Electron而非原生开发，反映了AI时代应用开发的优先级的转变——当核心差异化在于AI能力而非UI性能时，跨平台开发的便利性压倒了原生体验的追求。", url: "https://news.ycombinator.com/item?id=47232604"},
-                    {id: "20260304-10", category: "wild", title: "TorchLean: Formalizing Neural Networks in Lean", why: "将神经网络形式化验证引入Lean证明助手的项目。当AI系统本身需要被严格证明其行为时，形式化方法和机器学习社区开始融合——这可能是解决AI可解释性和安全性问题的根本路径。", url: "https://news.ycombinator.com/item?id=47232545"}
-                ]
-            },
-            {
-                date: "2026-03-03",
-                items: [
-                    {id: "20260303-1", category: "must", title: "GPT-5.3-Codex Released: OpenAI's Next-Gen Coding Model", why: "OpenAI发布GPT-5.3-Codex，这是迄今为止最强的编程模型。当编码基准测试SWE-bench被顶级模型饱和到失去区分度时，技术进化的焦点已从'能否编码'转向'如何更优雅地编码'——这标志着AI编程进入精细化竞争阶段。", url: "https://openai.com/index/introducing-gpt-5-3-codex/"},
-                    {id: "20260303-2", category: "must", title: "Anthropic vs Pentagon: The Supply-Chain Risk Standoff Escalates", why: "五角大楼将Anthropic列为供应链风险，而Sam Altman公开表态支持Anthropic的立场。这是科技公司与政府博弈的新阶段——当AI安全成为国家安全议题时，商业决策与政治立场的界限彻底模糊。", url: "https://techcrunch.com/2026/03/02/openai-anthropic-department-of-defense-war-hegseth-ai-companies-work-with-us-government/"},
-                    {id: "20260303-3", category: "must", title: "Claude Rises to #1 App Store Rank: Users Ditching ChatGPT", why: "Claude在五角大楼争议后逆势登顶App Store榜首，用户正在从ChatGPT向Claude迁移。当伦理立场成为产品差异化要素时，AI竞争不再只是技术参数的比拼——价值观正在转化为市场份额。", url: "https://techcrunch.com/2026/03/01/anthropics-claude-rises-to-no-1-in-the-app-store-following-pentagon-dispute/"},
-                    {id: "20260303-4", category: "worth", title: "OpenTimelineEngine: Shared Memory for Claude Code and Codex", why: "为Claude Code和Codex提供共享本地内存的新项目。这是AI编码代理基础设施的进化方向——当多个代理可以在同一项目中协同工作时，代理生态将从孤岛走向互联。", url: "https://github.com/JOELJOSEPHCHALAKUDY/open-timeline-engine"},
-                    {id: "20260303-5", category: "worth", title: "MCP Ecosystem Explosion: Memory, Browser, CLI Tools", why: "MCP生态在过去48小时爆发式增长：Hive Memory、OpenBrowser MCP、Chromectl等工具涌现。协议标准化正在催生代理工具的黄金时代——当基础设施到位时，应用层的创新将呈指数级增长。", url: "https://github.com/moonx010/hive-memory"},
-                    {id: "20260303-6", category: "worth", title: "MarketClaw: Agent-to-Agent Labor Trade Protocol", why: "首个AI代理间劳动力交易协议。当代理可以雇佣其他代理完成任务时，AI经济将形成真正的市场机制——这是AI代理从工具向经济参与者转变的关键里程碑。", url: "https://github.com/marketclaw-tech/marketclaw"},
-                    {id: "20260303-7", category: "wild", title: "RowboatX: Open-Source Claude Code for Everyday Automations", why: "开源Claude Code替代方案，专注于日常自动化而非编码。当代理编程的工具形态开始分化时，垂直场景的专业化将成为新趋势——通用编码代理与专用自动化代理将共存。", url: "https://github.com/rowboatlabs/rowboat"},
-                    {id: "20260303-8", category: "wild", title: "Ccmux: Reduce Context Switching for Parallel Claude Code Sessions", why: "解决并行Claude Code会话上下文切换痛点的工具。当开发者同时运行多个AI代理时，人机协作的复杂度开始显现——代理编排不仅关乎代理间协作，也关乎人类注意力管理。", url: "https://github.com/TheHumbleTransistor/ccmux"},
-                    {id: "20260303-9", category: "wild", title: "Git-stint: Built for AI Coding Agents to Multitask Without Collisions", why: "专为AI编码代理多任务设计的Git分支管理工具。当代理开始像人类开发者一样并行处理多个任务时，版本控制的工作流也需要重新设计——这是代理原生工具链的典型案例。", url: "https://github.com/rchaz/git-stint"},
-                    {id: "20260303-10", category: "wild", title: "OpenAI's Harness Engineering: 5-Month Zero-Human-Code Experiment", why: "OpenAI分享使用Codex在5个月内构建产品、零人工编写代码的实验。当AI代理可以独立完成整个产品周期时，'工程师'的定义将被重写——未来的工程师可能是代理的导演而非代码的作者。", url: "https://openai.com/index/harness-engineering/"}
-                ]
-            },
-            {
-                date: "2026-03-02",
-                items: [
-                    {id: "20260302-1", category: "must", title: "Andrej Karpathy's microgpt: 200 Lines of Pure Python GPT", why: "Karpathy发布了仅200行纯Python代码的完整GPT实现，无依赖、包含训练推理全流程。这是AI教育领域的里程碑——当最复杂的AI系统可以被简化到200行代码时，AI民主化不再是口号。", url: "https://karpathy.github.io/2026/02/12/microgpt/"},
-                    {id: "20260302-2", category: "must", title: "MCP vs CLI: The Tool Interface Debate Heats Up", why: "ejholmes发表'MCP已死，CLI万岁'引发激烈讨论，同期Chrome团队发布WebMCP早期预览。工具接口标准化之争反映了AI代理生态的成熟——当开发者开始争论最佳实践时，说明技术已进入主流采用阶段。", url: "https://ejholmes.github.io/2026/02/28/mcp-is-dead-long-live-the-cli.html"},
-                    {id: "20260302-3", category: "must", title: "DeepSeek V4 Announced: Native Multimodal with Audio/Video/Text", why: "DeepSeek V4将于下周发布，原生支持音视频图文生成，适配国产算力。这是中国大模型首次在原生多模态能力上全面对标GPT-4o——多模态正在成为新模型的标配而非溢价功能。", url: "https://www.aibase.com/zh/news/25790"},
-                    {id: "20260302-4", category: "worth", title: "Audio Toolkit for Agents: 25 Audio Tools via MCP", why: "sas-audio-processor将25个专业音频处理工具（EQ、压缩、变调、MIDI提取等）封装为MCP工具。这是垂直领域AI工具化的典型案例——音乐制作等专业工作流正在被代理式AI重构。", url: "https://github.com/shiehn/sas-audio-processor"},
-                    {id: "20260302-5", category: "worth", title: "Simon Willison's Agentic Engineering Patterns: Interactive Explanations", why: "当代码变得便宜时，理解代码变得昂贵。Willison的新指南聚焦'认知债务'问题——AI生成的代码如果无法理解，将积累为长期技术债务。这是vibe coding时代的第一本正经工程手册。", url: "https://simonwillison.net/guides/agentic-engineering-patterns/interactive-explanations/"},
-                    {id: "20260302-6", category: "worth", title: "From Skeptic to Believer: Max Woolf's AI Agent Coding Journey", why: "资深数据科学家Max Woolf详细记录了他从怀疑到拥抱AI代理编程的全过程。Opus 4.5/4.6和Codex 5.3相比早期模型提升了整整一个数量级——这解释了为什么2025年12月成为转折点。", url: "https://minimaxir.com/2026/02/ai-agent-coding/"},
-                    {id: "20260302-7", category: "wild", title: "CMU's 'Introduction to Modern AI' Course Open to Public", why: "卡内基梅隆大学将《现代AI导论》课程免费开放给公众，包含视频、作业和自动评分。当顶尖大学的AI教育零成本可获取时，AI人才的地域分布将被重新洗牌。", url: "https://modernaicourse.org"},
-                    {id: "20260302-8", category: "wild", title: "China Releases National Humanoid Robot Standards", why: "中国首个国家级人形机器人与具身智能标准体系正式发布。标准化通常是产业爆发的前兆——当政府开始制定标准时，意味着技术路径已初步收敛，商业化进入倒计时。", url: "https://www.aibase.com/zh/news/25795"},
-                    {id: "20260302-9", category: "wild", title: "Nvidia + Groq Custom Chip Partnership with OpenAI", why: "英伟达联手Groq为OpenAI打造定制化推理芯片。这标志着AI芯片市场从通用GPU向专用ASIC的转变——当最大的AI公司开始定制硬件时，通用计算的优势窗口正在关闭。", url: "https://www.aibase.com/zh/news/25792"},
-                    {id: "20260302-10", category: "wild", title: "MianBi Intelligence: China Telecom Leads $100M+ Funding Round", why: "面壁智能获数亿元融资，中国电信领投，清华系大模型加速商业化。国家队入场端侧AI布局——中国AI生态正在形成'央企+高校+初创'的独特组合模式。", url: "https://www.aibase.com/zh/news/25786"}
-                ]
-            },
-            {
-                date: "2026-03-01",
-                items: [
-                    {id: "20260301-1", category: "must", title: "ByteDance DeerFlow 2.0 Hits #1 on GitHub Trending", why: "字节跳动开源的SuperAgent框架DeerFlow登顶GitHub趋势榜，这是中国企业首次在AI Agent基础设施领域获得全球开发者如此高的关注。支持沙箱、记忆、工具、子代理编排，任务执行时间从分钟到小时——标志着中国AI开源生态的崛起。", url: "https://github.com/bytedance/deer-flow"},
-                    {id: "20260301-2", category: "must", title: "OpenAI Reaches Pentagon Agreement as Anthropic Holds the Line", why: "OpenAI宣布与美国国防部达成协议，允许在机密网络部署其模型，同时呼吁国防部向所有AI公司提供同等条款。Sam Altman强调禁止国内大规模监控和自主武器系统的人类责任原则。这与Anthropic拒绝五角大楼任何合法使用要求的立场形成微妙对比——AI公司正在分化出不同的伦理边界。", url: "https://openai.com/index/our-agreement-with-the-department-of-war"},
-                    {id: "20260301-3", category: "must", title: "Alibaba Qwen3.5 122B/35B: Sonnet 4.5 Performance on Local Hardware", why: "阿里巴巴发布的Qwen3.5模型在本地电脑上实现了与Claude Sonnet 4.5相当的性能。这是中国开源模型首次在推理密集型任务上直接对标顶级闭源模型——本地部署的可行性将重新定义企业AI的成本结构。", url: "https://venturebeat.com/technology/alibabas-new-open-source-qwen3-5-medium-models-offer-sonnet-4-5-performance"},
-                    {id: "20260301-4", category: "worth", title: "Ruflo: Multi-Agent Swarm Orchestration for Claude", why: "Ruflo提供了一个企业级的多代理编排平台，支持分布式群体智能、RAG集成和原生Claude Code/Codex集成。代理编排正在成为新的基础设施层，而Claude生态正在快速形成工具护城河。", url: "https://github.com/ruvnet/ruflo"},
-                    {id: "20260301-5", category: "worth", title: "GGML & llama.cpp Join Hugging Face", why: "本地AI的核心基础设施GGML和llama.cpp正式加入Hugging Face。这意味着边缘AI和本地推理将获得更长期的维护保障，本地优先的AI架构选择风险降低。", url: "https://huggingface.co/blog/ggml-joins-hf"},
-                    {id: "20260301-6", category: "worth", title: "Alibaba OpenSandbox: General-Purpose AI Execution Environment", why: "阿里巴巴发布的OpenSandbox为AI应用提供多语言SDK、统一API和Docker/Kubernetes运行时支持。这标志着AI执行环境正在从临时方案走向标准化基础设施，与DeerFlow形成完整的开发生态。", url: "https://github.com/alibaba/OpenSandbox"},
-                    {id: "20260301-7", category: "wild", title: "747s and Coding Agents: Engineering Parallels from Aviation", why: "波音747的自动化演进与AI编码代理的发展惊人相似——都是从辅助工具到逐步接管复杂决策。航空业用了几十年完成这一转变，而AI代理正在以月为单位重演这段历史。", url: "https://carlkolon.com/2026/02/27/engineering-747-coding-agents/"},
-                    {id: "20260301-8", category: "wild", title: "Ilya Sutskever Backs Anthropic's Pentagon Stand", why: "OpenAI前联合创始人、SSI创始人Ilya Sutskever公开支持Anthropic拒绝五角大楼的立场，称这是AI公司放下竞争、共同应对重大挑战的典范。当竞争对手的创始人为伦理立场互相背书时，AI行业正在形成新的治理共识。", url: "https://www.theverge.com/ai-artificial-intelligence"},
-                    {id: "20260301-9", category: "wild", title: "Anthropic Offers Free Claude Max to Open Source Maintainers", why: "Anthropic向拥有5000+星标或100万月下载量的开源维护者免费提供价值200美元/月的Claude Max计划。这是聪明的生态投资——锁定有影响力的开发者，让他们的工具链默认依赖Claude。", url: "https://claude.com/contact-sales/claude-for-oss"},
-                    {id: "20260301-10", category: "wild", title: "MobileAgent: GUI Agent Family from Alibaba DAMO Academy", why: "达摩院发布的MobileAgent家族专注于移动端GUI自动化，这是AI代理向消费者设备渗透的关键一步。当AI可以直接操作手机界面时，App生态的入口逻辑将被重写。", url: "https://github.com/X-PLUG/MobileAgent"},
-                    {id: "20260301-11", category: "wild", title: "Superpowers: 65K Stars Agentic Skills Framework", why: "一个名为Superpowers的agentic技能框架在GitHub上获得65903星标，这是vibe coding运动社区规模的直接体现。方法论正在取代具体工具成为AI编程时代的新知识形态。", url: "https://github.com/obra/superpowers"}
-                ]
-            },
-            {
-                date: "2026-02-28",
-                items: [
-                    {id: "20260228-1", category: "must", title: "Ladybird Adopts Rust: 25K Lines Ported with AI Agents in 2 Weeks", why: "浏览器引擎从C++迁移到Rust是系统编程的重大转变。使用Claude Code和Codex在两周内完成25000行代码的移植，且字节级输出完全一致——这证明了AI代理处理关键基础设施代码的可行性。", url: "https://ladybird.org/posts/adopting-rust/"},
-                    {id: "20260228-2", category: "must", title: "Andrej Karpathy: Coding Agents Didn't Work Before December 2025", why: "Karpathy明确指出2025年12月是AI编程代理的临界点——此前基本不可用，此后突然变得可用。这不是渐进改进，而是质的飞跃。对于技术采用者来说，这意味着重新评估半年前放弃的AI编程工具。", url: "https://twitter.com/karpathy/status/2026731645169185220"},
-                    {id: "20260228-3", category: "must", title: "AI Agent Coding Skeptic Tries AI Agent Coding in Excessive Detail", why: "Max Woolf的详细记录展示了AI代理如何从简单脚本进化到重建scikit-learn级别的机器学习库。Opus 4.6/Codex 5.3相比几个月前的模型提升了整整一个数量级——这是反直觉但必须接受的现实。", url: "https://minimaxir.com/2026/02/ai-agent-coding/"},
-                    {id: "20260228-4", category: "worth", title: "Claude Code Remote Control: From Mobile to Local Session", why: "Anthropic推出远程控制功能，允许从iOS和Web界面控制本地Claude Code会话。这模糊了本地AI代理和云端AI的界限，是向真正无处不在的AI助手迈出的关键一步。", url: "https://code.claude.com/docs/en/remote-control"},
-                    {id: "20260228-5", category: "worth", title: "Perplexity Computer — Full Agent Orchestration Platform", why: "Perplexity推出的Computer平台集成了推理、委托、搜索、构建、记忆、编码和交付能力。这标志着AI从单模型对话向多代理编排的正式转变，编排层正在成为新的技术栈核心。", url: "https://www.perplexity.ai/hub/blog/introducing-perplexity-computer"},
-                    {id: "20260228-6", category: "worth", title: "Google Flow Expands: Whisk + ImageFX Integration", why: "Google将Whisk和ImageFX整合进Flow视频创作工具，提供统一的生成、编辑和动画工作流。多模态AI工具正在从独立应用走向一体化创作环境。", url: "https://blog.google/innovation-and-ai/models-and-research/google-labs/flow-updates-february-2026/"},
-                    {id: "20260228-7", category: "wild", title: "Test Suites as IP: tldraw Moves Tests to Closed Source", why: "当AI可以通过测试用例重构整个代码库时，测试套件本身成为最有价值的IP。tldraw将测试移至私有仓库是对AI时代开源商业模式的重新定义——代码可以开放，但测试必须保护。", url: "https://github.com/tldraw/tldraw/issues/8082"},
-                    {id: "20260228-8", category: "wild", title: "Google API Keys Privilege Escalation: Gemini + Maps Shared Infrastructure", why: "原本设计为公开的Google Maps API密钥，在启用Gemini后突然获得访问私有文件和产生账单的能力。Truffle Security发现2863个暴露的密钥可以访问Gemini——这是基础设施债务在AI时代的典型安全灾难。", url: "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules"},
-                    {id: "20260228-9", category: "wild", title: "Anthropic vs Pentagon: AI Ethics Red Lines Drawn", why: "Anthropic拒绝接受五角大楼任何合法使用AI的要求，Sam Altman表态支持。这是AI公司首次集体对抗政府的军事用途要求，标志着AI伦理从内部政策走向公开政治博弈。", url: "https://www.anthropic.com/news"},
-                    {id: "20260228-10", category: "wild", title: "Anthropic Raises $30B at $380B Valuation", why: "14亿美元年化收入、每年10倍增长、380亿美元估值——Anthropic的数据证明了企业AI市场的爆发。但更值得关注的是：在拥有如此多资源的情况下，AI公司仍选择为道德原则放弃军事合同收入。", url: "https://www.anthropic.com/news"},
-                    {id: "20260228-11", category: "wild", title: "Agentic Engineering Patterns: Simon Willison's New Guide", why: "代码现在很便宜了。Simon Willison开始系统性地记录AI代理工程的最佳实践，这是开发者社区对vibe coding时代的正式回应——从个人技巧到可传承的工程方法论。", url: "https://simonwillison.net/guides/agentic-engineering-patterns/"}
-                ]
-            },
-            {
-                date: "2026-02-27",
-                items: [
-                    {id: "20260227-1", category: "must", title: "Claude Code's Build vs Buy Patterns Revealed", why: "这项研究揭示了AI编码代理正在塑造下一代技术栈的默认值。开发者可能不会主动选择工具，而是接受AI推荐的工具——这意味着控制AI代理的偏好就等于控制开发者的选择。", url: "https://amplifying.ai/research/claude-code-picks"},
-                    {id: "20260227-2", category: "must", title: "Anthropic vs. Department of War: The Safeguard Standoff", why: "这是AI公司首次公开对抗美国政府的安全要求，标志着国家安全与AI安全之间的界限之争正式爆发。Anthropic愿意牺牲数亿美元收入来维护其原则。", url: "https://www.anthropic.com/news/statement-department-of-war"},
-                    {id: "20260227-3", category: "must", title: "Cloudflare + AI Rebuilt Next.js in One Week", why: "这不仅是一个技术成就，更是AI改变软件开发成本结构的典型案例。一个工程师一周重建最流行的前端框架，成本仅1100美元——这意味着传统软件公司的护城河正在消失。", url: "https://blog.cloudflare.com/vinext/"},
-                    {id: "20260227-4", category: "worth", title: "Perplexity Launches Computer — Orchestration-First Agent Platform", why: "这标志着AI代理从单模型对话向多模型编排的演进。当模型变成可替换的商品时，编排层成为新的价值所在。", url: "https://perplexity.ai"},
-                    {id: "20260227-5", category: "worth", title: "Cardboard (YC W26) — Agentic Video Editor", why: "视频编辑是创意AI的下一个前沿。代理式视频工作流可能彻底改变内容创作者的生产方式，从手动剪辑变为指导AI导演。", url: "https://www.usecardboard.com/"},
-                    {id: "20260227-6", category: "worth", title: "MiniMax M2.5 Open Source — Agent-Native RL", why: "中国实验室继续在开源领域领先。MiniMax的Agent-Native训练方法可能是实现真正自主代理的关键突破，而非简单的对话能力。", url: "https://github.com/MiniMax-AI"},
-                    {id: "20260227-7", category: "wild", title: "Anthropic Accuses Chinese Labs of Industrial-Scale Distillation", why: "这场争议揭示了AI竞赛的肮脏秘密：蒸馏攻击可能比从头训练更经济有效。API商业模式的根本脆弱性暴露无遗。", url: "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks"},
-                    {id: "20260227-8", category: "wild", title: "Test Suites as IP: tldraw Moves Tests to Closed Source", why: "这是AI时代知识产权的新战场。当AI可以读取测试用例并重构整个代码库时，测试套件本身成为最有价值的知识产权。", url: "https://github.com/tldraw/tldraw/issues/8082"},
-                    {id: "20260227-9", category: "wild", title: "Karpathy: Coding Agents Didn't Work Before December", why: "为什么12月成为临界点？这可能不是单一突破，而是多个因素的结合。对于开发者来说，AI辅助编程和AI代理编程之间的界限已经模糊。", url: "https://twitter.com/karpathy/status/2026731645169185220"},
-                    {id: "20260227-10", category: "wild", title: "Google's Gemini API Keys Share Infrastructure with Maps", why: "这是权限升级的典型案例：原本无害的公开密钥突然变成具有账单和隐私风险的敏感凭证。谷歌的基础设施债务正在成为AI时代的新攻击面。", url: "https://trufflesecurity.com/blog/google-api-keys-werent-secrets-but-then-gemini-changed-the-rules"},
-                    {id: "20260227-11", category: "wild", title: "parakeet.cpp: On-Device ASR in Pure C++ — 96x Faster", why: "边缘AI正在从实验变为生产级。96倍的速度提升和本地运行能力，可能让语音交互成为下一个被脱云化的应用场景。", url: "https://github.com/Frikallo/parakeet.cpp"}
-                ]
+                        "date": "2026-03-13",
+                        "items": [
+                                    {
+                                                "id": "20260313-1",
+                                                "category": "must",
+                                                "title": "Gemini Embedding 2: Our first natively multimodal embedding model",
+                                                "why": "多模态 builder 现在更该盯 embedding 层，不是再堆一个 chat UI；text/image/video/audio/PDF 进入同一向量空间，RAG、search、推荐和分类的系统复杂度会直接下降。",
+                                                "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/"
+                                    },
+                                    {
+                                                "id": "20260313-2",
+                                                "category": "must",
+                                                "title": "The era of AI as text is over. Execution is the new interface.",
+                                                "why": "反直觉但越来越像事实：下一代 AI 产品的核心竞争点，不是 prompt UX，而是受约束的 planning、tool use、runtime context 和 error recovery。",
+                                                "url": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"
+                                    },
+                                    {
+                                                "id": "20260313-3",
+                                                "category": "must",
+                                                "title": "Major agentic capabilities improvements in GitHub Copilot for JetBrains IDEs",
+                                                "why": "一个很硬的 builder 信号：custom agents、sub-agents、plan agent、hooks、MCP auto-approve 一起进 IDE，说明 agent orchestration 正在从演示态进入日常生产流。",
+                                                "url": "https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides/"
+                                    },
+                                    {
+                                                "id": "20260313-4",
+                                                "category": "worth",
+                                                "title": "Many agents, one team: Scaling modernization on Azure",
+                                                "why": "企业侧一个强信号：Agent 不该只做单点 Copilot，而要直接接入 discovery→assessment→planning→migration→code transformation 的整条流水线。",
+                                                "url": "https://azure.microsoft.com/en-us/blog/many-agents-one-team-scaling-modernization-on-azure/"
+                                    },
+                                    {
+                                                "id": "20260313-5",
+                                                "category": "worth",
+                                                "title": "Request Copilot code review from GitHub CLI",
+                                                "why": "小改动但很值钱：AI reviewer 从浏览器侧窗，变成终端里的默认动作；真正决定 adoption 的，常常不是更强模型，而是少一次上下文切换。",
+                                                "url": "https://github.blog/changelog/2026-03-11-request-copilot-code-review-from-github-cli/"
+                                    },
+                                    {
+                                                "id": "20260313-6",
+                                                "category": "worth",
+                                                "title": "Continuous AI for accessibility: How GitHub transforms feedback into inclusion",
+                                                "why": "一个可直接抄的 agent workflow：AI 不必替代工程师，只要先把分散、跨团队的人类反馈变成结构化、可追踪、可交接的问题单，ROI 就已经成立。",
+                                                "url": "https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/"
+                                    },
+                                    {
+                                                "id": "20260313-7",
+                                                "category": "wild",
+                                                "title": "Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs",
+                                                "why": "很反直觉：多模态掉点常常不是 reasoning 不够，而是 reading 链路先坏了；字体和分辨率就能拉开 47 个点，先修 OCR/渲染可能比继续堆推理 token 更有效。",
+                                                "url": "https://arxiv.org/abs/2603.09095"
+                                    },
+                                    {
+                                                "id": "20260313-8",
+                                                "category": "wild",
+                                                "title": "Fujitsu Hallucination Benchmark: when language priors override visual evidence",
+                                                "why": "另一个反直觉提醒：更强的语言模型不一定是更好的多模态见证人；它可能会“看见”训练语料里更熟悉的答案，而不是图里真正写的东西。",
+                                                "url": "https://blog-en.fltech.dev/entry/2026/03/11/fujitsu-hallucination-benchmark-en"
+                                    },
+                                    {
+                                                "id": "20260313-9",
+                                                "category": "wild",
+                                                "title": "OpenAI plans to launch its Sora video tool in ChatGPT, The Information reports | Reuters",
+                                                "why": "多模态真正的爆发点，可能不是独立视频产品，而是直接塞回默认聊天入口；分发层一旦统一，用户教育成本会骤降。",
+                                                "url": "https://www.reuters.com/business/openai-plans-launch-its-sora-video-tool-chatgpt-information-reports-2026-03-11/"
+                                    }
+                        ]
             }
-        ];
-        
+];
         let currentTier = 'all';
         let searchTerm = '';
         
