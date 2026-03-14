@@ -3,6 +3,67 @@ const BRIEFS = [
     "date": "2026-03-14",
     "items": [
       {
+        "id": "20260314-brief3-1",
+        "category": "must",
+        "title": "Gumloop lands $50M from Benchmark to turn every employee into an AI agent builder",
+        "why": "最硬的 builder 信号不是更强模型，而是把 agent builder 降到非工程师也能上手；企业自动化入口正从 IT 部门下沉到每个 knowledge worker。",
+        "url": "https://techcrunch.com/2026/03/12/gumloop-lands-50m-from-benchmark-to-turn-every-employee-into-an-ai-agent-builder/"
+      },
+      {
+        "id": "20260314-brief3-2",
+        "category": "must",
+        "title": "9 Observations from Building with AI Agents",
+        "why": "反直觉但很实：先用最强模型跑通，再把稳定子任务微调/类型化/自动优化；真正拉高 production 成功率的，往往不是继续堆模型，而是闭环工程。",
+        "url": "https://tomtunguz.com/9-observations-using-ai-agents/"
+      },
+      {
+        "id": "20260314-brief3-3",
+        "category": "must",
+        "title": "A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning",
+        "why": "多模态 agent 真正的难点不是看见，而是沿条件链稳定执行；最强模型 Path F1 也只有 53.33，说明 GUI/workflow agent 离放心托付还很远。",
+        "url": "https://arxiv.org/abs/2603.12266"
+      },
+      {
+        "id": "20260314-brief3-4",
+        "category": "worth",
+        "title": "The Org Chart Math Behind AI-Native Speed",
+        "why": "一个 CEO 级反直觉洞察：AI 带来的不只是人均产出提升，更是组织沟通链路塌缩；速度优势可能主要来自更小团队，而不是更聪明个体。",
+        "url": "https://tomtunguz.com/communication-tax-small-orgs/"
+      },
+      {
+        "id": "20260314-brief3-5",
+        "category": "worth",
+        "title": "NVIDIA GTC 2026: Live Updates on What’s Next in AI",
+        "why": "下周 GTC 的 builder 风向已经很清楚：open models、agentic AI、physical AI、infra 一起上桌；做产品的人要把注意力从单模型转向 full-stack runtime。",
+        "url": "https://blogs.nvidia.com/blog/gtc-2026-news/"
+      },
+      {
+        "id": "20260314-brief3-6",
+        "category": "worth",
+        "title": "Linking Perception, Confidence and Accuracy in MLLMs",
+        "why": "很值钱的多模态 insight：先校准 confidence，再决定是否 self-check / self-reflect，比无脑加 test-time compute 更划算。",
+        "url": "https://arxiv.org/abs/2603.12149"
+      },
+      {
+        "id": "20260314-brief3-7",
+        "category": "wild",
+        "title": "Increasing intelligence in AI agents can worsen collective outcomes",
+        "why": "超反直觉：agent 更聪明，不一定让系统更稳；在资源稀缺场景里，模型多样性和学习能力反而可能把整体推向过载。",
+        "url": "https://arxiv.org/abs/2603.12129"
+      },
+      {
+        "id": "20260314-brief3-8",
+        "category": "wild",
+        "title": "Everyone’s Building AI Agents. Almost No One Is Asking the Right Question.",
+        "why": "如果这条判断成立，下一轮护城河不在 model，也不在 prompt，而在 context ownership；谁控制 memory layer，谁就控制 agent 的长期价值。",
+        "url": "https://augmentedmind.substack.com/p/everyones-building-ai-agents-almost"
+      }
+    ]
+  },
+  {
+    "date": "2026-03-14",
+    "items": [
+      {
         "id": "20260314-brief2-1",
         "category": "must",
         "title": "Gumloop lands $50M from Benchmark to turn every employee into an AI agent builder",
