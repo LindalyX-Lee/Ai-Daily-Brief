@@ -65,135 +65,196 @@
 
     <script>
 const BRIEFS = [
-            {
-                        "date": "2026-03-14",
-                        "items": [
-                                    {
-                                                "id": "20260314-1",
-                                                "category": "must",
-                                                "title": "Gemini Embedding 2: Our first natively multimodal embedding model",
-                                                "why": "多模态 builder 现在更该盯 embedding 层，不是再堆一个 chat UI；text/image/video/audio/PDF 进入同一向量空间，RAG、search、推荐和分类会立刻变简单。",
-                                                "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/"
-                                    },
-                                    {
-                                                "id": "20260314-2",
-                                                "category": "must",
-                                                "title": "The era of AI as text is over. Execution is the new interface.",
-                                                "why": "反直觉但越来越真：下一代 AI 产品的护城河，不是 prompt UI，而是 planning、tool use、runtime context 和 error recovery 这层执行系统。",
-                                                "url": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"
-                                    },
-                                    {
-                                                "id": "20260314-3",
-                                                "category": "must",
-                                                "title": "Major agentic capabilities improvements in GitHub Copilot for JetBrains IDEs",
-                                                "why": "一个很硬的 builder 信号：custom agents、sub-agents、plan agent、hooks、MCP auto-approve 一起进 IDE，agent orchestration 正在从演示态走向日常生产流。",
-                                                "url": "https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides/"
-                                    },
-                                    {
-                                                "id": "20260314-4",
-                                                "category": "worth",
-                                                "title": "Many agents, one team: Scaling modernization on Azure",
-                                                "why": "企业侧强信号：Agent 不该只做单点 Copilot，而要覆盖 discovery→assessment→planning→migration→code transformation 的整条流水线。",
-                                                "url": "https://azure.microsoft.com/en-us/blog/many-agents-one-team-scaling-modernization-on-azure/"
-                                    },
-                                    {
-                                                "id": "20260314-5",
-                                                "category": "worth",
-                                                "title": "Request Copilot code review from GitHub CLI",
-                                                "why": "小改动但很值钱：AI reviewer 从浏览器侧窗变成终端默认动作；真正决定 adoption 的，常常不是更强模型，而是少一次上下文切换。",
-                                                "url": "https://github.blog/changelog/2026-03-11-request-copilot-code-review-from-github-cli/"
-                                    },
-                                    {
-                                                "id": "20260314-6",
-                                                "category": "worth",
-                                                "title": "9 Observations from Building with AI Agents",
-                                                "why": "一线 builder 经验很实：先用最强模型做 prototype，再把稳定子任务微调/类型化/可回滚；不是所有环节都值得继续堆更大模型。",
-                                                "url": "https://tomtunguz.com/9-observations-using-ai-agents/"
-                                    },
-                                    {
-                                                "id": "20260314-7",
-                                                "category": "wild",
-                                                "title": "Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs",
-                                                "why": "很反直觉：多模态掉点往往不是 reasoning 不够，而是 reading 链路先坏了；字体和分辨率都能大幅影响结果，先修输入链路可能比加 token 更赚。",
-                                                "url": "https://arxiv.org/abs/2603.09095"
-                                    },
-                                    {
-                                                "id": "20260314-8",
-                                                "category": "wild",
-                                                "title": "Fujitsu Hallucination Benchmark: when language priors override visual evidence",
-                                                "why": "另一个反直觉提醒：更强语言模型不一定是更好的多模态见证人；它可能优先回答“训练里最像的答案”，而不是图里真的写了什么。",
-                                                "url": "https://blog-en.fltech.dev/entry/2026/03/11/fujitsu-hallucination-benchmark-en"
-                                    }
-                        ]
-            },
-            {
-                        "date": "2026-03-13",
-                        "items": [
-                                    {
-                                                "id": "20260313-1",
-                                                "category": "must",
-                                                "title": "Gemini Embedding 2: Our first natively multimodal embedding model",
-                                                "why": "多模态 builder 现在更该盯 embedding 层，不是再堆一个 chat UI；text/image/video/audio/PDF 进入同一向量空间，RAG、search、推荐和分类的系统复杂度会直接下降。",
-                                                "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/"
-                                    },
-                                    {
-                                                "id": "20260313-2",
-                                                "category": "must",
-                                                "title": "The era of AI as text is over. Execution is the new interface.",
-                                                "why": "反直觉但越来越像事实：下一代 AI 产品的核心竞争点，不是 prompt UX，而是受约束的 planning、tool use、runtime context 和 error recovery。",
-                                                "url": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"
-                                    },
-                                    {
-                                                "id": "20260313-3",
-                                                "category": "must",
-                                                "title": "Major agentic capabilities improvements in GitHub Copilot for JetBrains IDEs",
-                                                "why": "一个很硬的 builder 信号：custom agents、sub-agents、plan agent、hooks、MCP auto-approve 一起进 IDE，说明 agent orchestration 正在从演示态进入日常生产流。",
-                                                "url": "https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides/"
-                                    },
-                                    {
-                                                "id": "20260313-4",
-                                                "category": "worth",
-                                                "title": "Many agents, one team: Scaling modernization on Azure",
-                                                "why": "企业侧一个强信号：Agent 不该只做单点 Copilot，而要直接接入 discovery→assessment→planning→migration→code transformation 的整条流水线。",
-                                                "url": "https://azure.microsoft.com/en-us/blog/many-agents-one-team-scaling-modernization-on-azure/"
-                                    },
-                                    {
-                                                "id": "20260313-5",
-                                                "category": "worth",
-                                                "title": "Request Copilot code review from GitHub CLI",
-                                                "why": "小改动但很值钱：AI reviewer 从浏览器侧窗，变成终端里的默认动作；真正决定 adoption 的，常常不是更强模型，而是少一次上下文切换。",
-                                                "url": "https://github.blog/changelog/2026-03-11-request-copilot-code-review-from-github-cli/"
-                                    },
-                                    {
-                                                "id": "20260313-6",
-                                                "category": "worth",
-                                                "title": "Continuous AI for accessibility: How GitHub transforms feedback into inclusion",
-                                                "why": "一个可直接抄的 agent workflow：AI 不必替代工程师，只要先把分散、跨团队的人类反馈变成结构化、可追踪、可交接的问题单，ROI 就已经成立。",
-                                                "url": "https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/"
-                                    },
-                                    {
-                                                "id": "20260313-7",
-                                                "category": "wild",
-                                                "title": "Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs",
-                                                "why": "很反直觉：多模态掉点常常不是 reasoning 不够，而是 reading 链路先坏了；字体和分辨率就能拉开 47 个点，先修 OCR/渲染可能比继续堆推理 token 更有效。",
-                                                "url": "https://arxiv.org/abs/2603.09095"
-                                    },
-                                    {
-                                                "id": "20260313-8",
-                                                "category": "wild",
-                                                "title": "Fujitsu Hallucination Benchmark: when language priors override visual evidence",
-                                                "why": "另一个反直觉提醒：更强的语言模型不一定是更好的多模态见证人；它可能会“看见”训练语料里更熟悉的答案，而不是图里真正写的东西。",
-                                                "url": "https://blog-en.fltech.dev/entry/2026/03/11/fujitsu-hallucination-benchmark-en"
-                                    },
-                                    {
-                                                "id": "20260313-9",
-                                                "category": "wild",
-                                                "title": "OpenAI plans to launch its Sora video tool in ChatGPT, The Information reports | Reuters",
-                                                "why": "多模态真正的爆发点，可能不是独立视频产品，而是直接塞回默认聊天入口；分发层一旦统一，用户教育成本会骤降。",
-                                                "url": "https://www.reuters.com/business/openai-plans-launch-its-sora-video-tool-chatgpt-information-reports-2026-03-11/"
-                                    }
-                        ]
-            }
+  {
+    "date": "2026-03-14",
+    "items": [
+      {
+        "id": "20260314-brief2-1",
+        "category": "must",
+        "title": "Gumloop lands $50M from Benchmark to turn every employee into an AI agent builder",
+        "why": "最硬的 builder 信号不是“更强模型”，而是把 agent builder 降到非工程师也能日常使用；企业自动化的入口正在从 IT 部门下沉到每个 knowledge worker。",
+        "url": "https://techcrunch.com/2026/03/12/gumloop-lands-50m-from-benchmark-to-turn-every-employee-into-an-ai-agent-builder/"
+      },
+      {
+        "id": "20260314-brief2-2",
+        "category": "must",
+        "title": "9 Observations from Building with AI Agents",
+        "why": "反直觉但很实：先用最强模型跑通，再把稳定子任务微调/类型化/自动优化；真正提升 production 成功率的，常常不是继续堆模型，而是闭环工程。",
+        "url": "https://tomtunguz.com/9-observations-using-ai-agents/"
+      },
+      {
+        "id": "20260314-brief2-3",
+        "category": "must",
+        "title": "MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning",
+        "why": "多模态 agent 真正的难点不是“看见”，而是沿条件链稳定执行；最强模型 Path F1 也只有 53.33，说明 GUI/workflow agent 还远没到放心托付的时候。",
+        "url": "https://arxiv.org/abs/2603.12266"
+      },
+      {
+        "id": "20260314-brief2-4",
+        "category": "worth",
+        "title": "The Org Chart Math Behind AI-Native Speed",
+        "why": "一个 CEO 级反直觉洞察：AI 带来的不只是人均产出提升，更是组织沟通链路塌缩；速度优势可能主要来自更小团队，而不是更聪明个体。",
+        "url": "https://tomtunguz.com/communication-tax-small-orgs/"
+      },
+      {
+        "id": "20260314-brief2-5",
+        "category": "worth",
+        "title": "NVIDIA GTC 2026: Live Updates on What’s Next in AI",
+        "why": "下周 GTC 的 builder 风向已经很清楚：open models、agentic AI、physical AI、infra 一起上桌；做产品的人要把注意力从单模型转向 full-stack runtime。",
+        "url": "https://blogs.nvidia.com/blog/gtc-2026-news/"
+      },
+      {
+        "id": "20260314-brief2-6",
+        "category": "worth",
+        "title": "Linking Perception, Confidence and Accuracy in MLLMs",
+        "why": "很值钱的多模态 insight：先校准 confidence，再决定是否 self-check / self-reflect，比无脑加 test-time compute 更划算。",
+        "url": "https://arxiv.org/abs/2603.12149"
+      },
+      {
+        "id": "20260314-brief2-7",
+        "category": "wild",
+        "title": "Increasing intelligence in AI agents can worsen collective outcomes",
+        "why": "超反直觉：agent 更聪明，不一定让系统更稳；在资源稀缺场景里，模型多样性和学习能力反而可能把整体推向过载。",
+        "url": "https://arxiv.org/html/2603.12129"
+      },
+      {
+        "id": "20260314-brief2-8",
+        "category": "wild",
+        "title": "Everyone’s Building AI Agents. Almost No One Is Asking the Right Question.",
+        "why": "如果这条判断成立，下一轮护城河不在 model，也不在 prompt，而在 context ownership；谁控制 memory layer，谁就控制 agent 的长期价值。",
+        "url": "https://augmentedmind.substack.com/p/everyones-building-ai-agents-almost"
+      }
+    ]
+  },
+  {
+    "date": "2026-03-14",
+    "items": [
+      {
+        "id": "20260314-1",
+        "category": "must",
+        "title": "Gemini Embedding 2: Our first natively multimodal embedding model",
+        "why": "多模态 builder 现在更该盯 embedding 层，不是再堆一个 chat UI；text/image/video/audio/PDF 进入同一向量空间，RAG、search、推荐和分类会立刻变简单。",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/"
+      },
+      {
+        "id": "20260314-2",
+        "category": "must",
+        "title": "The era of AI as text is over. Execution is the new interface.",
+        "why": "反直觉但越来越真：下一代 AI 产品的护城河，不是 prompt UI，而是 planning、tool use、runtime context 和 error recovery 这层执行系统。",
+        "url": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"
+      },
+      {
+        "id": "20260314-3",
+        "category": "must",
+        "title": "Major agentic capabilities improvements in GitHub Copilot for JetBrains IDEs",
+        "why": "一个很硬的 builder 信号：custom agents、sub-agents、plan agent、hooks、MCP auto-approve 一起进 IDE，agent orchestration 正在从演示态走向日常生产流。",
+        "url": "https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides/"
+      },
+      {
+        "id": "20260314-4",
+        "category": "worth",
+        "title": "Many agents, one team: Scaling modernization on Azure",
+        "why": "企业侧强信号：Agent 不该只做单点 Copilot，而要覆盖 discovery→assessment→planning→migration→code transformation 的整条流水线。",
+        "url": "https://azure.microsoft.com/en-us/blog/many-agents-one-team-scaling-modernization-on-azure/"
+      },
+      {
+        "id": "20260314-5",
+        "category": "worth",
+        "title": "Request Copilot code review from GitHub CLI",
+        "why": "小改动但很值钱：AI reviewer 从浏览器侧窗变成终端默认动作；真正决定 adoption 的，常常不是更强模型，而是少一次上下文切换。",
+        "url": "https://github.blog/changelog/2026-03-11-request-copilot-code-review-from-github-cli/"
+      },
+      {
+        "id": "20260314-6",
+        "category": "worth",
+        "title": "9 Observations from Building with AI Agents",
+        "why": "一线 builder 经验很实：先用最强模型做 prototype，再把稳定子任务微调/类型化/可回滚；不是所有环节都值得继续堆更大模型。",
+        "url": "https://tomtunguz.com/9-observations-using-ai-agents/"
+      },
+      {
+        "id": "20260314-7",
+        "category": "wild",
+        "title": "Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs",
+        "why": "很反直觉：多模态掉点往往不是 reasoning 不够，而是 reading 链路先坏了；字体和分辨率都能大幅影响结果，先修输入链路可能比加 token 更赚。",
+        "url": "https://arxiv.org/abs/2603.09095"
+      },
+      {
+        "id": "20260314-8",
+        "category": "wild",
+        "title": "Fujitsu Hallucination Benchmark: when language priors override visual evidence",
+        "why": "另一个反直觉提醒：更强语言模型不一定是更好的多模态见证人；它可能优先回答“训练里最像的答案”，而不是图里真的写了什么。",
+        "url": "https://blog-en.fltech.dev/entry/2026/03/11/fujitsu-hallucination-benchmark-en"
+      }
+    ]
+  },
+  {
+    "date": "2026-03-13",
+    "items": [
+      {
+        "id": "20260313-1",
+        "category": "must",
+        "title": "Gemini Embedding 2: Our first natively multimodal embedding model",
+        "why": "多模态 builder 现在更该盯 embedding 层，不是再堆一个 chat UI；text/image/video/audio/PDF 进入同一向量空间，RAG、search、推荐和分类的系统复杂度会直接下降。",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/"
+      },
+      {
+        "id": "20260313-2",
+        "category": "must",
+        "title": "The era of AI as text is over. Execution is the new interface.",
+        "why": "反直觉但越来越像事实：下一代 AI 产品的核心竞争点，不是 prompt UX，而是受约束的 planning、tool use、runtime context 和 error recovery。",
+        "url": "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"
+      },
+      {
+        "id": "20260313-3",
+        "category": "must",
+        "title": "Major agentic capabilities improvements in GitHub Copilot for JetBrains IDEs",
+        "why": "一个很硬的 builder 信号：custom agents、sub-agents、plan agent、hooks、MCP auto-approve 一起进 IDE，说明 agent orchestration 正在从演示态进入日常生产流。",
+        "url": "https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides/"
+      },
+      {
+        "id": "20260313-4",
+        "category": "worth",
+        "title": "Many agents, one team: Scaling modernization on Azure",
+        "why": "企业侧一个强信号：Agent 不该只做单点 Copilot，而要直接接入 discovery→assessment→planning→migration→code transformation 的整条流水线。",
+        "url": "https://azure.microsoft.com/en-us/blog/many-agents-one-team-scaling-modernization-on-azure/"
+      },
+      {
+        "id": "20260313-5",
+        "category": "worth",
+        "title": "Request Copilot code review from GitHub CLI",
+        "why": "小改动但很值钱：AI reviewer 从浏览器侧窗，变成终端里的默认动作；真正决定 adoption 的，常常不是更强模型，而是少一次上下文切换。",
+        "url": "https://github.blog/changelog/2026-03-11-request-copilot-code-review-from-github-cli/"
+      },
+      {
+        "id": "20260313-6",
+        "category": "worth",
+        "title": "Continuous AI for accessibility: How GitHub transforms feedback into inclusion",
+        "why": "一个可直接抄的 agent workflow：AI 不必替代工程师，只要先把分散、跨团队的人类反馈变成结构化、可追踪、可交接的问题单，ROI 就已经成立。",
+        "url": "https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/"
+      },
+      {
+        "id": "20260313-7",
+        "category": "wild",
+        "title": "Understanding and Bridging the Modality Gap When Text Becomes Pixels in Multimodal LLMs",
+        "why": "很反直觉：多模态掉点常常不是 reasoning 不够，而是 reading 链路先坏了；字体和分辨率就能拉开 47 个点，先修 OCR/渲染可能比继续堆推理 token 更有效。",
+        "url": "https://arxiv.org/abs/2603.09095"
+      },
+      {
+        "id": "20260313-8",
+        "category": "wild",
+        "title": "Fujitsu Hallucination Benchmark: when language priors override visual evidence",
+        "why": "另一个反直觉提醒：更强的语言模型不一定是更好的多模态见证人；它可能会“看见”训练语料里更熟悉的答案，而不是图里真正写的东西。",
+        "url": "https://blog-en.fltech.dev/entry/2026/03/11/fujitsu-hallucination-benchmark-en"
+      },
+      {
+        "id": "20260313-9",
+        "category": "wild",
+        "title": "OpenAI plans to launch its Sora video tool in ChatGPT, The Information reports | Reuters",
+        "why": "多模态真正的爆发点，可能不是独立视频产品，而是直接塞回默认聊天入口；分发层一旦统一，用户教育成本会骤降。",
+        "url": "https://www.reuters.com/business/openai-plans-launch-its-sora-video-tool-chatgpt-information-reports-2026-03-11/"
+      }
+    ]
+  }
 ];
         let currentTier = 'all';
         let searchTerm = '';
