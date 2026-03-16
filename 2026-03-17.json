@@ -1,0 +1,73 @@
+{
+  "date": "2026-03-17",
+  "title": "AI Daily Brief — 2026年3月17日",
+  "items": [
+    {
+      "category": "MUST READ",
+      "articles": [
+        {
+          "title": "OpenAI GPT-5.4 正式发布：原生 Computer Use + 100万 Token 上下文",
+          "summary": "OpenAI 首款具备原生计算机使用能力的通用模型，可直接操控 UI、跨应用执行工作流（Excel/浏览器/文件系统），API 和 Codex 已可用。这标志着 AI Agent 从'聊天工具'向'数字员工'的关键跃迁。",
+          "url": "https://venturebeat.com/technology/openai-launches-gpt-5-4-with-native-computer-use-mode-financial-plugins-for"
+        },
+        {
+          "title": "MCP 协议成为事实标准：Google、OpenAI、Microsoft 全部接入",
+          "summary": "Anthropic 2024年底发布的 Model Context Protocol 在12个月内被所有主流厂商采纳。Google 于 2025年4月添加支持，OpenAI 3月接入。2025年12月 Anthropic 将其捐赠给 Linux Foundation。",
+          "url": "https://thenextweb.com/news/rise-of-model-context-protocol-in-the-agentic-era"
+        },
+        {
+          "title": "企业 Agentic AI 爆发年：McKinsey 预测年价值 $2.6-4.4 万亿",
+          "summary": "2026年是 Agentic AI 企业级落地的 breakout year。已验证用例：客服（自主工单/退款）、销售（合同工作流，转化率提升15%）、财务自动化。",
+          "url": "https://joget.com/ai-agent-adoption-in-2026-what-the-analysts-data-shows/"
+        }
+      ]
+    },
+    {
+      "category": "WORTH A LOOK",
+      "articles": [
+        {
+          "title": "Microsoft 整合 AutoGen + Semantic Kernel",
+          "summary": "2025年10月发布统一的 Microsoft Agent Framework，为微软生态企业提供清晰的 Agent 开发路径。",
+          "url": "https://dev.to/khushi_shah_12fad88dba799/best-ai-agent-frameworks-in-2026-1aom"
+        },
+        {
+          "title": "Zoom 扩展企业 Agentic AI 平台",
+          "summary": "新增跨 Zoom Workplace、Phone、CX 的工作流编排能力，视频会议巨头全面进入 AI Agent 赛道。",
+          "url": "https://news.zoom.com/ec26-agentic-ai-platform-announcements/"
+        },
+        {
+          "title": "Claude Sonnet 4.6 vs GPT-5.4 基准对比",
+          "summary": "OSWorld benchmark: GPT-5.4 得分 75%。多模态能力上 GPT-5.4 领先（原生音频/视频/Computer Use），Claude 在代码和 reasoning 上仍有优势。",
+          "url": "https://zapier.com/blog/claude-vs-chatgpt/"
+        }
+      ]
+    },
+    {
+      "category": "WILDCARD",
+      "articles": [
+        {
+          "title": "Google Antigravity：重构软件开发范式的 Agent 平台",
+          "summary": "Google 2025年底推出的 AI Agent 开发平台，将自主 Agent 直接嵌入编码环境。",
+          "url": "https://nexos.ai/blog/best-ai-agents/"
+        },
+        {
+          "title": "Agent Framework 之争：赢家已出现但没人用",
+          "summary": "LangGraph、CrewAI、AutoGen、OpenAI Agents SDK……框架过剩导致选择困难。Builder 视角：与其追逐最新框架，不如先用一个跑通完整工作流。",
+          "url": "https://dev.to/meimakes/the-agent-framework-wars-have-a-winner-and-nobodys-using-it-yet-3i2j"
+        }
+      ]
+    }
+  ],
+  "openclaw_update": {
+    "current": "2026.3.8",
+    "latest": "2026.3.13",
+    "recommend_update": true,
+    "key_changes": [
+      "默认模型升级: GPT-5.3-codex → GPT-5.4",
+      "Feishu 修复: 事件级去重，解决重复回复问题",
+      "构建性能: 修复 ~2x 内存回归问题",
+      "新增功能: Tool Search 支持，减少 50% token 成本",
+      "Docker: 新增 OPENCLAW_TZ 时区支持"
+    ]
+  }
+}
