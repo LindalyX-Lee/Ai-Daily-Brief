@@ -6,19 +6,19 @@
       "category": "MUST READ",
       "articles": [
         {
-          "title": "OpenAI GPT-5.4 正式发布：原生 Computer Use + 100万 Token 上下文",
-          "summary": "OpenAI 首款具备原生计算机使用能力的通用模型，可直接操控 UI、跨应用执行工作流（Excel/浏览器/文件系统），API 和 Codex 已可用。这标志着 AI Agent 从'聊天工具'向'数字员工'的关键跃迁。",
-          "url": "https://venturebeat.com/technology/openai-launches-gpt-5-4-with-native-computer-use-mode-financial-plugins-for"
+          "title": "GPT-5.4 发布：原生 Computer Use + 1M 上下文",
+          "summary": "OpenAI 正式发布 GPT-5.4，首个在桌面任务上超越人类性能的通用模型。核心升级：原生 Computer Use API、100万 token 上下文窗口、Tool Search 功能降低 47% token 成本。这直接对标 Claude Code，但真正的信号是——模型正在商品化，战争已转移到 runtime 层。",
+          "url": "https://openai.com/index/gpt-5-4-system-card/"
         },
         {
-          "title": "MCP 协议成为事实标准：Google、OpenAI、Microsoft 全部接入",
-          "summary": "Anthropic 2024年底发布的 Model Context Protocol 在12个月内被所有主流厂商采纳。Google 于 2025年4月添加支持，OpenAI 3月接入。2025年12月 Anthropic 将其捐赠给 Linux Foundation。",
-          "url": "https://thenextweb.com/news/rise-of-model-context-protocol-in-the-agentic-era"
+          "title": "Anthropic 为 Claude Code 推出 Agentic Code Review",
+          "summary": "多智能体代码审查工具，号称能捕获人工审查常遗漏的 bug。内部已用于"几乎每个 PR"。这是从"AI 辅助编码"向"AI 负责审查"的关键跃迁——代码质量保障的范式正在改变。",
+          "url": "https://www.anthropic.com/news/code-review"
         },
         {
-          "title": "企业 Agentic AI 爆发年：McKinsey 预测年价值 $2.6-4.4 万亿",
-          "summary": "2026年是 Agentic AI 企业级落地的 breakout year。已验证用例：客服（自主工单/退款）、销售（合同工作流，转化率提升15%）、财务自动化。",
-          "url": "https://joget.com/ai-agent-adoption-in-2026-what-the-analysts-data-shows/"
+          "title": "Model Context Protocol (MCP) 进入主流",
+          "summary": "Anthropic 去年11月发布的 MCP 正成为 Agent 与外部数据源通信的事实标准。不再需要手动构建 API 集成，Agent 直接连接 MCP 服务器即可。协议层标准化将加速整个 Agent 生态的爆发。",
+          "url": "https://modelcontextprotocol.io/"
         }
       ]
     },
@@ -26,19 +26,19 @@
       "category": "WORTH A LOOK",
       "articles": [
         {
-          "title": "Microsoft 整合 AutoGen + Semantic Kernel",
-          "summary": "2025年10月发布统一的 Microsoft Agent Framework，为微软生态企业提供清晰的 Agent 开发路径。",
-          "url": "https://dev.to/khushi_shah_12fad88dba799/best-ai-agent-frameworks-in-2026-1aom"
+          "title": "9 Observations from Building with AI Agents | Tomasz Tunguz",
+          "summary": "一年实战总结的冷思考：原型阶段用最强模型，稳定任务 fine-tune 小模型；静态类型语言比动态语言更适合 Agent（Rust > Ruby）；让 Agent 互为评委能显著提升输出质量。",
+          "url": "https://tomtunguz.com/9-observations-using-ai-agents/"
         },
         {
-          "title": "Zoom 扩展企业 Agentic AI 平台",
-          "summary": "新增跨 Zoom Workplace、Phone、CX 的工作流编排能力，视频会议巨头全面进入 AI Agent 赛道。",
-          "url": "https://news.zoom.com/ec26-agentic-ai-platform-announcements/"
+          "title": "How to build an AI agent that actually works | InfoWorld",
+          "summary": "CodeRabbit 的生产经验：Agent 不是自主漫游的 AI，而是"嵌入工作流的智能"。先构建确定性管道，只在真正需要判断的地方插入推理。包含 10 点生产检查清单。",
+          "url": "https://www.infoworld.com/article/4141524/how-to-build-an-ai-agent-that-actually-works.html"
         },
         {
-          "title": "Claude Sonnet 4.6 vs GPT-5.4 基准对比",
-          "summary": "OSWorld benchmark: GPT-5.4 得分 75%。多模态能力上 GPT-5.4 领先（原生音频/视频/Computer Use），Claude 在代码和 reasoning 上仍有优势。",
-          "url": "https://zapier.com/blog/claude-vs-chatgpt/"
+          "title": "Anthropic 3月13-27日双倍配额活动",
+          "summary": "所有套餐（Free/Pro/Max/Team）在非高峰时段（美东时间早8点-下午2点之外）自动获得双倍使用额度。Claude Code 用户可薅。",
+          "url": "https://www.anthropic.com/pricing"
         }
       ]
     },
@@ -46,14 +46,14 @@
       "category": "WILDCARD",
       "articles": [
         {
-          "title": "Google Antigravity：重构软件开发范式的 Agent 平台",
-          "summary": "Google 2025年底推出的 AI Agent 开发平台，将自主 Agent 直接嵌入编码环境。",
-          "url": "https://nexos.ai/blog/best-ai-agents/"
+          "title": "GPT-5.4 vs Claude Code：真正的战场不在模型质量",
+          "summary": "有趣观点：一个月内有 4 个前沿模型发布（Gemini 3.1 Pro、Claude Opus 4.6、GPT-5.3-Codex、GPT-5.4），预训练扩展已撞墙，模型正在商品化。胜负手是"谁捕获你的工作流"。",
+          "url": "https://medium.com/data-science-collective/gpt-5-4-came-for-claude-code-the-real-story-is-bigger-than-both-927059667584"
         },
         {
-          "title": "Agent Framework 之争：赢家已出现但没人用",
-          "summary": "LangGraph、CrewAI、AutoGen、OpenAI Agents SDK……框架过剩导致选择困难。Builder 视角：与其追逐最新框架，不如先用一个跑通完整工作流。",
-          "url": "https://dev.to/meimakes/the-agent-framework-wars-have-a-winner-and-nobodys-using-it-yet-3i2j"
+          "title": "NVIDIA GTC 发布开源 Agent/机器人/药物发现模型",
+          "summary": "NVIDIA 在 GTC 2026 扩展了其开源模型家族，专门针对 Agentic AI、物理 AI（人形机器人）和医疗 AI。值得关注 Builder 的底层基础设施变化。",
+          "url": "https://www.nvidia.com/en-us/ai/"
         }
       ]
     }
@@ -64,10 +64,11 @@
     "recommend_update": true,
     "key_changes": [
       "默认模型升级: GPT-5.3-codex → GPT-5.4",
-      "Feishu 修复: 事件级去重，解决重复回复问题",
-      "构建性能: 修复 ~2x 内存回归问题",
-      "新增功能: Tool Search 支持，减少 50% token 成本",
-      "Docker: 新增 OPENCLAW_TZ 时区支持"
+      "新增 Docker 时区支持 (OPENCLAW_TZ)",
+      "修复 cron 隔离任务的嵌套死锁问题",
+      "浏览器自动化: 改进批量操作和会话生命周期管理",
+      "macOS: Node.js 最低版本对齐至 22.16.0",
+      "大量 UI 修复: 聊天上下文图标、移动端导航、滚动药丸按钮"
     ]
   }
 }
