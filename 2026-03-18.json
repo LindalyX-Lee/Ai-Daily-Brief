@@ -1,0 +1,63 @@
+{
+  "date": "2026-03-18",
+  "openclaw": {
+    "current": "2026.3.8",
+    "latest": "2026.3.13-1",
+    "recommend_update": true,
+    "changes": [
+      "默认模型升级: GPT-5.3-codex → GPT-5.4",
+      "Feishu 修复: 事件级去重，解决重复回复问题",
+      "构建性能: 修复 ~2x 内存回归问题",
+      "Agent 修复: Anthropic thinking blocks 在 replay 时正确处理",
+      "Cron 修复: 防止隔离型 cron 嵌套死锁",
+      "Browser: 批量 act dispatch 和选择器支持",
+      "Docker: 新增 OPENCLAW_TZ 时区支持"
+    ]
+  },
+  "must_read": [
+    {
+      "title": "NVIDIA GTC 2026: AI 从工具进化为自主系统",
+      "url": "https://blogs.nvidia.com/blog/gtc-2026-news/",
+      "why": "Jensen Huang 主题演讲：AI 正从简单 prompt 工具转向能推理、规划和行动的长期运行智能体"
+    },
+    {
+      "title": "OpenAI GPT-5.4 正式发布：专为自主 AI Agent 设计",
+      "url": "https://aiagentsdirectory.com/blog/openai-launches-gpt-54-a-frontier-model-built-for-autonomous-ai-agents",
+      "why": "原生支持 Computer Use Agent (CUA)，模型可直接操控屏幕、点击按钮、填写表单"
+    },
+    {
+      "title": "Claude Opus 4.6: 长时运行 Agent 的上下文压缩",
+      "url": "https://www.infoq.com/news/2026/03/opus-4-6-context-compaction/",
+      "why": "Adaptive Reasoning + Context Compaction，支持复杂编码和知识工作任务"
+    }
+  ],
+  "worth_a_look": [
+    {
+      "title": "Anthropic: 2025 是 Coding Agent 生产化元年",
+      "url": "https://www.libertify.com/interactive-library/agentic-coding-trends-report-anthropic/",
+      "why": "从实验性工具到服务真实客户的生产系统"
+    },
+    {
+      "title": "AI 代码审查工具采用率从 14.8% 飙升至 51.4%",
+      "url": "https://www.techlila.com/ai-productivity-tools-adoption-in-software-engineering-statistics/",
+      "why": "10 个月内增长 3.5 倍，2025 企业级 AI 采用加速"
+    },
+    {
+      "title": "Zoom 扩展企业 Agentic AI 平台",
+      "url": "https://news.zoom.com/ec26-agentic-ai-platform-announcements/",
+      "why": "覆盖协作和客户体验工作流，推出 AI Expert Assist 3.0"
+    }
+  ],
+  "wildcard": [
+    {
+      "title": "\"Vibe Coding Hangover\" 来了",
+      "url": "https://dev.to/slowcommit/vibe-coding-is-now-mainstream-what-it-means-for-the-future-of-software-development-25k8",
+      "why": "高级工程师描述与 AI 生成代码库协作如同\"开发地狱\"：能跑但几乎不可理解"
+    },
+    {
+      "title": "NVIDIA GR00T N1: 人形机器人 VLA 模型",
+      "url": "https://en.wikipedia.org/wiki/Vision-language-action_model",
+      "why": "双系统架构（感知 + 动作），3 月发布"
+    }
+  ]
+}
