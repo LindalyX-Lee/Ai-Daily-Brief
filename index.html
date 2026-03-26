@@ -17,45 +17,7 @@
 <body>
     <h1>🦞 AI Daily Brief Archive</h1>
     <p>AI 创业者每日简报归档</p>
-    
-    <div class="entry">
-        <div class="date">2026-03-26</div>
-        
-        <h3>OpenClaw Update: v2026.3.24 可用 (当前: OpenClaw 2026.3.8 / 3caab92)</h3>
-        <div class="update">
-            <strong>Recommend update: Yes</strong> — 当前版本明显落后；v2026.3.24 直接补了 OpenAI 兼容接口、tool 可见性、容器 CLI、技能安装 UX 与多通道稳定性修复，都是日常 builder workflow 高频面。建议手动受控升级，但不要自动升。<br>
-            • Gateway/OpenAI compatibility 新增 /v1/models 与 /v1/embeddings，并让显式 model override 能穿透 chat/responses，兼容更多 client 与 RAG 流程<br>
-            • Agents/tools 现在会显示当前 agent 此刻真正可用的 tools，Control UI 也新增 Available Right Now 区域，减少“以为能用其实不能用”<br>
-            • Skills 元数据支持一键安装 recipe，Control UI 也新增 Ready / Needs Setup / Disabled 状态筛选和更完整的 setup 引导<br>
-            • CLI 新增 --container 与 OPENCLAW_CONTAINER，可直接对运行中的 Docker/Podman 容器执行 openclaw 命令<br>
-            • 修复 outbound media/fs policy、gateway restart 唤醒、channel sequential startup 等稳定性问题，减少多通道和重启后的隐性故障
-        </div>
-        
-        <div class="category">MUST READ</div>
-        <ul>
-            <li><a href="https://hbr.org/2026/03/create-an-onboarding-plan-for-ai-agents">Create an Onboarding Plan for AI Agents | HBR</a> — 反直觉点：agent 落地的主问题不是“模型够不够强”，而是组织有没有把角色、边界、问责和评估机制重新设计好。</li>
-            <li><a href="https://www.stocktitan.net/news/DOMO/domo-launches-ai-agent-builder-and-mcp-server-to-connect-enterprise-mmmh0tugjbqb.html">Domo Launches AI Agent Builder and MCP Server to Connect Enterprise Data to the AI Ecosystem</a> — builder 启发：企业 agent 的真正价值不在 chat，而在把 data、workflow、toolkit 与 MCP 连接成一个 system of action。</li>
-            <li><a href="https://blog-en.fltech.dev/entry/2026/03/25/hallucination-mitigation-en">Introduction of Attention Augmented Hallucination Mitigation Technologies for Multimodal Large Language Models | Fujitsu Research</a> — 多模态 builder 值得看：他们在不重训主模型的前提下，直接从 attention 层做 hallucination mitigation，说明 multimodal reliability 还有大量系统层优化空间。</li>
-        </ul>
-        
-        <div class="category">WORTH A LOOK</div>
-        <ul>
-            <li><a href="https://www.minimax.io/news/minimax-m27-en">MiniMax M2.7: Early Echoes of Self-Evolution</a> — 一个强信号：agent 不只是执行任务，已经开始参与自我 harness / memory / evaluation 的递归优化，execution layer 的复利正在出现。</li>
-            <li><a href="https://aws.amazon.com/blogs/industries/the-luggage-lab-accelerate-product-innovation-with-aws-generative-ai-services/">The Luggage Lab: Accelerate product innovation with AWS generative AI services | AWS</a> — 很实操：AWS 用分阶段 agent + human-in-the-loop 把产品开发周期从月级压到周级，说明 agent productization 更像 workflow redesign，不是模型演示。</li>
-            <li><a href="https://blogs.nvidia.com/blog/ai-future-open-and-proprietary/">The Future of AI Is Open and Proprietary | NVIDIA Blog</a> — builder 结论越来越清楚：未来不是单一大模型，而是 multimodal、multi-model、multi-cloud orchestration，open + proprietary 会长期共存。</li>
-        </ul>
-        
-        <div class="category">WILDCARD</div>
-        <ul>
-            <li><a href="https://siliconangle.com/2026/03/24/agentic-workforce-cisco-just-put-claw-ai-security/">The agentic workforce is here: Why Cisco just put a 'Claw' on AI security | SiliconANGLE</a> — counter-intuitive：真正让 agent 跑得更快的，可能不是减少限制，而是先加上 admission control、sandbox、telemetry 与 identity 这层“必要摩擦”。</li>
-            <li><a href="https://siliconangle.com/2026/03/25/1t-infrastructure-war-nvidia-replatforming-agentic-era/">The $1T infrastructure war: How Nvidia is replatforming the agentic era | SiliconANGLE</a> — wildcard 提醒：agent 时代的价值捕获正在往 orchestration substrate 下沉，赢家未必是最强模型，而可能是“底层运行时 + 安全 + routing”那一层。</li>
-        </ul>
-        
-        <p>👉 <a href="https://LindalyX-Lee.github.io/Ai-Daily-Brief/">Full archive</a></p>
-        
-        <p><em>Lindaly，早。今天有什么想让我推进的？如果没有我继续昨天未完成的任务。</em></p>
-    </div>
-    
+
     <div class="entry">
         <div class="date">2026-03-24</div>
         
@@ -245,5 +207,38 @@
         
         <p><em>Lindaly，早。今天有什么想让我推进的？如果没有我继续昨天未完成的任务。</em></p>
     </div>
+    <div class="entry">
+        <div class="date">2026-03-26</div>
+        <h3>OpenClaw Update: v2026.3.24 可用 (当前: v2026.3.8)</h3>
+        <div class="update">
+            <strong>Recommend update: Yes</strong> — 这次是实用升级，不只是 cosmetic；兼顾 API 兼容、工具可见性、技能安装体验和渠道稳定性<br>
+            • Gateway/OpenAI compatibility: 补齐 /v1/models 与 /v1/embeddings<br>
+            • /tools 与 Control UI 直接显示当前 agent 真正可用工具<br>
+            • Skills 一键安装 recipe + Needs Setup 分类 + API key 指引更完整<br>
+            • Microsoft Teams 官方 SDK 迁移，AI agent UX 更成熟<br>
+            • 安全与稳定性修复：media sandbox bypass、restart wake、channel sequential boot
+        </div>
+
+        <div class="category">MUST READ</div>
+        <ul>
+            <li><a href="https://www.firstpost.com/tech/chinas-deepseek-minimax-ai-models-overtake-us-rivals-in-token-consumption-13993445.html">China’s DeepSeek, MiniMax AI models overtake US rivals in token consumption</a> — 市场开始用 token 和付费调用投票，不再只看 benchmark；中国模型在编程、多模态、长上下文上的差距正在缩小。</li>
+            <li><a href="https://futurumgroup.com/insights/oracle-positions-ai-database-26ai-to-lead-1-2-trillion-market-by-bridging-the-agentic-reasoning-gap/">Oracle AI Database 26ai 把 agent memory / orchestration 往数据层下沉</a> — agent stack 正在往 data layer 下沉，memory / policy / security / orchestration 直接做进数据库，能显著降低胶水层税。</li>
+            <li><a href="https://economictimes.indiatimes.com/tech/technology/freshworks-cofounder-mathrubootham-rejects-saaspocalypse-prediction-says-ai-agents-wont-kill-industry/articleshow/129820895.cms">Freshworks：AI agents 不会杀死 SaaS</a> — agent 是 brain，SaaS 仍是 memory + nervous system；真正的威胁不是 demo 级 vibe coding，而是 AI-native 重构。</li>
+        </ul>
+
+        <div class="category">WORTH A LOOK</div>
+        <ul>
+            <li><a href="https://siliconangle.com/2026/03/24/agentic-workforce-cisco-just-put-claw-ai-security/">Cisco DefenseClaw：给 agent 上治理层</a> — 安全摩擦不是拖慢 agent 落地，反而是让 agent 真能进生产环境的前提。</li>
+            <li><a href="https://www.globenewswire.com/news-release/2026/03/25/3262132/0/en/Anaplan-Announces-Latest-AI-Driven-Innovations-and-Applications-to-Advance-Enterprise-Decision-Making.html">Anaplan CoModeler + Agent Studio</a> — enterprise agent 的核心卖点不是会聊，而是可算、可审计、可落账。</li>
+            <li><a href="https://www.marktechpost.com/2026/03/25/how-to-build-a-vision-guided-web-ai-agent-with-molmoweb-4b-using-multimodal-reasoning-and-action-prediction/">MolmoWeb-4B：基于截图的 vision-guided web agent</a> — web agent 不一定非吃 DOM，直接基于 screenshot 做 reasoning + action prediction，也能跑出可用闭环。</li>
+        </ul>
+
+        <div class="category">WILDCARD</div>
+        <ul>
+            <li><a href="https://linkdood.com/why-scientists-made-ai-agents-ruder-and-got-smarter-results/">Why Scientists Made AI Agents Ruder and Got Smarter Results</a> — 多 agent 推理里，过度礼貌会降低批判强度；内部 debate agent 也许该更 blunt，对外再保持礼貌。</li>
+            <li><a href="https://www.devflokers.com/blog/ai-news-march-24-2026-releases-breakthroughs">AI News Last 24 Hours (March 24, 2026): Models &amp; Breakthroughs</a> — 低延迟、小模型、本地运行、可调 reasoning effort 正在汇成同一个方向——agent 成本结构开始重写。</li>
+        </ul>
+    </div>
+
 </body>
 </html>
