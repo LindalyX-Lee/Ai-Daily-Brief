@@ -19,6 +19,47 @@
     <p>AI 创业者每日简报归档</p>
     
     <div class="entry">
+        <div class="date">2026-03-29</div>
+        
+        <h3>OPENCLAW UPDATE CHECK</h3>
+        <div class="update">
+            <strong>Current version:</strong> OpenClaw 2026.3.8 (3caab92)<br>
+            <strong>Latest version:</strong> v2026.3.28<br>
+            • xAI: 迁移至 Responses API，新增 first-class x_search，Grok plugin 自动启用<br>
+            • MiniMax: 新增 image-01 图片生成 provider（文生图 + 图生图，支持长宽比）<br>
+            • Plugins/Hooks: before_tool_call 支持 async requireApproval，可暂停工具执行等待用户确认<br>
+            • OpenAI: apply_patch 默认开启，沙盒权限与 write 权限对齐<br>
+            • Plugins/CLI: Claude/Codex/Gemini CLI 迁移至插件层，Gemini CLI backend 正式支持<br>
+            • ACP/channels: Discord/BlueBubbles/iMessage 新增 current-conversation 绑定<br>
+            <strong>Recommend update?</strong> Yes — 20天版本差，大量实质更新。当前版本明显落后，建议手动受控升级。
+        </div>
+        
+        <div class="category">MUST READ</div>
+        <ul>
+            <li><a href="https://llm-stats.com/ai-news">AI sycophancy makes people less likely to apologize, study finds</a> — counter-intuitive：LLM 谄媚性不只影响 AI 对齐——研究显示与 AI 对话后，人类也更不愿认错、倾向 double down。做 agent 产品的 builder，这是直接的产品行为影响。</li>
+            <li><a href="https://www.birjob.com/blog/ai-agents-2026-what-works-what-doesnt">AI Agents in 2026: What's Actually Working, What's Hype, and What Nobody Tells You</a> — 模型够好 + 价格够低，agent 终于实用化。重点不是"AI 能做什么"，而是"什么场景人类愿意交给 AI 自动做"——这个边界在 2026 年正在被重划。</li>
+            <li><a href="https://allen.hutchison.org/2026/03/28/responsibility-and-the-road-ahead/">Building Responsible AI Agents: Balancing Control and Autonomy</a> — 系列深度文，从 agent anatomy、reasoning、memory、tools 到 guardrails，落脚 autonomy vs responsibility。有 self-modifying agent 先例在前，这个话题对 builder 已经是必修课。</li>
+        </ul>
+        
+        <div class="category">WORTH A LOOK</div>
+        <ul>
+            <li><a href="https://www.nxcode.io/resources/news/cursor-ai-review-2026-features-pricing-worth-it">Cursor AI Review 2026: Is It Worth $20/Month?</a> — 多 agent 并行在 Cursor 里已经真正 work——不同任务跑不同模型（Claude 推理、GPT 生成、Gemini 迭代），coding agent 平台之争正在从单工具走向多模型编排。</li>
+            <li><a href="https://www.aitude.com/intelligent-agents-in-robotics/">CES 2026: Next-Gen Robotics Processor with VLM/VLA Hardware Acceleration</a> — 机器人芯片原生支持 Vision-Language-Action (VLA) 架构，低功耗下实时 VL reasoning + action planning。physical AI 的硬件瓶颈正在被撬开。</li>
+            <li><a href="https://explodingtopics.com/blog/list-of-llms">Top 50+ LLMs in 2026</a> — 500+ models 时代，校准心智比追新更重要。Gemini 3 Pro 在 Humanity's Last Exam 已超越 GPT-5.2，关键不是哪个最强，而是哪个最适合你的 agent stack。</li>
+        </ul>
+        
+        <div class="category">WILDCARD</div>
+        <ul>
+            <li><a href="https://llm-stats.com/ai-news">Gemini 3.1 Pro: 1M-token Context, 77.1% ARC-AGI-2</a> — 当前最便宜的 Pro 级百万上下文模型，RAG/长程规划/复杂 agent 场景的性价比重构机会。</li>
+            <li><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.3.28">OpenClaw v2026.3.28: Codex/Claude CLI → First-Class Plugin Surface</a> — CLI 作为 plugin 是信号：未来 agent 不只是调用 API，而是编排工具链，CLI backend 化意味着 building agent 的工具层变宽了。</li>
+        </ul>
+        
+        <p>👉 <a href="https://LindalyX-Lee.github.io/Ai-Daily-Brief/">Full archive</a></p>
+        
+        <p><em>Lindaly，早。今天有什么想让我推进的？如果没有我继续昨天未完成的任务。</em></p>
+    </div>
+
+    <div class="entry">
         <div class="date">2026-03-28</div>
         
         <h3>OPENCLAW UPDATE CHECK</h3>
