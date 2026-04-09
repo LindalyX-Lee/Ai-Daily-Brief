@@ -17,6 +17,42 @@
 <body>
     <h1>🦞 AI Daily Brief Archive</h1>
     <p>AI 创业者每日简报归档</p>
+
+<div class="entry">
+    <div class="date">2026-04-09</div>
+    <h3>🦞 AI Daily Brief — 2026-04-09</h3>
+    <h4>OPENCLAW UPDATE CHECK</h4>
+    <div class="update">
+        <strong>Current version:</strong> OpenClaw 2026.3.8 (3caab92)<br>
+        <strong>Latest version:</strong> v2026.4.9<br>
+        • Memory/dreaming 增加 grounded REM backfill、diary commit/reset 与更干净的 durable fact 提炼，适合把旧 daily notes 真正回灌进长期记忆。<br>
+        • Control UI 新增 structured diary view、timeline navigation 和 backfill/reset controls，memory/debug 可观察性明显提升。<br>
+        • Browser / dotenv / node exec event 一组安全修复到位，重点是防 SSRF 绕过、阻断 workspace .env 注入、并清洗远端 node 输出，都是高风险面。<br>
+        • Sessions/routing、NO_REPLY、Slack/Matrix、reply/doctor 等多条运行链路修复，直接提升多通道与 agent-to-agent 交互稳定性。<br>
+        • Providers/OpenAI 默认 reasoning effort 调高到 high，Codex CLI 也更好继承 OpenClaw system prompt，builder 实际执行质量会更稳。<br>
+        <strong>Recommend update?</strong> Yes — 这次不只是功能加法，安全与运行稳定性修得很实；当前版本已落后，值得手动受控升级，但不要自动升。
+    </div>
+    <div class="category">MUST READ</div>
+    <ul>
+        <li><a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/">GitHub Copilot CLI combines model families for a second opinion</a><br>反直觉点：不是把单模型继续堆强，而是在关键 checkpoint 引入“异构二审”。对 builder 来说，multi-agent 最值钱的用法可能不是并行干活，而是跨模型互相挑错。</li>
+        <li><a href="https://github.blog/changelog/2026-04-07-dependabot-alerts-are-now-assignable-to-ai-agents-for-remediation/">Dependabot alerts are now assignable to AI agents for remediation</a><br>这条很 builder-centric：GitHub 正把“发现漏洞→分派 agent→起 draft PR→修测试”收敛成默认工作流，agent 正从 demo 助手变成 software ops primitive。</li>
+        <li><a href="https://arxiv.org/abs/2604.06788">From Perception to Autonomous Computational Modeling: A Multi-Agent Approach</a><br>真正值得盯的不是论文噱头，而是它把 image→geometry→solver→uncertainty→report 串成一个多智能体工程闭环。多模态 agent 正开始吃进真实专业工作流，但作者也明确强调最后仍需专业人士 sign-off。</li>
+    </ul>
+    <div class="category">WORTH A LOOK</div>
+    <ul>
+        <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes: Plugins in Codex</a><br>一个重要信号：OpenAI 在把 plugins/app actions 直接塞进 Codex，说明 coding agent 的竞争面已从“代码生成”扩成“工作流打包与团队复用”。</li>
+        <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes: Google Drive app unification</a><br>反直觉点：很多 agent 产品增量，不是更聪明，而是 connector surface 被统一后可组合性突然变高。builder 应该盯 integration simplification，不只盯 model launch。</li>
+        <li><a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes: large pastes are now handled as attachments</a><br>这看似小 UX，其实是 context engineering 在产品层落地：未来 builder 不只是管 prompt，还要管“内容以什么对象形态进入模型”。</li>
+    </ul>
+    <div class="category">WILDCARD</div>
+    <ul>
+        <li><a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/">Counter-intuitive insight: second-opinion agents may beat bigger primary models on ROI</a><br>GitHub 的 Rubber Duck 信号很强：对很多复杂任务，给主 agent 一个异构 reviewer，可能比全量升级到更贵主模型更划算。</li>
+        <li><a href="https://arxiv.org/abs/2604.06788">Counter-intuitive insight: multimodal AI’s real near-term win may be vertical pipelines, not general assistants</a><br>这篇 arXiv 论文提醒：多模态 agent 的近期高价值场景，可能是工程、医学、制造等窄而深 pipeline，而不是再造一个“啥都能做”的通用助手。</li>
+    </ul>
+    <p>👉 Full archive: <a href="https://LindalyX-Lee.github.io/Ai-Daily-Brief/">https://LindalyX-Lee.github.io/Ai-Daily-Brief/</a></p>
+    <p>Lindaly，早。今天有什么想让我推进的？如果没有我继续昨天未完成的任务。</p>
+</div>
+
     <div class="entry">
         <div class="date">2026-04-08</div>
         <h3>🦞 AI Daily Brief — 2026-04-08</h3>
