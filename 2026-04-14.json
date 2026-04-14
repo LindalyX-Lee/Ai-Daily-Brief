@@ -1,0 +1,66 @@
+{
+  "date": "2026-04-14",
+  "title": "🦞 AI Daily Brief — 2026-04-14",
+  "openclaw_update": {
+    "current_version": "OpenClaw 2026.3.8 (3caab92)",
+    "latest_version": "v2026.4.12",
+    "bullets": [
+      "插件加载现在更收敛到 manifest 声明范围，减少无关 provider/channel runtime 被顺手拉起；对长期跑多插件的实例，这是稳定性和边界感都更好的修补。",
+      "新增 Active Memory 插件，让主回复前可自动拉回偏好、上下文和历史细节；builder 价值不在“会记住”，而在减少每次都要手动说 remember this 的摩擦。",
+      "新增 bundled Codex provider 与 LM Studio provider：一边把 codex/gpt-* 走原生 Codex 路径，一边把本地/自托管 OpenAI-compatible 模型纳入统一工作流。",
+      "Feishu setup path 更顺，外加 commands.list RPC 与更完整 provider docs，实际会降低多端接入和运维排障成本。",
+      "安全修复很实：移除 busybox/toybox 类解释器式 safe bins、阻断空 approver 列表误授权、扩大 shell-wrapper / env-argv 注入拦截。"
+    ],
+    "recommendation": "Yes — 当前版本落后到 2026.4.12；这次重点不是花哨新功能，而是插件边界、记忆可靠性、本地模型接入、Feishu 体验和几处高价值安全修补，值得手动受控升级，但不要自动升。"
+  },
+  "must_read": [
+    {
+      "title": "GitHub Copilot CLI combines model families for a second opinion",
+      "summary": "反直觉点：不是把主模型无限做强，而是在关键 checkpoint 引入“异构二审”。对 builder 来说，multi-agent 更高 ROI 的用法可能是互相挑错，不是无脑并行。",
+      "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/"
+    },
+    {
+      "title": "Dependabot alerts are now assignable to AI agents for remediation",
+      "summary": "这条很 builder-centric：GitHub 正把“发现漏洞→分派 agent→起 draft PR→修测试”收敛成默认工作流，agent 正从 demo 助手变成 software ops primitive。",
+      "link": "https://github.blog/changelog/2026-04-07-dependabot-alerts-are-now-assignable-to-ai-agents-for-remediation/"
+    },
+    {
+      "title": "From Perception to Autonomous Computational Modeling: A Multi-Agent Approach",
+      "summary": "真正值得盯的不是论文噱头，而是它把图像→几何→求解→不确定性→报告串成工程闭环。多模态 agent 已开始吃进真实专业工作流，但作者也明确强调必须由专业人士最终 sign-off。",
+      "link": "https://arxiv.org/abs/2604.06788"
+    }
+  ],
+  "worth_a_look": [
+    {
+      "title": "Designing the agentic AI enterprise for measurable performance",
+      "summary": "虽然是 sponsored，但判断不差：agent 真正难的不是 prompt，而是 KPI 对齐、治理、可观测性与 rollback。builder 做产品时要把 runtime discipline 当底座。",
+      "link": "https://venturebeat.com/orchestration/designing-the-agentic-ai-enterprise-for-measurable-performance"
+    },
+    {
+      "title": "ChatGPT release notes: Plugins in Codex",
+      "summary": "一个重要信号：OpenAI 在把可复用 workflow bundle 直接塞进 Codex，说明 coding agent 的竞争面已从“写代码”扩成“团队级工作流封装与分发”。",
+      "link": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    },
+    {
+      "title": "ChatGPT release notes: Large pastes as attachments / Google Drive app unification",
+      "summary": "反直觉点：很多 agent 产品增量，不是更聪明，而是输入对象和 connector surface 被重新设计后，可组合性突然变高。context engineering 正在产品层落地。",
+      "link": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    }
+  ],
+  "wildcard": [
+    {
+      "title": "Second-opinion agents may beat larger primary models on ROI",
+      "summary": "GitHub 的 Rubber Duck 很像一个行业提示：对很多复杂任务，给主 agent 一个异构 reviewer，可能比把主模型升级到更贵档位更划算。",
+      "link": "https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/"
+    },
+    {
+      "title": "Multimodal AI’s near-term win may be vertical pipelines, not general assistants",
+      "summary": "这篇 arXiv 提醒一个反直觉方向：多模态 agent 近期最先跑通的，可能不是“万能助手”，而是工程、制造、医疗这类窄而深的专业 pipeline。",
+      "link": "https://arxiv.org/abs/2604.06788"
+    }
+  ],
+  "archive_link": "https://LindalyX-Lee.github.io/Ai-Daily-Brief/",
+  "closing": "Lindaly，早。今天有什么想让我推进的？如果没有我继续昨天未完成的任务。",
+  "collaboration_doc_reminder": null,
+  "plain_text": "🦞 AI Daily Brief — 2026-04-14\n\nOPENCLAW UPDATE CHECK\nCurrent version: OpenClaw 2026.3.8 (3caab92)\nLatest version: v2026.4.12\n• 插件加载现在更收敛到 manifest 声明范围，减少无关 provider/channel runtime 被顺手拉起；对长期跑多插件的实例，这是稳定性和边界感都更好的修补。\n• 新增 Active Memory 插件，让主回复前可自动拉回偏好、上下文和历史细节；builder 价值不在“会记住”，而在减少每次都要手动说 remember this 的摩擦。\n• 新增 bundled Codex provider 与 LM Studio provider：一边把 codex/gpt-* 走原生 Codex 路径，一边把本地/自托管 OpenAI-compatible 模型纳入统一工作流。\n• Feishu setup path 更顺，外加 commands.list RPC 与更完整 provider docs，实际会降低多端接入和运维排障成本。\n• 安全修复很实：移除 busybox/toybox 类解释器式 safe bins、阻断空 approver 列表误授权、扩大 shell-wrapper / env-argv 注入拦截。\nRecommend update? Yes — 当前版本落后到 2026.4.12；这次重点不是花哨新功能，而是插件边界、记忆可靠性、本地模型接入、Feishu 体验和几处高价值安全修补，值得手动受控升级，但不要自动升。\n\nMUST READ (3)\n1. GitHub Copilot CLI combines model families for a second opinion\n反直觉点：不是把主模型无限做强，而是在关键 checkpoint 引入“异构二审”。对 builder 来说，multi-agent 更高 ROI 的用法可能是互相挑错，不是无脑并行。\n🔗 https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/\n\n2. Dependabot alerts are now assignable to AI agents for remediation\n这条很 builder-centric：GitHub 正把“发现漏洞→分派 agent→起 draft PR→修测试”收敛成默认工作流，agent 正从 demo 助手变成 software ops primitive。\n🔗 https://github.blog/changelog/2026-04-07-dependabot-alerts-are-now-assignable-to-ai-agents-for-remediation/\n\n3. From Perception to Autonomous Computational Modeling: A Multi-Agent Approach\n真正值得盯的不是论文噱头，而是它把图像→几何→求解→不确定性→报告串成工程闭环。多模态 agent 已开始吃进真实专业工作流，但作者也明确强调必须由专业人士最终 sign-off。\n🔗 https://arxiv.org/abs/2604.06788\n\nWORTH A LOOK (3)\n1. Designing the agentic AI enterprise for measurable performance\n虽然是 sponsored，但判断不差：agent 真正难的不是 prompt，而是 KPI 对齐、治理、可观测性与 rollback。builder 做产品时要把 runtime discipline 当底座。\n🔗 https://venturebeat.com/orchestration/designing-the-agentic-ai-enterprise-for-measurable-performance\n\n2. ChatGPT release notes: Plugins in Codex\n一个重要信号：OpenAI 在把可复用 workflow bundle 直接塞进 Codex，说明 coding agent 的竞争面已从“写代码”扩成“团队级工作流封装与分发”。\n🔗 https://help.openai.com/en/articles/6825453-chatgpt-release-notes\n\n3. ChatGPT release notes: Large pastes as attachments / Google Drive app unification\n反直觉点：很多 agent 产品增量，不是更聪明，而是输入对象和 connector surface 被重新设计后，可组合性突然变高。context engineering 正在产品层落地。\n🔗 https://help.openai.com/en/articles/6825453-chatgpt-release-notes\n\nWILDCARD (1-3)\n1. Second-opinion agents may beat larger primary models on ROI\nGitHub 的 Rubber Duck 很像一个行业提示：对很多复杂任务，给主 agent 一个异构 reviewer，可能比把主模型升级到更贵档位更划算。\n🔗 https://github.blog/ai-and-ml/github-copilot/github-copilot-cli-combines-model-families-for-a-second-opinion/\n\n2. Multimodal AI’s near-term win may be vertical pipelines, not general assistants\n这篇 arXiv 提醒一个反直觉方向：多模态 agent 近期最先跑通的，可能不是“万能助手”，而是工程、制造、医疗这类窄而深的专业 pipeline。\n🔗 https://arxiv.org/abs/2604.06788\n\n👉 Full archive: https://LindalyX-Lee.github.io/Ai-Daily-Brief/\n\nLindaly，早。今天有什么想让我推进的？如果没有我继续昨天未完成的任务。\n"
+}
