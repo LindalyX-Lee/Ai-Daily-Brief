@@ -20,6 +20,42 @@
     <div class="update"><strong>NEW:</strong> BMW Hub 已上线：<a href="./bmw.html">点这里直接看 BMW 手机入口</a></div>
 
 <div class="entry">
+    <div class="date">2026-04-18</div>
+    <h3>🦞 AI Daily Brief — 2026-04-18</h3>
+    <h4>OPENCLAW UPDATE CHECK</h4>
+    <div class="update">
+        <strong>Current version:</strong> OpenClaw 2026.4.15 (041266a)<br>
+        <strong>Latest version:</strong> v2026.4.16<br>
+        • Anthropic 默认模型选择与 Claude CLI defaults 对齐到 Opus 4.7，说明 agent runtime 正在更积极偏向长任务和高可靠 coding workflow。<br>
+        • Google plugin 新增 Gemini TTS，包含 voice 选择、WAV reply output 和 telephony PCM，意味着 multimodal output 已从展示能力走向可嵌入真实产品流。<br>
+        • Control UI 新增 Model Auth 状态卡，可直接看到 OAuth token 健康和 provider rate-limit pressure，对多 provider builder 的运维价值很实。<br>
+        • memory-lancedb 支持云存储，durable memory index 不再被本地磁盘绑定，agent memory 开始更像 production infra。<br>
+        • 新增 experimental.localModelLean，可为弱本地模型移除 browser、cron、message 等重工具，说明 agent stack 开始认真做低配部署优化。<br>
+        • 修复 built-in tool name collision 的本地 MEDIA trust 漏洞和 webchat audio path containment，这波有明确安全收益。<br>
+        <strong>Recommend update?</strong> Yes, 这次不只是小修小补，覆盖默认模型、TTS、多 provider 运维可视化、memory infra 和安全修复，手动受控升级值得排期。
+    </div>
+    <div class="category">MUST READ</div>
+    <ul>
+        <li><a href="https://www.anthropic.com/news/claude-opus-4-7">Claude Opus 4.7 发布，重点不是更强 benchmark，而是更稳的 long-running agentic workflows</a><br>Anthropic 这次最 builder-centric 的信号，是强调复杂长任务、instruction fidelity、自检能力和更强 vision，说明高价值 agent 正在从“能做”转向“可放心托付”。</li>
+        <li><a href="https://github.blog/changelog/2026-04-16-manage-agent-skills-with-github-cli/">GitHub CLI 把 agent skills 做成可发现、可安装、可 pin、可发布的 supply chain</a><br>反直觉点，下一阶段 agent 规模化瓶颈可能不是 prompt engineering，而是 skill lifecycle management，谁先把版本、provenance、update 治理好，谁更容易团队化复用。</li>
+        <li><a href="https://developers.openai.com/codex/cli">OpenAI Codex CLI 继续把 image inputs、subagents、web search、cloud tasks 收进一个 terminal agent 工作台</a><br>这说明 coding agent 的竞争边界已经明显外扩，不再只是代码生成，而是 multimodal context + external search + parallel agents + remote execution 的组合工作流。</li>
+    </ul>
+    <div class="category">WORTH A LOOK</div>
+    <ul>
+        <li><a href="https://github.com/openclaw/openclaw/releases">OpenClaw 2026.4.16 这次更新本身就是一个 builder 信号，memory cloud index 和 auth/rate-limit observability 很关键</a><br>对真正跑多 provider、多 session agent 系统的人来说，这类“看见 auth 健康、减轻 local-model prompt 负担、把 memory 拉到 object storage”的改进，比再涨一点 benchmark 更值钱。</li>
+        <li><a href="https://www.anthropic.com/news/claude-opus-4-7">Anthropic 把 Opus 4.7 的 cyber safeguards 放进真实发布流程，说明 frontier agent 已经必须和 capability gating 一起设计</a><br>builder 要吸收的不是安全口号，而是高能力 agent 发布正在默认绑定 use-case detection、blocked classes 和 verification program，这会成为行业常态。</li>
+        <li><a href="https://www.nvidia.com/en-us/industries/robotics/">NVIDIA 最近持续强化 physical AI 与 multimodal workflow 叙事，提醒多模态价值未必先落在内容生成</a><br>一个重要校准是，图像/视频/空间理解的更高 ROI 可能先来自 robotics、industrial inspection、video understanding 这类 world-facing pipeline，而不是再多一个生成 demo。</li>
+    </ul>
+    <div class="category">WILDCARD</div>
+    <ul>
+        <li><a href="https://github.blog/changelog/2026-04-16-manage-agent-skills-with-github-cli/">Counter-intuitive: 最该投入的 agent 基础设施，可能不是更多 agents，而是 skills 的 package manager 化</a><br>当 gh skill 把安装、version pin、immutable release、tree SHA 检测都补上后，agent 生态的核心问题会越来越像软件供应链，而不是 prompt 花活。</li>
+        <li><a href="https://www.anthropic.com/news/claude-opus-4-7">Counter-intuitive: multimodal AI 的 killer app 可能先是“更靠谱地看懂世界”，不是“更会生成世界”</a><br>从 Opus 4.7 强调更高分辨率 vision，到 NVIDIA 强调 physical AI workflow，信号都在指向 perception + action loop，而不是单点内容生成炫技。</li>
+    </ul>
+    <p>👉 Full archive: <a href="https://LindalyX-Lee.github.io/Ai-Daily-Brief/">https://LindalyX-Lee.github.io/Ai-Daily-Brief/</a></p>
+    <p>Lindaly，早。今天有什么想让我推进的？如果没有我继续昨天未完成的任务。</p>
+</div>
+
+<div class="entry">
     <div class="date">2026-04-17</div>
     <h3>🦞 AI Daily Brief — 2026-04-17</h3>
     <h4>OPENCLAW UPDATE CHECK</h4>
