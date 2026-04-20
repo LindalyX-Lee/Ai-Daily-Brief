@@ -7,7 +7,7 @@
   <style>
     :root {
       --bg:#0b0d10; --card:#151922; --muted:#8b93a7; --text:#eef2f7; --border:#262c3a;
-      --accent:#6ea8fe; --accent2:#ff8a5b; --accent3:#9f7aea; --ok:#34d399; --warn:#fbbf24;
+      --accent:#6ea8fe; --accent2:#ff8a5b; --ok:#34d399;
     }
     * { box-sizing:border-box; }
     body {
@@ -35,9 +35,7 @@
     .tag { display:inline-block; padding:4px 10px; border-radius:999px; font-size:12px; font-weight:700; }
     .yt { background:rgba(110,168,254,.12); color:var(--accent); }
     .x { background:rgba(255,138,91,.12); color:var(--accent2); }
-    .xhs { background:rgba(159,122,234,.12); color:var(--accent3); }
     .lock { background:rgba(52,211,153,.12); color:var(--ok); }
-    .test { background:rgba(251,191,36,.12); color:var(--warn); }
     .num { color:var(--muted); font-size:12px; }
     .title { font-size:18px; font-weight:700; margin:6px 0 8px; }
     .title a { color:var(--text); text-decoration:none; }
@@ -54,111 +52,50 @@
   <div class="wrap">
     <div class="hero">
       <h1>BMW Hub</h1>
-      <div class="sub">Build Must Watch 的手机入口。Obsidian 沉淀，HTML 负责直接看。</div>
+      <div class="sub">Builder Cognition OS 的手机入口：最新在上，历史在下。</div>
       <div class="banner">
-        <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
-        <div class="meta">当前状态：YT 与 X 已可用；小红书为测试入口；消息流不再是入口层。</div>
+        <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
+        <div class="meta">Last updated: 2026-04-20 13:00 Asia/Shanghai · Obsidian 是 source of truth，HTML 是 mobile entry。</div>
       </div>
     </div>
 
     <div class="section">
-      <h2>Latest Queue</h2>
-      <div class="section-note">先看这里。今天最新一轮内容都在这，不用去消息流捞。</div>
+      <h2>2026-04-20 · Current</h2>
+      <div class="section-note">今天只保留两个最高值入口：一个实现层，一个架构层。</div>
 
       <div class="card">
-        <div class="topline"><span class="tag yt">YT · Day 3</span><span class="num">2 Production + 1 UU · v0.3</span></div>
-        <div class="title"><a href="https://www.youtube.com/watch?v=uUN1oy2PRHo">1. How to create JOBS for OpenClaw agents</a></div>
-        <div class="field"><b>Source:</b> Brian Casel</div>
-        <div class="field"><b>Build Action:</b> 给 agent 设计岗位</div>
-        <div class="field"><b>底层 Why:</b> 不是把任务丢给 agent，而是像搭团队一样定义岗位边界、职责与交接机制</div>
-        <div class="field"><b>Layer:</b> ①Production</div>
-        <div class="field"><b>Length:</b> ~20min</div>
-      </div>
-
-      <div class="card">
-        <div class="topline"><span class="tag yt">YT · Day 3</span><span class="num">Emergent-ready</span></div>
-        <div class="title"><a href="https://www.youtube.com/watch?v=6V-b073qhPA">2. OpenClaw + Obsidian gives you super powers</a></div>
-        <div class="field"><b>Source:</b> Alex Finn</div>
-        <div class="field"><b>Build Action:</b> 改造记忆底座</div>
-        <div class="field"><b>底层 Why:</b> agent 质量上限常常不在模型，而在 memory substrate；外置知识底座决定长期复利</div>
-        <div class="field"><b>Layer:</b> ①Production + ③Emergent</div>
-        <div class="field"><b>Length:</b> ~10min</div>
-        <div class="field"><b>Hint:</b> transcript-structure: worth-borrowing</div>
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①Production</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=jbHB-rzKBAs">Any Model. Any App. Build Your AI OS to Work Everywhere.</a></div>
+        <div class="field"><b>Source:</b> Linking Your Thinking with Nick Milo</div>
+        <div class="field"><b>Build Action:</b> 先补 maps / manuals，再接模型。</div>
+        <div class="field"><b>底层 Why:</b> 真正可迁移的不是某个 AI 工作流，而是你自己的文件层、导航层、协作层。</div>
+        <div class="field"><b>Layer:</b> ①Production + ②UU</div>
+        <div class="field"><b>Length:</b> ~14min</div>
       </div>
 
       <div class="card">
-        <div class="topline"><span class="tag yt">YT · Day 3</span><span class="num">UU</span></div>
-        <div class="title"><a href="https://www.youtube.com/watch?v=4uzGDAoNOZc">3. OpenClaw Creator: Why 80% Of Apps Will Disappear</a></div>
-        <div class="field"><b>Source:</b> Y Combinator</div>
-        <div class="field"><b>Build Action:</b> 校准产品存在理由</div>
-        <div class="field"><b>底层 Why:</b> 不是继续优化旧 app，而是倒逼思考 agent 时代什么产品形态还真正值得存在</div>
-        <div class="field"><b>Layer:</b> ②UU</div>
-        <div class="field"><b>Length:</b> ~22min</div>
+        <div class="topline"><span class="tag x">X</span><span class="num">①+②</span></div>
+        <div class="title"><a href="https://x.com/karpathy/status/2040572272944324650">Karpathy on personal wiki / file-over-app / BYOAI</a></div>
+        <div class="field"><b>Source:</b> Andrej Karpathy</div>
+        <div class="field"><b>Build Action:</b> 把“AI 记住你”改成“你拥有自己的可检查记忆资产”。</div>
+        <div class="field"><b>底层 Why:</b> 记忆价值不该沉在黑箱产品里；显式文件资产才有可迁移性、可审计性、可复利性。</div>
+        <div class="field"><b>Layer:</b> ①Production + ②UU</div>
       </div>
     </div>
 
     <div class="section">
-      <h2>X Top 5</h2>
-      <div class="section-note">过去 24 小时 builder / agent / product signal。不是泛热搜。</div>
+      <h2>2026-04-18 · Archive</h2>
+      <div class="section-note">已存在的上一批内容；保留，不回填不存在的日期。</div>
       <div class="grid two">
-        <div class="card">
-          <div class="topline"><span class="tag x">X</span><span class="num">①+②</span></div>
-          <div class="title"><a href="https://x.com/claudeai/status/2045156267690213649">Claude Design 发布</a></div>
-          <div class="field"><b>Build Action:</b> 观察交付物 AI 化</div>
-          <div class="field"><b>Why:</b> Claude 开始接管 prototype / slides / one-pager 这类交付物本身。</div>
-        </div>
-        <div class="card">
-          <div class="topline"><span class="tag x">X</span><span class="num">①</span></div>
-          <div class="title"><a href="https://x.com/jasonlk/status/2045309335899648306">The Agents Ep #001：三类 agent 生产事故</a></div>
-          <div class="field"><b>Build Action:</b> 建 daily agent maintenance</div>
-          <div class="field"><b>Why:</b> 上线不是结束；agent 漂移、回归、甩锅都需要运营级维护。</div>
-        </div>
-        <div class="card">
-          <div class="topline"><span class="tag x">X</span><span class="num">①</span></div>
-          <div class="title"><a href="https://x.com/jasonlk/status/2045149331544547803">AI SDR 周六自动拿下六位数 deal</a></div>
-          <div class="field"><b>Build Action:</b> 重想 coverage 逻辑</div>
-          <div class="field"><b>Why:</b> GTM agent 的价值不只是效率，而是 coverage 不再被 headcount 限制。</div>
-        </div>
-        <div class="card">
-          <div class="topline"><span class="tag x">X</span><span class="num">②</span></div>
-          <div class="title"><a href="https://x.com/levelsio/status/2045085201995370840">OpenClaw OAuth token refresh 把 agent 卡死</a></div>
-          <div class="field"><b>Build Action:</b> 补 auth / reliability 监控</div>
-          <div class="field"><b>Why:</b> 真瓶颈常常不在模型，而在 auth、infra、provider state。</div>
-        </div>
-        <div class="card">
-          <div class="topline"><span class="tag x">X</span><span class="num">②</span></div>
-          <div class="title"><a href="https://x.com/aisolopreneur/status/2045153679846596975">team context management 开源方向</a></div>
-          <div class="field"><b>Build Action:</b> 盯 context management 层</div>
-          <div class="field"><b>Why:</b> multi-agent / multi-human 系统的核心瓶颈正转向 context management。</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>小红书 Top 5 · Provisional</h2>
-      <div class="section-note">当前只作为测试入口：基础读取已通，但 AI / builder 精准搜索还不稳。</div>
-      <div class="grid two">
-        <div class="card"><div class="topline"><span class="tag xhs">小红书</span><span class="tag test">test</span></div><div class="title"><a href="https://www.xiaohongshu.com/explore/6468cf9500000000130068f2">面试全套核心技巧，速抄！</a></div><div class="field"><b>Why:</b> 先测可执行职场信息密度。</div></div>
-        <div class="card"><div class="topline"><span class="tag xhs">小红书</span><span class="tag test">test</span></div><div class="title"><a href="https://www.xiaohongshu.com/explore/640cbe6a00000000130352e9">不就是个ppt</a></div><div class="field"><b>Why:</b> 测试表达 / 交付感内容是否有 sidecar 价值。</div></div>
-        <div class="card"><div class="topline"><span class="tag xhs">小红书</span><span class="tag test">test</span></div><div class="title"><a href="https://www.xiaohongshu.com/explore/645e5eb10000000013007dbc">这个狗氮充电器，完全值2个哇塞</a></div><div class="field"><b>Why:</b> 测试消费工具 / 轻数码决策 signal。</div></div>
-        <div class="card"><div class="topline"><span class="tag xhs">小红书</span><span class="tag test">test</span></div><div class="title"><a href="https://www.xiaohongshu.com/explore/644b4446000000001203c808">北舞上班Vlog｜北舞毕业生在北京的收入水平？</a></div><div class="field"><b>Why:</b> 测试职业叙事是否值得做 sidecar 源。</div></div>
-        <div class="card"><div class="topline"><span class="tag xhs">小红书</span><span class="tag test">test</span></div><div class="title"><a href="https://www.xiaohongshu.com/explore/640b16250000000027001be5">救命！宝贝自己就是靠这个找到真实音色！</a></div><div class="field"><b>Why:</b> 先测方法型内容是否有迁移价值。</div></div>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Previous Locked Batch</h2>
-      <div class="section-note">昨天锁定的 3 条，已经进入历史与 skip 依据。</div>
-      <div class="grid two">
-        <div class="card"><div class="topline"><span class="tag lock">locked</span><span class="num">⭐⭐⭐</span></div><div class="title"><a href="https://www.youtube.com/watch?v=mduLV-mWrNM">You NEED to set up a multi agent team with OpenClaw and Hermes</a></div><div class="field"><b>Source:</b> Alex Finn</div></div>
-        <div class="card"><div class="topline"><span class="tag lock">locked</span><span class="num">saved</span></div><div class="title"><a href="https://www.youtube.com/watch?v=y6YTk0C5pBY">Obsidian Just Won</a></div><div class="field"><b>Source:</b> Nick Milo (LYT)</div></div>
-        <div class="card"><div class="topline"><span class="tag lock">locked</span><span class="num">saved</span></div><div class="title"><a href="https://www.youtube.com/watch?v=We7BZVKbCVw">Head of Claude Code: What happens after coding is solved</a></div><div class="field"><b>Source:</b> Boris Cherny / Lenny's Podcast</div></div>
+        <div class="card"><div class="topline"><span class="tag lock">locked</span><span class="num">①Production</span></div><div class="title"><a href="https://www.youtube.com/watch?v=uUN1oy2PRHo">How to create JOBS for OpenClaw agents</a></div><div class="field"><b>Source:</b> Brian Casel</div><div class="field"><b>Why:</b> 不是丢任务，而是像搭团队一样定义 agent 岗位、边界与交接。</div></div>
+        <div class="card"><div class="topline"><span class="tag lock">locked</span><span class="num">①+③</span></div><div class="title"><a href="https://www.youtube.com/watch?v=6V-b073qhPA">OpenClaw + Obsidian gives you super powers</a></div><div class="field"><b>Source:</b> Alex Finn</div><div class="field"><b>Why:</b> memory substrate 决定 agent 长期上限，不只是模型强弱。</div></div>
+        <div class="card"><div class="topline"><span class="tag lock">locked</span><span class="num">②UU</span></div><div class="title"><a href="https://www.youtube.com/watch?v=4uzGDAoNOZc">OpenClaw Creator: Why 80% Of Apps Will Disappear</a></div><div class="field"><b>Source:</b> Y Combinator</div><div class="field"><b>Why:</b> 倒逼思考 agent 时代什么产品形态还真正值得存在。</div></div>
       </div>
     </div>
 
     <div class="divider"></div>
-    <div class="mini">Rule: Obsidian 是 source of truth；HTML 是 mobile entry。消息流只负责推送，不再承担入口职责。</div>
+    <div class="mini">Rule: 入口只有一个；消息只负责推送，历史回看在本页完成。</div>
   </div>
 </body>
 </html>
