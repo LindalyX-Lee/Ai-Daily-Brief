@@ -1,0 +1,61 @@
+{
+  "date": "2026-03-21",
+  "openclaw_update": {
+    "current": "2026.3.8",
+    "latest": "v2026.3.13-1",
+    "recommend": "Yes",
+    "changes": [
+      "Session reset现在保留lastAccountId/lastThreadId",
+      "Telegram/Discord连接稳定性修复",
+      "默认模型升级到GPT-5.4 (1M token上下文)",
+      "Docker新增OPENCLAW_TZ时区支持",
+      "iOS新增onboarding welcome pager"
+    ]
+  },
+  "must_read": [
+    {
+      "title": "Forbes: AI Agent安全正在重复行业最古老的错误",
+      "url": "https://www.forbes.com/councils/forbestechcouncil/2026/03/20/ai-agent-security-is-repeating-the-industrys-oldest-mistake/",
+      "summary": "MCP协议出现CVE-2025-49596高危漏洞(CVSS 9.4)，企业Agent安全从网络层转向执行层"
+    },
+    {
+      "title": "The Guardian: Meta AI Agent指令导致敏感数据大规模泄露",
+      "url": "https://www.theguardian.com/technology/2026/mar/20/meta-ai-agents-instruction-causes-large-sensitive-data-leak-to-employees",
+      "summary": "Agent错误地向未授权员工分享内部敏感数据，触发Sev-1内部安全警报"
+    },
+    {
+      "title": "GPT-5.4 vs Claude 4.6 对比",
+      "url": "https://tech-insider.org/chatgpt-vs-claude-vs-deepseek-vs-gemini-2026/",
+      "summary": "GPT-5.4 (3月5日发布) 支持1M token上下文窗口和128K最大输出，OpenRouter可用"
+    }
+  ],
+  "worth_a_look": [
+    {
+      "title": "Product Hunt: 2026最佳AI Agents",
+      "url": "https://www.producthunt.com/categories/ai-agents",
+      "summary": "Raccoon AI扩展到协作研究+应用构建，OpenMolt提供安全+记忆增强的开发者Agent基础设施"
+    },
+    {
+      "title": "AgentPay SDK: AI Agent自主支付突破",
+      "url": "https://en.cryptonomist.ch/2026/03/20/agentpay-sdk-guides-autonomous-payments-in-usd1-breakthrough-for-ai-agents-on-evm/",
+      "summary": "开发者可在EVM兼容网络上创建可编程策略规则执行支付的Agent"
+    },
+    {
+      "title": "LLM Stats: AI模型更新日报",
+      "url": "https://llm-stats.com/llm-updates",
+      "summary": "追踪主流模型API变化、价格更新和功能发布"
+    }
+  ],
+  "wildcard": [
+    {
+      "title": "Nvidia下一代AI: 万亿美元收入机会",
+      "url": "https://www.jpost.com/consumerism/article-890443",
+      "summary": "集成到系统可提升数十%吞吐量，大规模运行AI Agent能力增强"
+    },
+    {
+      "title": "2026 AI API价格战: Grok vs Gemini vs GPT-4o vs Claude",
+      "url": "https://intuitionlabs.ai/articles/ai-api-pricing-comparison-grok-gemini-openai-claude",
+      "summary": "Grok引领成本效率，Gemini占据均衡中位"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "date": "2026-03-22",
+  "openclaw_update": {
+    "current": "2026.3.8",
+    "latest": "v2026.3.13-1",
+    "recommend": "Yes",
+    "why": "当前版本落后 5 个 patch，且新版包含 Feishu 去重、cron 死锁、gateway 稳定性与浏览器/会话修复，和你现在的日常使用场景直接相关。",
+    "changes": [
+      "默认模型测试基线升级到 GPT-5.4",
+      "fix(cron): 防止 isolated cron 嵌套 lane deadlock",
+      "fix(feishu): 事件级去重，避免重复回复",
+      "fix(gateway): bound unanswered client requests，并恢复 control-ui 连接分类/鉴权相关修复",
+      "fix(session): reset 时保留 lastAccountId / lastThreadId",
+      "fix(browser): 加固 batch act dispatch 与 session lifecycle"
+    ]
+  },
+  "must_read": [
+    {
+      "title": "GitHub: How Squad runs coordinated AI agents inside your repository",
+      "url": "https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/",
+      "summary": "反直觉点：多智能体不一定先上重 orchestration，repo-native + decisions.md 这种可审计共享记忆，反而更适合 builder 快速起步。"
+    },
+    {
+      "title": "If You Want to Build Agent Systems, You Need to Lose Your REST-Style Intuitions",
+      "url": "https://ai.ksopyla.com/posts/enterprise-agents-new-systems-mindset/",
+      "summary": "反直觉点：agent interface 不是 API endpoint，而是 capability surface + delegation surface + policy boundary。"
+    },
+    {
+      "title": "HiDreamClaw launches as the first image-and-video native Claw",
+      "url": "https://markets.financialcontent.com/stocks/article/getnews-2026-3-21-ai-agents-enter-the-vertical-scenario-era-hidreamclaw-launches-as-the-first-image-and-video-native-claw",
+      "summary": "对多模态创业最关键：通用 agent 正在让位给 vertical agent，真正价值来自嵌入创作工作流而不是“能聊天”。"
+    }
+  ],
+  "worth_a_look": [
+    {
+      "title": "Multi-Agent Architectures: The Power of Coordination",
+      "url": "https://www.arunbaby.com/ai-agents/0029-multi-agent-architectures/",
+      "summary": "builder 视角很实：hierarchical / collaborative / sequential 三种架构下，state schema 与 least privilege 比 prompt 更重要。"
+    },
+    {
+      "title": "Meta REA: The Autonomous AI Agent Accelerating Ads Ranking Innovation",
+      "url": "https://engineering.fb.com/2026/03/17/developer-tools/ranking-engineer-agent-rea-autonomous-ai-system-accelerating-meta-ads-ranking-innovation/",
+      "summary": "长周期 agent 的启发：真正护城河不是一次性生成，而是 hibernate-and-wake 持续跑多天工作流。"
+    },
+    {
+      "title": "NVIDIA: Building the AI Grid with NVIDIA",
+      "url": "https://developer.nvidia.com/blog/building-the-ai-grid-with-nvidia-orchestrating-intelligence-everywhere/",
+      "summary": "多模态落地的硬约束越来越清楚：voice / vision agent 的核心瓶颈已从训练转向推理延迟、抖动和 token economics。"
+    }
+  ],
+  "wildcard": [
+    {
+      "title": "GitHub Changelog: Secret scanning in AI coding agents via the GitHub MCP Server",
+      "url": "https://github.blog/changelog/2026-03-17-secret-scanning-in-ai-coding-agents-via-the-github-mcp-server/",
+      "summary": "一个很实用的小信号：安全能力开始直接变成 agent 的工具，而不只是 CI 里的后置检查。"
+    }
+  ]
+}

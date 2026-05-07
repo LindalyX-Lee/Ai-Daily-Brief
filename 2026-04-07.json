@@ -1,0 +1,65 @@
+{
+  "date": "2026-04-07",
+  "title": "🦞 AI Daily Brief — 2026-04-07",
+  "openclaw_update": {
+    "current_version": "OpenClaw 2026.3.8 (3caab92)",
+    "latest_version": "v2026.4.5",
+    "bullets": [
+      "新增内建 `video_generate` 与 `music_generate`，并打通 Google Lyria、MiniMax、ComfyUI 等多模态生成链路。",
+      "新增 Qwen、Fireworks AI、StepFun、MiniMax TTS、Ollama Web Search、MiniMax Search 等 provider / integration，builder 的模型与搜索面显著变宽。",
+      "Memory / dreaming 持续增强，开始更像系统后台能力，而不是简单检索。",
+      "Control UI 支持多语言，本地化与 Skills 面板 ClawHub 安装流更顺，团队 adoption 门槛更低。",
+      "Gateway、cron、reply delivery、macOS LaunchAgent restart 等稳定性修复很多，直接影响日常运行可靠性。"
+    ],
+    "recommendation": "Yes — 当前版本从 2026.3.8 落后到 2026.4.5，差距已覆盖多模态、provider 扩展、记忆系统与运行稳定性；对 builder workflow 是实打实增益，但建议手动受控升级，不自动升。"
+  },
+  "must_read": [
+    {
+      "title": "NVIDIA Ignites the Next Industrial Revolution in Knowledge Work With Open Agent Development Platform",
+      "summary": "反直觉点：agent 竞争不只在模型，而在 runtime discipline——安全护栏、可解释 eval、混合模型编排开始成为默认基础设施。",
+      "link": "https://nvidianews.nvidia.com/news/ai-agents"
+    },
+    {
+      "title": "Intuit's AI agents hit 85% repeat usage. The secret was keeping humans involved",
+      "summary": "builder 重点不是把人拿掉，而是把人放在高 stakes 节点；真正带来复用率的不是全自动，而是 AI+HI 的信任设计。",
+      "link": "https://venturebeat.com/orchestration/intuits-ai-agents-hit-85-repeat-usage-the-secret-was-keeping-humans-involved"
+    },
+    {
+      "title": "Google releases Gemma 4 under Apache 2.0 — and that license change may matter more than benchmarks",
+      "summary": "多模态 open model 的真正信号可能不是 benchmark，而是 Apache 2.0 + 原生 audio/vision/function calling，把企业落地摩擦直接砍掉。",
+      "link": "https://venturebeat.com/technology/google-releases-gemma-4-under-apache-2-0-and-that-license-change-may-matter"
+    }
+  ],
+  "worth_a_look": [
+    {
+      "title": "New tools for building agents",
+      "summary": "OpenAI 的方向很明确：agent stack 正从聊天接口转向 Responses API + built-in tools + observability，编排层正在产品化。",
+      "link": "https://openai.com/index/new-tools-for-building-agents/"
+    },
+    {
+      "title": "Developer’s Guide to AI Agent Protocols",
+      "summary": "一个值得 builder 校准的信号：MCP、A2A、UCP 这些协议不是概念噪音，而是在替代大量脆弱的自定义集成。",
+      "link": "https://developers.googleblog.com/en/developers-guide-to-ai-agent-protocols/"
+    },
+    {
+      "title": "openclaw 2026.4.5 release",
+      "summary": "如果你在做 agent infra，这版值得看：多模态生成、provider 扩展、memory/dreaming 与 runtime 稳定性开始收敛到同一套系统能力。",
+      "link": "https://github.com/openclaw/openclaw/releases/tag/v2026.4.5"
+    }
+  ],
+  "wildcard": [
+    {
+      "title": "Intuit AI+HI lesson",
+      "summary": "wildcard：未来最强 agent 产品未必是“最 autonomous”的，而是最会决定何时请人类上场的。",
+      "link": "https://venturebeat.com/orchestration/intuits-ai-agents-hit-85-repeat-usage-the-secret-was-keeping-humans-involved"
+    },
+    {
+      "title": "Gemma 4 licensing as product wedge",
+      "summary": "counter-intuitive：开放生态下一步护城河，也许不是把模型再做大，而是把 legal/compliance friction 先做小。",
+      "link": "https://venturebeat.com/technology/google-releases-gemma-4-under-apache-2-0-and-that-license-change-may-matter"
+    }
+  ],
+  "archive_link": "https://LindalyX-Lee.github.io/Ai-Daily-Brief/",
+  "closing": "Lindaly，早。今天有什么想让我推进的？如果没有我继续昨天未完成的任务。",
+  "collaboration_doc_reminder": null
+}

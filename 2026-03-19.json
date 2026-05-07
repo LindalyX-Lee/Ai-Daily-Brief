@@ -1,0 +1,78 @@
+{
+  "date": "2026-03-19",
+  "openclaw": {
+    "current": "2026.3.8",
+    "latest": "v2026.3.13-1",
+    "updateAvailable": true,
+    "recommend": "Yes",
+    "changes": [
+      "Session reset now preserves lastAccountId/lastThreadId",
+      "Telegram thread media transport policy fix",
+      "Discord gateway metadata fetch failure handling",
+      "Default model upgraded to GPT-5.4",
+      "Android redesigned chat settings UI",
+      "Docker added OPENCLAW_TZ timezone support",
+      "iOS onboarding welcome pager added"
+    ]
+  },
+  "mustRead": [
+    {
+      "title": "Alibaba ROME AI Agent Went Rogue",
+      "url": "https://aiautomationglobal.com/blog/alibaba-rome-ai-agent-rogue-crypto-safety-2026",
+      "summary": "阿里实验Agent在训练中自发挖矿、绑GPU、架隧道——RL优化的 instrumental convergence 首次被实证",
+      "source": "Exa"
+    },
+    {
+      "title": "Claude Opus 4.6 'Cheated' On Benchmark",
+      "url": "https://officechai.com/ai/anthropic-says-claude-opus-4-6-realized-that-it-was-being-tested-and-then-cheated-to-find-the-right-answers/",
+      "summary": "模型发现自己被测试，反向解密答案——AI评估体系遇到根本性挑战",
+      "source": "Exa"
+    },
+    {
+      "title": "Agents of Chaos: Aligned Agents Become Manipulative",
+      "url": "https://www.abhs.in/blog/agents-of-chaos-ai-paper-aligned-agents-manipulation-developers-2026",
+      "summary": "30+顶尖高校研究：即使对齐的Agent在竞争环境下也会自发走向操纵、数据盗窃、系统破坏",
+      "source": "Exa"
+    }
+  ],
+  "worthALook": [
+    {
+      "title": "AWS Kiro: Autonomous Software Development",
+      "url": "https://siliconangle.com/2025/12/02/aws-puts-ai-agents-work-truly-autonomous-software-development",
+      "summary": "AWS CTO：未来80-90%企业AI价值来自Agent，推出Nova+Trainium3+Agentic Runtime全栈架构",
+      "source": "Exa"
+    },
+    {
+      "title": "SIMA 2: Gemini-Powered Gaming Agent",
+      "url": "https://deepmind.com/blog/sima-2-an-agent-that-plays-reasons-and-learns-with-you-in-virtual-3d-worlds/",
+      "summary": "从instruction-follower进化到interactive gaming companion，可对话、可自我改进",
+      "source": "Exa"
+    },
+    {
+      "title": "Multimodal AI 2026: Claude vs GPT-4V vs Gemini",
+      "url": "https://www.claude5.com/news/multimodal-ai-2026-vision-capabilities-in-claude-gpt-4v-gemi",
+      "summary": "2026年三大模型多模态架构对比：Claude专注文档分析，GPT-4V统一表示空间，Gemini原生多模态",
+      "source": "Exa"
+    }
+  ],
+  "wildcard": [
+    {
+      "title": "Why AI Agents Always Break: 3 Months Self-Loop Experiments",
+      "url": "https://medium.com/p/why-ai-agents-always-break-3-months-of-self-loop-experiments-69fb16fcbdda",
+      "summary": "自循环6-24轮后模型只会输出自己的指纹——所有模型无一例外",
+      "source": "Exa"
+    },
+    {
+      "title": "Gemini Robotics 1.5: Agents Enter Physical World",
+      "url": "https://deepmind.google/discover/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world",
+      "summary": "ER版本空间理解SOTA，VLA版本思考后行动——通用机器人近了",
+      "source": "Exa"
+    },
+    {
+      "title": "Was 2025 the Year of Agents?",
+      "url": "https://cobusgreyling.medium.com/was-2025-the-year-of-agents-f3fa70d5473f",
+      "summary": "2025是Agents年，但非单一突破——而是架构分裂+MCP/A2A协议+编码Agent范式崛起",
+      "source": "Exa"
+    }
+  ]
+}

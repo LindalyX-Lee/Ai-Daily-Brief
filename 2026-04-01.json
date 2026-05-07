@@ -1,0 +1,63 @@
+{
+  "date": "2026-04-01",
+  "title": "🦞 AI Daily Brief — 2026-04-01",
+  "openclaw_check": {
+    "current": "OpenClaw 2026.3.8 (3caab92)",
+    "latest": "v2026.3.31",
+    "recommend_update": true,
+    "reason": "当前版本明显落后，且新版集中补了后台任务、MCP/tool surface、安全边界与通知能力；对日常 agent 执行稳定性有直接帮助。",
+    "changes": [
+      "Background tasks 升级为统一共享控制面：把 ACP、subagent、cron、background CLI 收拢到同一 SQLite ledger。",
+      "新增 openclaw flows list|show|cancel，开始把线性任务流变成一等公民。",
+      "MCP/tooling 更稳：bundle MCP tool 命名更安全，支持 streamable-http 与每服务连接超时。",
+      "Android notifications 新增 forwarding controls、package filtering、quiet hours、rate limiting。",
+      "Plugin SDK / auth / node pairing 的安全边界更收紧，默认 fail-closed 倾向更明显。"
+    ]
+  },
+  "must_read": [
+    {
+      "title": "Everyone told you to deploy AI agents. No one told you what happens to your SOC when you do",
+      "url": "https://venturebeat.com/security/rsac-2026-agentic-soc-agent-telemetry-security-gap",
+      "why_matters": "反直觉点：agent 落地瓶颈不是模型不够强，而是日志里根本分不清‘人’和‘agent’，没有 behavioral baseline 就没法进生产。"
+    },
+    {
+      "title": "Alibaba is turning agentic AI into a merchant workforce, and it’s doing it at scale",
+      "url": "https://techwireasia.com/2026/04/alibaba-agentic-ai-ecommerce-digital-workforce-taobao-tmall/",
+      "why_matters": "builder 启发：真正跑起来的 agent 不是聊天更像人，而是直接接入 pricing / voucher / customer service 闭环，把 token 变成运营杠杆。"
+    },
+    {
+      "title": "Nvidia bets $2 billion on Marvell as rising AI adoption fuels competition",
+      "url": "https://www.reuters.com/technology/nvidia-invests-2-billion-marvell-launches-ai-partnership-2026-03-31/",
+      "why_matters": "别只盯模型层；agent 与 multimodal 下一轮竞争正往芯片+系统协同下沉，custom silicon 会决定谁能把成本和延迟压到可商用。"
+    }
+  ],
+  "worth_a_look": [
+    {
+      "title": "Apple tests Siri feature that handles multiple commands at once, Bloomberg News reports",
+      "url": "https://www.reuters.com/technology/apple-tests-siri-feature-that-handles-multiple-commands-once-bloomberg-news-2026-03-31/",
+      "why_matters": "产品信号很强：consumer assistant 正从 single-turn QA 走向 multi-step orchestration，用户会越来越默认‘一句话交代多个任务’。"
+    },
+    {
+      "title": "Agentic AI Solutions and Development Tools - AWS",
+      "url": "https://aws.amazon.com/ai/agentic-ai/",
+      "why_matters": "云厂商叙事已经从 prompt/POC 切到 measurable impact；builder 要开始用 outcome、不是 model demo 来定义产品。"
+    },
+    {
+      "title": "Yupp shuts down after raising $33M from a16z crypto's Chris Dixon",
+      "url": "https://techcrunch.com/2026/03/31/yupp-ai-shuts-down-33m-a16z-crypto-chris-dixon/",
+      "why_matters": "一个逆向信号：单纯做‘模型比较/聚合’的价值正在塌缩，真正有粘性的机会转向 agentic systems 和 workflow ownership。"
+    }
+  ],
+  "wildcard": [
+    {
+      "title": "Introducing Claude Opus 4.6",
+      "url": "https://www.anthropic.com/news",
+      "why_matters": "值得留意的不是单点 benchmark，而是 Anthropic 明确把 agentic coding、computer use、tool use、search 放到同一能力叙事里——模型厂正在围绕 agent 工作负载调优。"
+    },
+    {
+      "title": "OpenAI Model Craft: Parameter Golf",
+      "url": "https://openai.com/",
+      "why_matters": "counter-intuitive：行业一边卷更大模型，一边也在卷更小更精的参数效率；未来很多 agent 产品的优势会来自 cost-per-task，而不是 IQ 炫技。"
+    }
+  ]
+}

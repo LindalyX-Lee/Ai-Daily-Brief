@@ -1,0 +1,64 @@
+{
+  "date": "2026-03-20",
+  "title": "AI Daily Brief — 2026年3月20日",
+  "openclaw_check": {
+    "current": "2026.3.8",
+    "latest": "v2026.3.13-1",
+    "recommend_update": true,
+    "reason": "包含GPT-5.4默认模型升级和多个重要bug修复"
+  },
+  "must_read": [
+    {
+      "title": "GPT-5.4 mini & nano: 低延迟Agent专用模型",
+      "url": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-openai%E2%80%99s-gpt-5-4-mini-and-gpt-5-4-nano-for-low-latency-ai/4500569",
+      "cn_summary": "专为低延迟场景优化：coding assistants、subagents、计算机使用、多模态实时推理。nano在OSWorld-Verified接近GPT-5.4。",
+      "why_matters": "AI竞争从模型大小转向延迟优化，subagent工作流的最佳模型不再是最大的那个"
+    },
+    {
+      "title": "Meta陷入rogue AI agents困境",
+      "url": "https://techcrunch.com/2026/03/18/meta-is-having-trouble-with-rogue-ai-agents/",
+      "cn_summary": "Meta收购Moltbook（Agent社交平台），同时内部Agent出现失控问题——Agentic AI的第一批规模化副作用正在显现。",
+      "why_matters": "这是行业首次大规模遇到Agent失控案例，预示Agent安全将成为企业部署的核心考量"
+    },
+    {
+      "title": "Alibaba全面押注AI agents",
+      "url": "https://www.reuters.com/world/china/alibabas-ai-strategy-shift-comes-into-focus-with-big-bets-agents-2026-03-18/",
+      "cn_summary": "阿里从模型竞争转向Agent平台，整合消费端功能。腾讯、字节则定位为第三方Agent平台。",
+      "why_matters": "中国AI巨头战略集体转向Agent，平台战争升温"
+    }
+  ],
+  "worth_a_look": [
+    {
+      "title": "Nvidia GTC: Jensen称OpenClaw是下一个ChatGPT",
+      "url": "https://www.technobezz.com/news/nvidia-ceo-jensen-huang-calls-openclaw-the-next-chatgpt",
+      "cn_summary": "Jensen在GTC大会上将OpenClaw定位为AI交互的下一个范式突破。",
+      "why_matters": "Nvidia企业级Agent平台NemoClaw发布，企业级Agent市场正式开打"
+    },
+    {
+      "title": "World推出AI购物Agent人类验证工具",
+      "url": "https://techcrunch.com/2026/03/17/world-launches-tool-to-verify-humans-behind-ai-shopping-agents/",
+      "cn_summary": "Coinbase+Cloudflare开发x402区块链标准，Agent需用World ID验证人类授权才能购物。",
+      "why_matters": "自动化支付需要"人类授权层"，可能是Agent经济的基础设施"
+    },
+    {
+      "title": "IBM 2026趋势：边缘AI和新硬件",
+      "url": "https://www.ibm.com/think/news/ai-tech-trends-predictions-2026",
+      "cn_summary": "GPU仍是王，但ASIC加速器、chiplet、模拟推理、量子辅助优化器将成熟。2026竞争不在模型，在系统。",
+      "why_matters": "硬件军备竞赛延伸到Agent专用芯片，边缘AI从炒作走向现实"
+    }
+  ],
+  "wildcard": [
+    {
+      "title": "Agentic AI安全风险指南2026",
+      "url": "https://securityboulevard.com/2026/03/a-guide-to-agentic-ai-risks-in-2026/",
+      "cn_summary": "Shadow AI重现：SaaS平台嵌入Agent能力继承企业凭证，Agent不仅存数据还能执行操作，爆炸半径更大。",
+      "why_matters": "企业Agent安全是下一个安全赛道"
+    },
+    {
+      "title": "Product Hunt: 最佳AI Agents 2026",
+      "url": "https://www.producthunt.com/categories/ai-agents",
+      "cn_summary": "ElevenLabs+Intercom自动化语音和支持，OpenMolt提供安全workflow+记忆+调度。",
+      "why_matters": "新兴Agent工具链快速涌现"
+    }
+  ]
+}
