@@ -56,14 +56,40 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-05-22 07:45 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-05-23 07:37 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
 
 
     <div class="section">
-      <h2>2026-05-22 · Current</h2>
+      <h2>2026-05-23 · Current</h2>
+      <div class="section-note">Agent backup split-brain closure：status=ok 不是 backup green。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=aolI_Rz0ZqY">So You Think You Know Git - FOSDEM 2024</a></div>
+        <div class="field"><b>Source:</b> GitButler / Scott Chacon</div>
+        <div class="field"><b>Build Action:</b> 写恢复收据。</div>
+        <div class="field"><b>底层 Why:</b> <code>reflog</code> 让误操作可回滚，<code>force-with-lease</code> 防止覆盖未见远端变更；这两者组合成 agent backup split-brain 的最低恢复合约。</div>
+        <div class="field"><b>Proof:</b> yt-dlp PASS；transcript helper PASS；duration 47m00s；view_count 1,616,741；like_count 40,560；anchors 14:24 / 17:44 / 18:45。</div>
+        <div class="field"><b>Layer:</b> ①Production + ②UU</div>
+        <div class="field"><b>Length:</b> 47m00s</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag x">X + Official</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://docs.github.com/en/get-started/using-git/dealing-with-non-fast-forward-errors">Non-fast-forward recovery contract: fetch/merge + lease + reflog</a></div>
+        <div class="field"><b>Source:</b> GitHub Docs + <a href="https://git-scm.com/docs/git-push">Git push docs</a> + <a href="https://git-scm.com/docs/git-reflog">Git reflog docs</a> + <a href="https://x.com/i/web/status/1888983515406164050">Aiden Bai X sidecar</a></div>
+        <div class="field"><b>Build Action:</b> 禁裸force push。</div>
+        <div class="field"><b>底层 Why:</b> non-fast-forward 是历史分叉信号；先保留双方 head，再按 owner policy resolve，最后用 lease/remote equality 验证，不能把 <code>--force</code> 写成自动化默认。</div>
+        <div class="field"><b>Proof:</b> GitHub Docs HTTP 200；git-scm push/reflog HTTP 200；xreach PASS views 83,503 / likes 751；local Yuyummy proof ahead 16 / behind 3。</div>
+        <div class="field"><b>Layer:</b> ①Production + ②UU</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2026-05-22 · Previous</h2>
       <div class="section-note">Open-source agent skill packs reality gate：先审计再引入。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
