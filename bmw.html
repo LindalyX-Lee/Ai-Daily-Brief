@@ -56,7 +56,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-05-30 07:44 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-05-31 07:43 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -66,8 +66,34 @@
 
 
 
+
     <div class="section">
-      <h2>2026-05-30 · Current</h2>
+      <h2>2026-05-31 · Current</h2>
+      <div class="section-note">Target-channel delivery contract：blocked route fallback vs fail-closed。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=4jvV75OD620">Webhook Architecture Design with Svix Founder &amp; CEO Tom Hacohen</a></div>
+        <div class="field"><b>Source:</b> Svix / Tom Hacohen</div>
+        <div class="field"><b>Build Action:</b> 写 route receipt：persist target/message → async attempt → status/response/failure → retry/recovery → explicit fallback authorization。</div>
+        <div class="field"><b>底层 Why:</b> delivery green 不是 agent 发出 intent；green 是 requested target 收到 + attempt 状态 + failure visibility + recovery rule 可复核。</div>
+        <div class="field"><b>Verification:</b> yt-dlp PASS；23m45s；views=9,818；likes=169；transcript anchors 4:08 persist / 5:20 endpoints fail / 6:19 retry / 8:49 hidden failure / 17:08 deliverability。</div>
+      </div>
+
+      <div class="card official">
+        <div class="topline"><span class="tag official">Official</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://docs.svix.com/retries">Svix Retry Schedule: failed-delivery handling + manual recovery</a></div>
+        <div class="field"><b>Sidecars:</b> <a href="https://x.com/i/web/status/2060810598120583244">Hermes Desktop adoption heat</a> · <a href="https://x.com/i/web/status/2060347487639011454">agent receipt-layer phrase</a></div>
+        <div class="field"><b>Build Action:</b> 加 fallback 授权门：target proof / fallback_authorized_by / retry_or_recover plan / operator receipt path。</div>
+        <div class="field"><b>底层 Why:</b> official retry contract 把失败处理成状态机；它不把“换个 endpoint 发出去”算成功。agent target-channel 同理默认 fail-closed。</div>
+        <div class="field"><b>Verification:</b> docs HTTP 200 markers exponential backoff / Failed delivery handling / Disabling failing endpoints / Manual retries / Recover Failed / Replay Missing。</div>
+      </div>
+
+      <div class="section-note">Radar: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/radar/2026-05-31.md</code> · Canonical source: <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+    </div>
+
+    <div class="section">
+      <h2>2026-05-30 · Previous</h2>
       <div class="section-note">Yuyummy backup split-brain owner policy：local authoritative vs remote recovery。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
