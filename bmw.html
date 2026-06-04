@@ -56,7 +56,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-06-04 07:55 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-06-05 07:40 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -70,7 +70,37 @@
 
 
     <div class="section">
-      <h2>2026-06-04 · Current</h2>
+      <h2>2026-06-05 · Current</h2>
+      <div class="section-note">Consent-gated agent skill installs → verified script is not install permission。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=CEvIs9y1uog">Don't Build Agents, Build Skills Instead – Barry Zhang &amp; Mahesh Murag, Anthropic</a></div>
+        <div class="field"><b>Source:</b> AI Engineer / Barry Zhang + Mahesh Murag (Anthropic)</div>
+        <div class="field"><b>Build Action:</b> 写 Skill Install Receipt：source / anatomy / destination / permission delta / rollback / smoke test / explicit go-no-go。</div>
+        <div class="field"><b>底层 Why:</b> Skills 不是更长 prompt；它可以打包 executables、binaries、files、code、scripts、assets。既然像软件，就要像软件一样审计、测试、评估和授权；scan passed 不等于 install allowed。</div>
+        <div class="field"><b>Verification:</b> yt-dlp metadata PASS；16m22s；views=1,406,304；likes=28,796；likes/views≈2.05%；transcript anchors 0:41 Agent Skills / 3:33 scripts-as-tools / 7:34–7:51 executables+binaries+files+code+scripts+assets / 10:52 testing+evaluation。</div>
+      </div>
+
+      <div class="card official">
+        <div class="topline"><span class="tag official">Official</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills">Equipping agents for the real world with Agent Skills</a></div>
+        <div class="field"><b>Sidecar:</b> <a href="https://docs.anthropic.com/en/docs/claude-code/skills">Claude Code Docs · Extend Claude with skills</a> · <a href="https://x.com/i/web/status/2061018707644522578">X skill-pack heat</a></div>
+        <div class="field"><b>Build Action:</b> 把 less-trusted skill gate 写成 no-consent-no-install；Lindaly 明确回 <code>装</code> 之前，只能 audit，不能写入 runtime。</div>
+        <div class="field"><b>底层 Why:</b> Anthropic official plane 明确 less-trusted skills 要审计 bundled files、dependencies、resources/scripts 和 external network instructions；Claude Code docs 给出 <code>~/.claude/skills/</code>、scripts 与 Skill permission controls。读过 ≠ 安装；clean scan ≠ user-layer mutation consent。</div>
+        <div class="field"><b>Verification:</b> official page HTTP 200 markers: SKILL.md / progressive disclosure / scripts/resources / trusted-source warning / thoroughly audit / external network sources；docs HTTP 200 markers: <code>~/.claude/skills/</code> / <code>scripts/</code> / <code>permissions.additionalDirectories</code> / Skill permission rules。</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag lock">Entry</span><span class="num">Green if markers live</span></div>
+        <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+        <div class="field"><b>Radar:</b> <code>tasks/BMW/radar/2026-06-05.md</code></div>
+        <div class="field"><b>Canonical:</b> Shared-Memory <code>📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2026-06-04 · Previous</h2>
       <div class="section-note">Long-running agents → delegation receipt ladder / proof checkpoints。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
