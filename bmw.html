@@ -56,7 +56,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-06-09 07:35 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-06-10 07:43 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -70,8 +70,39 @@
 
 
 
+
     <div class="section">
-      <h2>2026-06-09 · Current</h2>
+      <h2>2026-06-10 · Current</h2>
+      <div class="section-note">Repeated source-gate failure → executable final-send deny filter / Source Receipt checker。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=BsWxPI9UM4c">Why AI evals are the hottest new skill for product builders | Hamel Husain &amp; Shreya Shankar</a></div>
+        <div class="field"><b>Source:</b> Lenny's Podcast / Hamel Husain + Shreya Shankar</div>
+        <div class="field"><b>Build Action:</b> 写 4–7 个 source-gate regression fixtures：NOT_SHAREABLE / TEMP_SEARCH_URL / stale URL / green official source。</div>
+        <div class="field"><b>底层 Why:</b> 这期的价值不是“evals 很重要”，而是具体操作顺序：看真实 traces → error analysis → 聚类 failure modes → 少量可运行 evals → production 前测试。迁移到 AI Daily：final composer 必须在发送前检查 source receipt，而不是依赖 agent 记得规则。</div>
+        <div class="field"><b>Verification:</b> yt-dlp metadata PASS；1h46m33s；uploaded 2025-09-25；views=116,522；likes=1,841；likes/views≈1.58%；transcript anchors 0:18 actionably improve / 12:39 error analysis / 13:58 trace / 34:28 failure modes / 51:21 tests before production / 1:05:19 four to seven evals。</div>
+      </div>
+
+      <div class="card official">
+        <div class="topline"><span class="tag official">Official</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://openai.github.io/openai-agents-python/guardrails/">OpenAI Agents SDK Guardrails — output guardrails and tripwires</a></div>
+        <div class="field"><b>Sidecar:</b> <a href="https://cookbook.openai.com/examples/how_to_use_guardrails">OpenAI Cookbook guardrails</a> · <a href="https://x.com/i/web/status/1971245503972245982">Lenny X heat</a></div>
+        <div class="field"><b>Build Action:</b> 把 Source Receipt 做成 output guardrail：缺 openable/shareable/source-plane proof 就 deny/freeze。</div>
+        <div class="field"><b>底层 Why:</b> Official docs 验证 output guardrail 会检查最终 agent output，tripwire 触发会 raise exception。对 Lindaly OS：内容有趣不等于来源可交付；坏 source 不能被流畅 final copy 洗绿。</div>
+        <div class="field"><b>Verification:</b> OpenAI Agents SDK docs HTTP 200 markers: Output guardrails / Tripwires / OutputGuardrailTripwireTriggered / final agent output checks；Cookbook HTTP 200 says output guardrails validate produced output before customer。X sidecar is heat only：125,298 views / 172 likes / 280 bookmarks。</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag lock">Entry</span><span class="num">Green if markers live</span></div>
+        <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+        <div class="field"><b>Radar:</b> <code>tasks/BMW/radar/2026-06-10.md</code></div>
+        <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2026-06-09 · Previous</h2>
       <div class="section-note">AI+活生生身体田野仪器 → subjective log + one objective anchor without medical overclaim。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
