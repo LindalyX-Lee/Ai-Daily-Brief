@@ -56,7 +56,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-06-10 07:43 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-06-11 07:38 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -72,7 +72,37 @@
 
 
     <div class="section">
-      <h2>2026-06-10 · Current</h2>
+      <h2>2026-06-11 · Current</h2>
+      <div class="section-note">Storage pressure as agent-ops governor → disk-pressure taint / cleanup-first receipt。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=seewoU3NQGs">AI Agents are Fast... Until They Kill Your SSD</a></div>
+        <div class="field"><b>Source:</b> Aditya Bharti | AI Automations</div>
+        <div class="field"><b>Build Action:</b> 写 Disk-Pressure Governor Receipt：free_space / pressure_level / heavy_lane_requested / category_map / owner_bit / cleanup_receipt / resume_threshold。</div>
+        <div class="field"><b>底层 Why:</b> 这期的价值不是“清硬盘教程”，而是把 AI-agent speed 的副作用还原成生产系统压力：output 越快，cache/log/build/QA artifact 越快堆。迁移到 Lindaly OS：agent 可做分类，但 source/evidence 保护、generated/cache 删除和 heavy-lane resume 需要 owner bit。</div>
+        <div class="field"><b>Verification:</b> yt-dlp metadata PASS；11m09s；uploaded 2026-05-26；views=20；likes=4；likes/views≈20.00% low-sample；transcript anchors 0:26 build environment healthy enough / 0:48 AI agents increase output pressure / 4:29 cleanup categories / 5:35 agent classifies, human decides / 5:58 preflight refuses unsafe cleanup。</div>
+      </div>
+
+      <div class="card official">
+        <div class="topline"><span class="tag official">Official</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction/">Kubernetes node-pressure eviction + disk-pressure taints</a></div>
+        <div class="field"><b>Sidecar:</b> <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/">Taints and Tolerations</a></div>
+        <div class="field"><b>Build Action:</b> 把本机 disk pressure 写成 heavy-lane <code>NoSchedule</code> 条件：pause / cleanup-first / allow-with-receipt。</div>
+        <div class="field"><b>底层 Why:</b> Kubernetes 在节点资源压力下监控 disk/inodes，DiskPressure active 时加 taint，不再调度新 workload。对 Mac Station：磁盘红灯不是普通提醒，而是 scheduler condition；ASR/render/clone/download/deploy 要先过 pressure gate。</div>
+        <div class="field"><b>Verification:</b> Kubernetes docs HTTP 200 markers：node-pressure eviction monitors memory/disk/inodes；eviction signals include <code>nodefs.available</code> / <code>imagefs.available</code>；DiskPressure adds <code>node.kubernetes.io/disk-pressure</code> taint。Local proof 07:31：<code>/System/Volumes/Data</code> 4.7Gi free / 99% used。</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag lock">Entry</span><span class="num">Green if markers live</span></div>
+        <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+        <div class="field"><b>Radar:</b> <code>tasks/BMW/radar/2026-06-11.md</code></div>
+        <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2026-06-10 · Previous</h2>
       <div class="section-note">Repeated source-gate failure → executable final-send deny filter / Source Receipt checker。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
