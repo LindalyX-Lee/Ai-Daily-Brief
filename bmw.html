@@ -56,7 +56,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-06-11 07:38 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-06-12 07:31 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -72,7 +72,37 @@
 
 
     <div class="section">
-      <h2>2026-06-11 · Current</h2>
+      <h2>2026-06-12 · Current</h2>
+      <div class="section-note">Lindaly.cn deploy receipt → one-channel releaseability / rollback / scoped credential proof。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=eoaDr5PpT2c">Continuous Delivery Pipelines: How to Build Better Software Faster • Dave Farley • GOTO 2021</a></div>
+        <div class="field"><b>Source:</b> Modern Software Engineering / Dave Farley</div>
+        <div class="field"><b>Build Action:</b> 写 Lindaly.cn Deployment Receipt：source commit/path、preview content marker、target URL、rollback pointer、credential scope/retirement。</div>
+        <div class="field"><b>底层 Why:</b> Continuous Delivery 的核心不是“更快部署”，而是让 releaseability 进入一个可测、可回滚、可恢复的单通道。对 Lindaly.cn：HTTP 200 只是 liveness；green 还必须证明 artifact 来自哪个 source path、预览内容 marker 是真的、生产 target 已验证、rollback 能执行、root/SSH 权限已收口。</div>
+        <div class="field"><b>Verification:</b> yt-dlp metadata PASS；33m18s；uploaded 2022-11-06；views=18,698；likes=569；likes/views≈3.04%；transcript anchors 1:53 commit→releasable + deploy frequency / 2:08 change failure rate / 2:17 time to recover / 9:24 deployment pipeline as releaseability vehicle / 9:32 one channel to production / 9:40 definitive statement of releaseability。</div>
+      </div>
+
+      <div class="card official">
+        <div class="topline"><span class="tag official">Official</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys">GitHub Docs — Managing deploy keys</a></div>
+        <div class="field"><b>Sidecar:</b> <a href="https://vercel.com/docs/deployments/managing-deployments">Vercel Managing Deployments</a> · <a href="https://vercel.com/docs/deployments/instant-rollback">Vercel Instant Rollback</a></div>
+        <div class="field"><b>Build Action:</b> 把“agent 有服务器权限”替换成 scoped credential receipt：repo-only key、explicit write bit、host alias、owner-approved root credential retirement。</div>
+        <div class="field"><b>底层 Why:</b> 部署真相包括凭据边界。deploy key 是单仓库作用域、默认只读、可显式给写权限；这提供了从 broad root SSH 退到 repo/host scoped key 的官方语义。配合 rollback/preview 文档，BMW 的判断标准变成：能否在不扩大权限的情况下发布、验证、回滚。</div>
+        <div class="field"><b>Verification:</b> GitHub docs HTTP 200 markers：single repository scope / read-only by default / optional write access / private-key handling / SSH aliasing。Vercel sidecars HTTP 200 markers：preview / production / instant rollback。Boundary：sidecars are release-surface model, not a Lindaly.cn hosting claim。</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag lock">Entry</span><span class="num">Green if markers live</span></div>
+        <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+        <div class="field"><b>Radar:</b> <code>tasks/BMW/radar/2026-06-12.md</code></div>
+        <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2026-06-11 · Previous</h2>
       <div class="section-note">Storage pressure as agent-ops governor → disk-pressure taint / cleanup-first receipt。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
