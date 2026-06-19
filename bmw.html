@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-06-19 07:56 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-06-20 07:40 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -76,7 +76,36 @@
 
 
     <div class="section">
-      <h2>2026-06-19 · Current</h2>
+      <h2>2026-06-20 · Current</h2>
+      <div class="section-note">AI Daily one-final control plane → idempotency receipt / duplicate-send arbitration。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①Production</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=J2IcD9FZvZU">Designing Idempotent API Endpoints for Payments at Stripe</a></div>
+        <div class="field"><b>Source:</b> Arpit Bhayani · 14m26s · metadata + transcript anchors verified.</div>
+        <div class="field"><b>Build Action:</b> 写 <code>AI Daily Final Receipt v0</code>：<code>final_run_id / payload_hash / destination / send_status / duplicate_policy / freeze_reason</code>。</div>
+        <div class="field"><b>底层 Why:</b> 支付系统不能靠“别重复点”防双扣；它用 idempotency key 存第一份结果并处理重复请求。AI Daily send edge 也必须把 final 从文本声明升级成 stored result。</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag official">Official</span><span class="num">①Production + ②UU</span></div>
+        <div class="title"><a href="https://docs.stripe.com/api/idempotent_requests">Stripe API Reference — Idempotent requests</a></div>
+        <div class="field"><b>Verified:</b> official docs expose safely retry, no duplicate operation, save first status/body, same key returns same result, compare parameters.</div>
+        <div class="field"><b>迁移到 Lindaly:</b> send 前读写 <code>job_id + target_date + destination</code> receipt；same key + same hash = reuse，same key + different hash = fail-closed。</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag lock">Entry</span><span class="num">Green if markers live</span></div>
+        <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+        <div class="field"><b>Radar:</b> <code>tasks/BMW/radar/2026-06-20.md</code></div>
+        <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <h2>2026-06-19 · Previous</h2>
       <div class="section-note">双百 true-number packet → external-review claim audit / no-fabrication receipt。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
