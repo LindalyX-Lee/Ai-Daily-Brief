@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-07-01 07:35 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-07-02 07:30 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -77,7 +77,34 @@
 
 
     <div class="section">
-      <h2>2026-07-01 · Current</h2>
+      <h2>2026-07-02 · Current</h2>
+      <div class="section-note">MCP tool-metadata poisoning / agent trust-boundary receipt：approved tools are not automatically trustworthy workflows。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①Production</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=86e49wcXst4">MCP Security is Still Broken</a></div>
+        <div class="field"><b>Source:</b> Prompt Engineering · 18m02s · metadata PASS: 2025-04-11, 14,822 views, 379 likes, verified channel; transcript PASS: tool descriptions trusted by LLMs, invisible-to-user descriptions, mitigation recommendations.</div>
+        <div class="field"><b>Build Action:</b> 写 <code>MCP Tool Trust Receipt v0</code>：<code>server/tool owner / description hash / metadata diff / permission delta / data classes / outbound endpoints / approval scope / runtime monitor / rollback-freeze</code>。</div>
+        <div class="field"><b>底层 Why:</b> 风险不在“某个工具坏了”，而在 tool description 变成 invisible control path：模型读完整描述，用户只看简化工具名。</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag official">Official</span><span class="num">①+②</span></div>
+        <div class="title"><a href="https://www.microsoft.com/en-us/security/blog/2026/06/30/securing-ai-agents-ai-tools-move-from-reading-acting/">Microsoft Incident Response：Securing AI agents: When AI tools move from reading to acting</a></div>
+        <div class="field"><b>Evidence:</b> rendered page verified: June 30, Microsoft Incident Response, MCP tool poisoning finance workflow, mitigation guidance, <code>Treat every MCP server as part of the supply chain</code>, <code>Treat tool descriptions as system prompts</code>, <code>Apply least agency</code>.</div>
+        <div class="field"><b>Bottom line:</b> <code>approved tool</code> is stale unless metadata drift, permission delta, outbound endpoint, and runtime anomaly are observable. Otherwise every individual action can look legitimate while the workflow leaks data.</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag lock">Entry</span><span class="num">Green if markers live</span></div>
+        <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+        <div class="field"><b>Daily/Radar:</b> <code>tasks/BMW/daily/2026-07-02-BMW.md</code> · <code>tasks/BMW/radar/2026-07-02.md</code></div>
+        <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2026-07-01 · Previous</h2>
       <div class="section-note">Spotify / Claude Code loop engineering：agent success rate comes from verification loops, not raw model IQ。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
