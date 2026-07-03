@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-07-03 07:30 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-07-04 07:37 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -77,7 +77,34 @@
 
 
     <div class="section">
-      <h2>2026-07-03 · Current</h2>
+      <h2>2026-07-04 · Current</h2>
+      <div class="section-note">Connector Credential Registry Receipt：token scopes, expiry, revocation, and audit before agents share cross-app access。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①+②</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=blmAkayzE8M">How to Secure Agents using OAuth — Jared Hanson (Keycard, Passport.js)</a></div>
+        <div class="field"><b>Source:</b> AI Engineer · 18m58s · metadata PASS: 2025-07-30, 8,482 views, 194 likes; transcript PASS: API keys long-lived/broadly scoped, refresh-token rotation, client credentials for agent-to-agent access, transactional authorization, scopes too coarse/long-lived.</div>
+        <div class="field"><b>Build Action:</b> 写 <code>Connector Credential Registry Receipt v0</code>：<code>connector / owner / auth_mode / token_subject / token_audience / scopes / issued_at / expires_at / refresh_path / revoke_path / secret_location / linked_agent_ids / runtime_audit / owner_bit</code>。</div>
+        <div class="field"><b>底层 Why:</b> 重点不是“能不能连上”，而是把静态 API key 换成短寿命、可审计、可撤销的身份授权，并让人类能看见 blast radius。</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag official">Official</span><span class="num">①Production</span></div>
+        <div class="title"><a href="https://modelcontextprotocol.io/specification/2025-06-18/basic/security_best_practices">Model Context Protocol：Security Best Practices</a></div>
+        <div class="field"><b>Evidence:</b> official docs verified: scope minimization, revocation friction, least privilege, consent handling, proxy isolation. Authorization sidecar verified token audience binding, protected resource metadata, and dynamic client registration. Executor 1.5.22 heat: <a href="https://x.com/i/web/status/2071389228890824718">9,282 views / 173 likes / 71 bookmarks</a>.</div>
+        <div class="field"><b>Bottom line:</b> OAuth 不是绿灯；绿灯是人类能快速回答：谁拥有这个 token、它能碰什么、多久过期、怎么撤销，而且不会把无关 agent 一起带崩。</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag lock">Entry</span><span class="num">Green if markers live</span></div>
+        <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+        <div class="field"><b>Daily/Radar:</b> <code>tasks/BMW/daily/2026-07-04-BMW.md</code> · <code>tasks/BMW/radar/2026-07-04.md</code></div>
+        <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2026-07-03 · Previous</h2>
       <div class="section-note">Hosted MCP / remote connector onboarding receipt：connect real-time sources without invisible authority。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
