@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-07-04 07:37 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-07-05 07:52 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -77,7 +77,34 @@
 
 
     <div class="section">
-      <h2>2026-07-04 · Current</h2>
+      <h2>2026-07-05 · Current</h2>
+      <div class="section-note">Agent-specific Toolkit Receipt：each agent identity should see only the tool subset it truly needs。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①Production</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=yWwYLbMvc3s">How Microsoft Agent 365 works</a></div>
+        <div class="field"><b>Source:</b> Microsoft Mechanics · 9m36s · metadata PASS: 2025-12-08, 81,140 views, 819 likes; transcript PASS: unique identity + information access/skills, granular action/knowledge control, own Entra identity, least-privilege defined content, data/tools/knowledge inventory, Agent Map relationships.</div>
+        <div class="field"><b>Build Action:</b> 写 <code>Agent-specific Toolkit Receipt v0</code>：<code>agent_id / role / visible_tool_subset / hidden_tool_subset / account_binding / data_classes_visible / write_capability / escalation_tool / approval_scope / audit_log_path / block_or_revoke_path</code>。</div>
+        <div class="field"><b>底层 Why:</b> 可迁移点不是 Microsoft，而是 control plane：agent identity 必须绑定可见工具、知识源、权限、异常阻断和 audit view。否则身份只是名字，所有 agent 仍共享万能钥匙。</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag official">X / Builder</span><span class="num">①+②</span></div>
+        <div class="title"><a href="https://x.com/i/web/status/2071389228890824718">Executor 1.5.22：Toolkits / Agent Identities</a></div>
+        <div class="field"><b>Evidence:</b> xreach verified 9,302 views / 173 likes / 71 bookmarks; text says Toolkits create an MCP server exposing a subset of tools to an agent and are part of managing Agent Identities. Sidecar: <a href="https://www.youtube.com/watch?v=DQX81oJfsTE">Google Cloud IAM for Agents</a> transcript verifies single-agent IAM conditions and no broad service-account permissions.</div>
+        <div class="field"><b>Bottom line:</b> Credential scope protects the token; toolkit scope protects the human. New connector/tool starts staged, then becomes visible only to the specific agent with owner bit and audit path.</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag lock">Entry</span><span class="num">Green if markers live</span></div>
+        <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+        <div class="field"><b>Daily/Radar:</b> <code>tasks/BMW/daily/2026-07-05-BMW.md</code> · <code>tasks/BMW/radar/2026-07-05.md</code></div>
+        <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2026-07-04 · Previous</h2>
       <div class="section-note">Connector Credential Registry Receipt：token scopes, expiry, revocation, and audit before agents share cross-app access。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
