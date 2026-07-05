@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-07-05 07:52 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-07-06 07:55 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -76,8 +76,38 @@
 
 
 
+
     <div class="section">
-      <h2>2026-07-05 · Current</h2>
+      <h2>2026-07-06 · Current</h2>
+      <div class="section-note">Runtime Tool-Call Audit Receipt：after narrowing tool visibility, prove who called what, when, and with which approval。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①Production</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=NoSmSVKMSMs">Tracing Claude Code to LangSmith</a></div>
+        <div class="field"><b>Source:</b> LangChain · 8m27s · metadata PASS: 2025-12-19, 4,516 views, 97 likes; transcript PASS: each Claude Code step / LLM call / tool call as trace, read_file tool input/output visible, user/AI/tool-call records, hook export to LangSmith, settings.local/env toggle.</div>
+        <div class="field"><b>Build Action:</b> 写 <code>Runtime Tool-Call Audit Receipt v0</code>：<code>agent_id / run_id / intent_key / tool_name / data_class / read_or_write / approval_state / trace_url / artifact_path / rollback_or_freeze_path</code>。</div>
+        <div class="field"><b>底层 Why:</b> 可迁移点不是 LangSmith，而是把 opaque agent chat 变成 replayable trace：谁调用了什么工具、读写了什么数据、得到什么输出、是否可冻结。</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag official">Official</span><span class="num">①+②</span></div>
+        <div class="title"><a href="https://docs.anthropic.com/en/docs/claude-code/hooks">Claude Code hooks lifecycle</a></div>
+        <div class="field"><b>Source:</b> Anthropic official docs · markers PASS: <code>PreToolUse</code>, <code>PermissionRequest</code>, <code>PermissionDenied</code>, <code>PostToolUse</code>, <code>PostToolUseFailure</code>, <code>PostToolBatch</code>.</div>
+        <div class="field"><b>Build Action:</b> 把 hook event 当 audit edge：pre-decision、permission dialog、denial/failure、post-result、artifact path、reviewer、rollback/freeze。</div>
+        <div class="field"><b>底层 Why:</b> Toolkit scope 是静态菜单；runtime hooks 是行为证据。没有 hook/trace，agent identity 只是名字，不是可审计工作流。</div>
+        <div class="field"><b>Sidecar:</b> <a href="https://docs.langchain.com/langsmith/trace-claude-code">LangSmith Trace Claude Code docs</a> · <a href="https://x.com/i/web/status/2040137349313556633">LangChain launch signal</a></div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag lock">Unified Entry</span><span class="num">Green if markers live</span></div>
+        <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+        <div class="field"><b>Daily/Radar:</b> <code>tasks/BMW/daily/2026-07-06-BMW.md</code> · <code>tasks/BMW/radar/2026-07-06.md</code></div>
+        <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2026-07-05 · Previous</h2>
       <div class="section-note">Agent-specific Toolkit Receipt：each agent identity should see only the tool subset it truly needs。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
