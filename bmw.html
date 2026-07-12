@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-07-12 07:30 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-07-13 07:30 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -79,7 +79,35 @@
 
 
     <div class="section">
-      <h2>2026-07-12 · Current</h2>
+      <h2>2026-07-13 · Current</h2>
+      <div class="section-note">Reply Triage / Complaint Escalation Receipt：classify interested replies, objections, opt-outs, angry responses, and legal/privacy risk before AI auto-follow-up。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①+②</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=0_opWSfmN8M">How Intercom rose from the ashes by betting everything on AI</a></div>
+        <div class="field"><b>Source:</b> Lenny's Podcast / Eoghan McCabe · 1h23m20s · metadata PASS: 2025-08-21, 52,063 views, 1,077 likes; transcript PASS: customer-service AI beta, resolved-ticket/resolution-rate metric, value alignment.</div>
+        <div class="field"><b>Build Action:</b> 写 <code>Reply Triage / Complaint Escalation Receipt v0</code>：<code>lead_id / channel / inbound_at / exact_reply_hash / intent_class / sentiment_or_risk / opt_out_state / human_owner / suggested_response_hash / approval_state / next_checkpoint / evidence_path / rollback_or_apology_path</code>。</div>
+        <div class="field"><b>底层 Why:</b> Intercom 的关键不是 AI 会答，而是把 AI work 绑定到 resolved customer problem。对 SY AI outbound，每个 reply 都是 relationship/legal state change；不分类、不 owner-assigned，就不能自动 follow-up。</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag official">Official</span><span class="num">①Production</span></div>
+        <div class="title"><a href="https://www.intercom.com/help/en/articles/12396892-manage-fin-ai-agent-s-escalation-guidance-and-rules">Intercom — Manage Fin AI Agent's escalation guidance and rules</a></div>
+        <div class="field"><b>Evidence:</b> official docs marker PASS: human request, strong frustration/anger, repetitive loop, escalation offers vs immediate escalation, no human routing target, handover wording, escalation metrics/reasons.</div>
+        <div class="field"><b>Sidecar:</b> <a href="https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business">FTC CAN-SPAM guide</a> verifies opt-out handling: 10 business days, no extra personal info, no sell/transfer of opted-out addresses.</div>
+        <div class="field"><b>Build Action:</b> Any <code>unsubscribe / stop / not interested / complaint / legal/privacy</code> reply becomes immediate stop/escalation state until Lindaly or named owner approves the next move.</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag x">X / Heat</span><span class="num">heat-only / rejected as source-of-truth</span></div>
+        <div class="title"><a href="https://x.com/i/web/status/2075241180640559128">Send-reply tool failure mode</a> / <a href="https://x.com/i/web/status/2076292704426938722">complaint-mining outbound risk</a></div>
+        <div class="field"><b>Evidence:</b> xreach PASS: send-reply structural warning 4,552 views / 34 likes / 23 bookmarks; complaint-mining tactic 145 views / 1 like / 1 bookmark. Both are pressure signals only.</div>
+        <div class="field"><b>Bottom line:</b> reply handling is a mutation edge. Agents may classify and draft; they may not send, continue cadence, enrich data, or update CRM until receipt fields exist.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2026-07-12 · Previous</h2>
       <div class="section-note">Outbound Deliverability / Opt-out Receipt：prove sender reputation, unsubscribe, rate limits, and stop conditions before AI outbound scale。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
