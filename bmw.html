@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-07-27 07:39 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-07-28 07:37 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -82,23 +82,51 @@
 
 
     <div class="section">
-      <h2>2026-07-27 · Current</h2>
+      <h2>2026-07-28 · Current</h2>
+      <div class="section-note">Reply-to-Resume Receipt / Human Answer-to-Next-Checkpoint Contract：after Lindaly replies, the agent should expose the state diff, current action, and next checkpoint instead of a vague <code>got it</code>。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+      <div class="card">
+        <div class="topline"><span class="tag yt">YT</span><span class="num">①+②</span></div>
+        <div class="title"><a href="https://www.youtube.com/watch?v=ZAaxx3qyT8g">Claude Code Just Got an Agent Dashboard</a></div>
+        <div class="field"><b>Source:</b> Nate Herk | AI Automation · 7m36s · metadata PASS: 2026-05-12, 123,756 views, 2,370 likes, like-view≈1.92%; transcript PASS: <code>waiting on me for input</code>, <code>approve the plan or give feedback</code>, and <code>reply right here from this agent view</code>.</div>
+        <div class="field"><b>Build Action:</b> 写 <code>Reply-to-Resume Receipt v0</code>：<code>surface_id / prior_blocking_question / human_reply / reply_channel / new_state / what_changed / current_action / updated_plan_sentence / proof_or_recap_path / next_checkpoint / next_ask_condition / owner / trust_state</code>。</div>
+        <div class="field"><b>Why:</b> the reply only pays off if the row shows what changed, what the agent is doing now, and when the human should check back—without reopening the whole transcript.</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag official">Official</span><span class="num">resume contract</span></div>
+        <div class="title"><a href="https://code.claude.com/docs/en/agent-view">Claude Code · Agent view</a></div>
+        <div class="field"><b>Verified markers:</b> <code>Peek and reply</code> shows the exact question/result/full status sentence; row summaries regenerate as sessions change; <code>Attach to a session</code> posts a short recap of what happened while you were away.</div>
+        <div class="field"><b>Sidecar:</b> <a href="https://www.youtube.com/watch?v=yUsUwJywsYQ">Damian Galarza</a> supplies the precision wording for <code>needs input / working / completed</code>; <a href="https://www.youtube.com/watch?v=-INveHwbRz4">Claude short</a> confirms the product heat; <a href="https://x.com/i/web/status/2081499804832502161">x heat</a> shows builder adoption pressure around background review while continuing work.</div>
+        <div class="field"><b>Boundary:</b> BMW authorizes no dashboard, tracing, route, credential, or repo mutation. This is a receipt and operator-surface contract only.</div>
+      </div>
+
+      <div class="card">
+        <div class="topline"><span class="tag lock">Receipt</span><span class="num">verified local entry</span></div>
+        <div class="field"><b>Daily/Radar:</b> <code>tasks/BMW/daily/2026-07-28-BMW.md</code> · <code>tasks/BMW/radar/2026-07-28.md</code></div>
+        <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+        <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>2026-07-27 · Previous</h2>
       <div class="section-note">Peek-and-Reply Interrupt Receipt / Minimal Human-Unblock Surface：every <code>Needs input</code> row should expose the exact question, minimum context, and reply path Lindaly needs to unblock the agent without opening the whole session。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
       <div class="card">
         <div class="topline"><span class="tag yt">YT</span><span class="num">①+②</span></div>
         <div class="title"><a href="https://www.youtube.com/watch?v=yUsUwJywsYQ">Claude Code Agent View: One Screen for Every Background Session</a></div>
-        <div class="field"><b>Source:</b> Damian Galarza · 6m49s · metadata PASS: 2026-05-14, 1,437 views, 39 likes, like-view≈2.71%; transcript PASS: <code>needs input / working / completed</code> plus <code>reply and send some feedback without having to dive directly into the session</code>.</div>
+        <div class="field"><b>Source:</b> Damian Galarza · 6m49s · metadata PASS: 2026-05-14, 1,441 views, 40 likes, like-view≈2.78%; transcript PASS: <code>needs input / working / completed</code> plus <code>reply and send some feedback without having to dive directly into the session</code>.</div>
         <div class="field"><b>Build Action:</b> 写 <code>Peek-and-Reply Interrupt Receipt v0</code>：<code>surface_id / row_label / blocking_question / ask_type / minimum_context / reply_widget_or_path / suggested_reply_shape / upstream_trace_or_artifact / consequence_if_yes / consequence_if_no / consequence_if_silence / owner / next_checkpoint / trust_state</code>。</div>
-        <div class="field"><b>Why:</b> a row becomes useful only when the human can answer with one bounded reply instead of reopening the whole session.</div>
+        <div class="field"><b>Why:</b> a row is only useful when the human can answer with one bounded reply instead of reopening the whole session.</div>
       </div>
 
       <div class="card">
         <div class="topline"><span class="tag official">Official</span><span class="num">proof plane</span></div>
         <div class="title"><a href="https://code.claude.com/docs/en/agent-view">Claude Code · Agent view</a></div>
         <div class="field"><b>Verified markers:</b> <code>Needs input / Working / Completed</code>, <code>Peek and reply</code>, and <code>Attach to a session</code>.</div>
-        <div class="field"><b>Sidecar:</b> <a href="https://docs.langchain.com/langsmith/trace-claude-code">LangSmith trace docs</a> verify user messages, tool calls, compaction, subagent runs, and assistant responses; <a href="https://www.youtube.com/watch?v=-INveHwbRz4">Claude official short</a> and <a href="https://www.youtube.com/watch?v=ZAaxx3qyT8g">Nate Herk</a> confirm the feature’s heat and the <code>approve / feedback / reply right here</code> operator pattern.</div>
-        <div class="field"><b>Boundary:</b> BMW authorizes no dashboard, tracing, route, credential, or repo mutation. This is a receipt and operator-surface contract only.</div>
+        <div class="field"><b>Sidecar:</b> <a href="https://docs.langchain.com/langsmith/trace-claude-code">LangSmith trace docs</a> verify user messages, tool calls, compaction, subagent runs, and assistant responses; <a href="https://www.youtube.com/watch?v=-INveHwbRz4">Claude short</a> and <a href="https://www.youtube.com/watch?v=ZAaxx3qyT8g">Nate Herk</a> provide the heat confirmation.</div>
+        <div class="field"><b>Boundary:</b> BMW authorizes no dashboard/tool/session-route/tracing mutation. This is a receipt and operator-surface contract only.</div>
       </div>
 
       <div class="card">
