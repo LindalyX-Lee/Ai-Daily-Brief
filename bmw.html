@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-08-07 07:56 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-08-08 07:41 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -82,7 +82,35 @@
 
 
 <div class="section">
-  <h2>2026-08-07 · Current</h2>
+  <h2>2026-08-08 · Current</h2>
+  <div class="section-note">Single-Source Memory Receipt / Primary File, Index, Cache Mirror, Freshness Gate：when an agent keeps running, durable memory should separate primary files from mirrors, label caches with freshness, and keep session-to-session relay bounded。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+  <div class="card">
+    <div class="topline"><span class="tag yt">YT</span><span class="num">①+②</span></div>
+    <div class="title"><a href="https://www.youtube.com/watch?v=julbw1JuAz0">Building Claude Code with Boris Cherny</a></div>
+    <div class="field"><b>Source:</b> The Pragmatic Engineer · yt-dlp PASS: 1:37:59, 298,502 views, 2,677 likes; transcript PASS on this machine with anchors <code>code drifted out of sync</code>, <code>if I make a local function it's not yet indexed and so rag isn't going to find it</code>, and <code>return that summary back to the main agent</code>.</div>
+    <div class="field"><b>Build Action:</b> 写 <code>Single-Source Memory Receipt v0</code>：<code>domain_primary_files / memory_index / cache_mirrors / freshness_header(last_sync) / announce_freshness_before_analysis / summary_relay_rule / stale_action / permission_boundary / proof_path / owner / next_checkpoint / delete_condition</code>。</div>
+    <div class="field"><b>Why:</b> hidden indexes drift; durable memory should stay close to live reality, and sub-agents should return bounded summaries instead of expanding hidden state.</div>
+  </div>
+
+  <div class="card">
+    <div class="topline"><span class="tag x">X / Official</span><span class="num">source-of-truth gate</span></div>
+    <div class="title"><a href="https://x.com/i/web/status/2084233350903128530">Four markdown files and zero databases</a></div>
+    <div class="field"><b>Signal:</b> xreach PASS: Alex Prompter · 94,215 views · 787 likes · 1,185 bookmarks. Core move = one file per domain, one <code>MEMORY.md</code> index, and cache files with <code>last_sync</code> freshness headers.</div>
+    <div class="field"><b>Why:</b> the memory mirror is useful only when it is explicitly labeled as cache; stale mirrors should warn, refresh, or block, not pretend to be truth.</div>
+    <div class="field"><b>Sidecar:</b> <a href="https://x.com/i/web/status/2085817074816070014">ClaudeDevs</a> shows that inter-session relay should send <code>summary</code>, not raw history or files; <a href="https://www.youtube.com/watch?v=O0FGCxkHM-U">Claude</a> keeps persistent memory compact and earned.</div>
+  </div>
+
+  <div class="card">
+    <div class="topline"><span class="tag lock">Receipt</span><span class="num">verified local entry</span></div>
+    <div class="field"><b>Daily/Radar:</b> <code>tasks/BMW/daily/2026-08-08-BMW.md</code> · <code>tasks/BMW/radar/2026-08-08.md</code></div>
+    <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+    <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>2026-08-07 · Previous</h2>
   <div class="section-note">Promotion Surface Receipt / What Graduates From Merge-Back Into Plan, Task Memory, Shared Rule, or Trash：after a child packet lands, the parent decides which delta earns a durable surface and which should die。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
   <div class="card">
