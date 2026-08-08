@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-08-08 07:41 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
+        <div class="meta">Last updated: 2026-08-09 07:43 Asia/Shanghai · Shared-Memory 是 canonical source；Conflux/Obsidian 是 human-facing entry；HTML 是 mobile entry。</div>
         <div class="mini">Obsidian entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
     </div>
@@ -82,7 +82,35 @@
 
 
 <div class="section">
-  <h2>2026-08-08 · Current</h2>
+  <h2>2026-08-09 · Current</h2>
+  <div class="section-note">Inter-Session Messaging Receipt / Summary-Not-History Relay：when one agent session hands work to another, pass a bounded summary plus explicit pointers instead of raw history, whole files, or blind continue。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+  <div class="card">
+    <div class="topline"><span class="tag yt">YT</span><span class="num">①+②</span></div>
+    <div class="title"><a href="https://www.youtube.com/watch?v=dtAJ2dOd3ko">/handoff is my new favourite skill</a></div>
+    <div class="field"><b>Source:</b> Matt Pocock · yt-dlp PASS: 12:24, 440,947 views, 12,596 likes; transcript PASS on this machine with anchors <code>compress it down into a markdown file</code>, <code>handed off to another session</code>, and <code>give me a handoff document that I can pass back to the planner</code>.</div>
+    <div class="field"><b>Build Action:</b> 写 <code>Inter-Session Messaging Receipt v0</code>：<code>sender_session / receiver_session / goal / why_it_matters / what_good_looks_like / avoid / explicit_pointers / summary_only_no_history_no_files / changed_decisions / proof_path / stale_after / owner / next_checkpoint / delete_condition</code>。</div>
+    <div class="field"><b>Why:</b> the sender should compress the relevant slice, hand it off cleanly, and return only the non-obvious delta — not replay the whole transcript.</div>
+  </div>
+
+  <div class="card">
+    <div class="topline"><span class="tag x">X / Official</span><span class="num">relay contract</span></div>
+    <div class="title"><a href="https://x.com/i/web/status/2085817074816070014">Sessions can now message each other</a></div>
+    <div class="field"><b>Signal:</b> xreach PASS on this machine: 5,965,400 views · 55,189 likes · 20,369 bookmarks. Core anchor = <code>It sends a summary (not your history or files), and the other session picks it up mid-task.</code></div>
+    <div class="field"><b>Why:</b> transport is solved only at the summary layer; raw history/files should stay out of the message so the receiving session gets intent, not transcript sludge.</div>
+    <div class="field"><b>Sidecar:</b> <a href="https://x.com/i/web/status/2085847177037762886">builder thread</a> adds <code>goal / why it matters / what good looks like / what to avoid</code>; <a href="https://x.com/i/web/status/2086012792109453715">actor-model framing</a> explains why summary-only beats shared hidden state; <a href="https://www.youtube.com/watch?v=julbw1JuAz0">Boris</a> reinforces <code>return that summary back to the main agent</code>.</div>
+  </div>
+
+  <div class="card">
+    <div class="topline"><span class="tag lock">Receipt</span><span class="num">verified local entry</span></div>
+    <div class="field"><b>Daily/Radar:</b> <code>tasks/BMW/daily/2026-08-09-BMW.md</code> · <code>tasks/BMW/radar/2026-08-09.md</code></div>
+    <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+    <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>2026-08-08 · Previous</h2>
   <div class="section-note">Single-Source Memory Receipt / Primary File, Index, Cache Mirror, Freshness Gate：when an agent keeps running, durable memory should separate primary files from mirrors, label caches with freshness, and keep session-to-session relay bounded。Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
   <div class="card">
