@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-08-29 07:44 Asia/Shanghai</div>
+        <div class="meta">Last updated: 2026-08-30 07:43 Asia/Shanghai</div>
         <div class="mini">Canonical source: <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
         <div class="mini">Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
@@ -83,7 +83,35 @@
 
 
 <div class="section">
-  <h2>2026-08-29 · Current</h2>
+  <h2>2026-08-30 · Current</h2>
+  <div class="section-note">Rule-Distillation Receipt / After path-scoping the right rules, how should past session traces propose reviewed updates without bloating <code>CLAUDE.md</code> by hand? Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+  <div class="card">
+    <div class="topline"><span class="tag yt">YT</span><span class="num">①+②</span></div>
+    <div class="title"><a href="https://www.youtube.com/watch?v=NoSmSVKMSMs">Tracing Claude Code to LangSmith</a></div>
+    <div class="field"><b>Source:</b> LangChain · yt-dlp PASS on this machine: 8:27, 4,630 views, 99 likes; transcript PASS: Claude Code writes transcript files, a stop hook can parse them, and each LLM/tool step becomes an inspectable trace.</div>
+    <div class="field"><b>Build Action:</b> 写 <code>Rule-Distillation Receipt v0</code>：<code>trace_pointer / repeated_correction / failing_path_or_tool / candidate_surface(CLAUDE.md|path_rule|skill|plan) / proposal_text / evidence_count / reviewer / accept_if / reject_if / expire_if / source_pointer</code>。</div>
+    <div class="field"><b>Why:</b> traces turn `what should we teach the repo next` from after-the-fact memory arguments into visible failure evidence and reusable proposal input.</div>
+  </div>
+
+  <div class="card">
+    <div class="topline"><span class="tag official">Official</span><span class="num">deterministic control plane</span></div>
+    <div class="title"><a href="https://code.claude.com/docs/en/hooks">Claude Code Docs · Hooks reference</a></div>
+    <div class="field"><b>Signal:</b> browser PASS on this machine: docs expose <code>PreToolUse</code>, <code>PermissionRequest</code>, <code>PermissionDenied</code>, <code>PostToolUse</code>, <code>PostToolUseFailure</code>, <code>PostToolBatch</code>, <code>PreCompact</code>, <code>PostCompact</code>, and <code>Decision control</code>.</div>
+    <div class="field"><b>Why:</b> hooks give the exact lifecycle boundaries where candidate rules can be captured, blocked, or annotated before they bloat global memory.</div>
+    <div class="field"><b>Sidecar:</b> <a href="https://code.claude.com/docs/en/memory">Memory docs</a> keep every-session facts small; <a href="https://code.claude.com/docs/en/skills">Skills docs</a> lazy-load procedures; <a href="https://www.youtube.com/watch?v=IkaPHiMDazM">Hooks in Claude Code</a> makes the deterministic-vs-prompt boundary concrete; <a href="https://x.com/i/web/status/2091380569716433349">Kun Chen on X</a> adds builder heat for `handwrite user / train project`.</div>
+  </div>
+
+  <div class="card">
+    <div class="topline"><span class="tag lock">Receipt</span><span class="num">verified local entry</span></div>
+    <div class="field"><b>Daily/Radar:</b> <code>tasks/BMW/daily/2026-08-30-BMW.md</code> · <code>tasks/BMW/radar/2026-08-30.md</code></div>
+    <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+    <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>2026-08-29 · Previous</h2>
   <div class="section-note">Path-Scoped Rule Receipt / After a rule earns survival, when should it stay path-scoped instead of leaking into every session? Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
   <div class="card">
