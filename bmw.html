@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-08-31 07:50 Asia/Shanghai</div>
+        <div class="meta">Last updated: 2026-09-01 07:58 Asia/Shanghai</div>
         <div class="mini">Canonical source: <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
         <div class="mini">Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
@@ -83,7 +83,34 @@
 
 
 <div class="section">
-  <h2>2026-08-31 · Current</h2>
+  <h2>2026-09-01 · Current</h2>
+  <div class="section-note">Adversarial-Review Escalation Receipt / Once a rule-review queue exists, which proposal classes auto-merge, which escalate to human review, and which should expire as scope creep? Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+  <div class="card">
+    <div class="topline"><span class="tag yt">YT</span><span class="num">①+②</span></div>
+    <div class="title"><a href="https://www.youtube.com/watch?v=JRIcxle8Lm8">Stop Reviewing AI Traces in Spreadsheets | MLflow Review Queues</a></div>
+    <div class="field"><b>Source:</b> MLflow · yt-dlp PASS on this machine: uploaded 2026-07-30, 6:07, 157 views, 5 likes; transcript PASS: the queue makes human-in-the-loop easier, creates a failure-mode dataset, and asks explicit questions like `did the agent use the right tools?`, `did it pass the right inputs?`, and `did it correctly use the tools' output?`</div>
+    <div class="field"><b>Build Action:</b> 写 <code>Adversarial-Review Escalation Receipt v0</code>：<code>proposal_id / trace_or_queue_pointer / diff_surface(global_rule|path_rule|skill|hook|plan) / evidence_questions_passed / blast_radius / auto_merge_if / human_review_if / expire_if / reviewer_or_codeowner / stale_after / rollback_path / merged_commit_or_pr / source_pointer</code>。</div>
+    <div class="field"><b>Why:</b> good auto-merge lanes are not built from vibes; they are built from small repeated diffs that keep passing explicit review questions and therefore earn quieter promotion.</div>
+  </div>
+
+  <div class="card">
+    <div class="topline"><span class="tag official">Official</span><span class="num">review + expiry contract</span></div>
+    <div class="title"><a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches">GitHub Docs · About protected branches</a></div>
+    <div class="field"><b>Signal:</b> raw fetch PASS on this machine: GitHub exposes <code>Require pull request reviews before merging</code>, <code>Require merge queue</code>, <code>Dismiss stale pull request approvals when new commits are pushed</code>, and <code>Require approval of the most recent reviewable push</code>.</div>
+    <div class="field"><b>Why:</b> this is the executable routing contract: small local diffs may move quietly, but scope-expanding or changed diffs must wait for human review and stale approvals die when the surface changes.</div>
+    <div class="field"><b>Sidecar:</b> <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners">GitHub Code Owners</a> adds path-based human routing; <a href="https://x.com/i/web/status/2094079445074162118">Kun Chen on over-engineering review loops</a> pushes scope-expansion escalation and simplification-first auto-fixes; <a href="https://www.youtube.com/watch?v=6E-ISEw35H4">Freeplay review queues</a> adds due-date/assignment/report discipline; <a href="https://x.com/i/web/status/2093059414999855176">Claude.md doctor</a> adds backtest pressure.</div>
+  </div>
+
+  <div class="card">
+    <div class="topline"><span class="tag lock">Receipt</span><span class="num">verified local entry</span></div>
+    <div class="field"><b>Daily/Radar:</b> <code>tasks/BMW/daily/2026-09-01-BMW.md</code> · <code>tasks/BMW/radar/2026-09-01.md</code></div>
+    <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+    <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+  </div>
+</div>
+<div class="section">
+  <h2>2026-08-31 · Previous</h2>
   <div class="section-note">Rule-Review Queue Receipt / Once traces synthesize candidate rule diffs, what minimal review queue decides merge, reject, or expire before they touch project memory? Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
   <div class="card">
