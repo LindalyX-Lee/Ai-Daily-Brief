@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-09-02 07:51 Asia/Shanghai</div>
+        <div class="meta">Last updated: 2026-09-03 07:31 Asia/Shanghai</div>
         <div class="mini">Canonical source: <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
         <div class="mini">Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
@@ -83,7 +83,34 @@
 
 
 <div class="section">
-  <h2>2026-09-02 · Current</h2>
+  <h2>2026-09-03 · Current</h2>
+  <div class="section-note">Policy-Shadow-Canary Receipt / After a reviewed <code>AGENTS.md</code> or <code>CLAUDE.md</code> diff wins offline replay against no-op, what path-local shadow run proves it helps live work before global promotion? Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+  <div class="card">
+    <div class="topline"><span class="tag yt">YT</span><span class="num">①+②</span></div>
+    <div class="title"><a href="https://www.youtube.com/watch?v=S-kSfuMtihQ">Control Panel, Ep 1 - Chapter 2 Demo: Runtime Control for Agents</a></div>
+    <div class="field"><b>Source:</b> LaunchDarkly · yt-dlp PASS on this machine: uploaded 2026-08-14, 10:08, 37 views; <code>like_count</code> unavailable from metadata. Transcript PASS with anchors <code>prompts, including policies and prompt snippets</code> 00:51, <code>online evals</code> / <code>always watching production traffic</code> 01:04-01:14, <code>targeting panel</code> 01:27-01:34, <code>guarded rollout</code> 03:14-03:24, <code>attach metrics on top of this rollout</code> 03:29-03:33, and <code>automatically roll back</code> 04:26-04:30.</div>
+    <div class="field"><b>Build Action:</b> 写 <code>Policy-Shadow-Canary Receipt v0</code>：<code>proposal_id / diff_surface(global_rule|path_rule|skill|hook|plan) / candidate_variation / baseline_variation / target_context_or_segment / shadow_mode / online_judges / live_metric / regression_threshold / sampling_rate / human_review_slice / promote_if / pause_if / restore_previous_if / owner / evidence_path / next_review_at / source_pointer</code>。</div>
+    <div class="field"><b>Why:</b> the operative move is no longer <code>does this rule help on replay?</code> but <code>how do candidate and baseline coexist on a narrow live slice until real traffic proves the winner?</code> This demo shows the exact ladder: variation, target, metrics, rollback.</div>
+  </div>
+
+  <div class="card">
+    <div class="topline"><span class="tag official">Official</span><span class="num">target + guarded rollout contract</span></div>
+    <div class="title"><a href="https://launchdarkly.com/docs/home/agentcontrol/target">LaunchDarkly Docs · Config targeting</a></div>
+    <div class="field"><b>Signal:</b> raw <code>target.md</code> fetch PASS on this machine: the page explicitly says <code>control which of your customers receive a particular variation of a config, based on their context</code>, <code>use a guarded rollout to gradually serve the new variation while monitoring key metrics for regressions</code>, and if regressions appear you can <code>pause the release or restore the previous variation</code>.</div>
+    <div class="field"><b>Why:</b> this converts path-local shadowing from a comforting metaphor into an operator contract: exact context, exact candidate, exact metric, exact restore path before canonical promotion.</div>
+    <div class="field"><b>Sidecar:</b> <a href="https://launchdarkly.com/docs/home/agentcontrol/online-evaluations">online evaluations</a> adds real-traffic judges and monitoring; <a href="https://launchdarkly.com/docs/home/releases/guarded-rollouts">guarded rollouts</a> defines the progressive release mechanic; <a href="https://x.com/i/web/status/2081757778956431411">offline vs online eval split</a> keeps <code>shadow runs</code> and <code>sampled human review</code>; <a href="https://www.youtube.com/watch?v=PSX2WmIZMYg">Braintrust HumanX 2026</a> adds <code>break in production</code> → <code>add it to your eval</code>.</div>
+  </div>
+
+  <div class="card">
+    <div class="topline"><span class="tag lock">Receipt</span><span class="num">verified local entry</span></div>
+    <div class="field"><b>Daily/Radar:</b> <code>tasks/BMW/daily/2026-09-03-BMW.md</code> · <code>tasks/BMW/radar/2026-09-03.md</code></div>
+    <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+    <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+  </div>
+</div>
+<div class="section">
+  <h2>2026-09-02 · Previous</h2>
   <div class="section-note">Policy-Backtest Receipt / Before a reviewed <code>AGENTS.md</code> or <code>CLAUDE.md</code> diff graduates, what replay or placebo check proves it beats a fake or no-op rule? Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
   <div class="card">
