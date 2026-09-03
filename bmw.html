@@ -57,7 +57,7 @@
       <div class="banner">
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/bmw.html">本页直达 BMW Hub</a></div>
         <div><a href="https://lindalyx-lee.github.io/Ai-Daily-Brief/">旧 AI Daily Brief Archive</a></div>
-        <div class="meta">Last updated: 2026-09-03 07:31 Asia/Shanghai</div>
+        <div class="meta">Last updated: 2026-09-04 07:56 Asia/Shanghai</div>
         <div class="mini">Canonical source: <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
         <div class="mini">Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
       </div>
@@ -83,7 +83,35 @@
 
 
 <div class="section">
-  <h2>2026-09-03 · Current</h2>
+  <h2>2026-09-04 · Current</h2>
+  <div class="section-note">Promotion-Threshold Receipt / After a path-local shadow or guarded rollout runs, which live deltas are strong enough to promote the candidate into canonical policy instead of keeping it local or deleting it? Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+
+  <div class="card">
+    <div class="topline"><span class="tag yt">YT</span><span class="num">①+②</span></div>
+    <div class="title"><a href="https://www.youtube.com/watch?v=EOBg9y9jKog">Control Panel - Episode 1</a></div>
+    <div class="field"><b>Source:</b> LaunchDarkly · yt-dlp PASS on this machine: uploaded 2026-06-11, 24:57, 448 views, 12 likes, like/view≈2.68%. Transcript PASS with anchors <code>manage online judges, online evals</code> / <code>always watching production</code> 07:09-07:16, <code>guarded rollout</code> 09:19-09:23, <code>attach metrics on top of this rollout</code> 09:36-09:42, and <code>reversal of this rollout</code> on statistical deviation 10:05-10:09.</div>
+    <div class="field"><b>Build Action:</b> 写 <code>Promotion-Threshold Receipt v0</code>：<code>proposal_id / diff_surface(global_rule|path_rule|skill|hook|plan) / candidate_variation / baseline_variation / target_context_or_segment / live_eval_window / minimum_sample_size / online_judges / judge_delta / business_metric_delta / human_review_sample / promote_if / keep_local_if / delete_if / rollback_if / owner / evidence_path / next_review_at / source_pointer</code>。</div>
+    <div class="field"><b>Why:</b> shadow proves exposure safety, not promotion. This episode shows the missing operator grammar directly: candidate and baseline share a live lane, judges watch production, metrics sit on the rollout, and reversal remains in the same loop.</div>
+  </div>
+
+  <div class="card">
+    <div class="topline"><span class="tag official">Official</span><span class="num">online-evals + live promotion contract</span></div>
+    <div class="title"><a href="https://launchdarkly.com/docs/home/agentcontrol/online-evaluations">LaunchDarkly Docs · Online evaluations</a></div>
+    <div class="field"><b>Signal:</b> raw <code>online-evaluations.md</code> fetch PASS on this machine: <code>Offline evaluations run against test datasets or static examples</code>; <code>Online evaluations run as your application sends real traffic through a config</code>; evaluation scores appear with <code>latency, cost, and user satisfaction metrics</code>; and docs explicitly say to <code>Trigger alerts or rollback actions based on evaluation scores</code> and <code>Compare variations using live performance data</code>.</div>
+    <div class="field"><b>Why:</b> this turns promotion from vibe to contract: a candidate earns canonical status only when a bounded live slice beats baseline on quality plus adjacent runtime/business metrics, with rollback still one step away.</div>
+    <div class="field"><b>Sidecar:</b> <a href="https://launchdarkly.com/docs/home/releases/guarded-rollouts">guarded rollouts</a> adds automatic consequence, <a href="https://www.youtube.com/watch?v=COCfAy2PB7s">AI Configs in Action</a> adds <code>shadow release</code> → <code>promote it forward as it makes sense</code>, and <a href="https://x.com/i/web/status/2081757778956431411">offline vs online eval split</a> keeps <code>shadow runs</code> and <code>sampled human review</code> explicit.</div>
+  </div>
+
+  <div class="card">
+    <div class="topline"><span class="tag lock">Receipt</span><span class="num">verified local entry</span></div>
+    <div class="field"><b>Daily/Radar:</b> <code>tasks/BMW/daily/2026-09-04-BMW.md</code> · <code>tasks/BMW/radar/2026-09-04.md</code></div>
+    <div class="field"><b>Canonical:</b> <code>/Users/lindaly/CCB/Shared-Memory-Agent/📒Shared-Memory/knowledge/bmw-hub.md</code></div>
+    <div class="field"><b>Conflux:</b> <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>2026-09-03 · Previous</h2>
   <div class="section-note">Policy-Shadow-Canary Receipt / After a reviewed <code>AGENTS.md</code> or <code>CLAUDE.md</code> diff wins offline replay against no-op, what path-local shadow run proves it helps live work before global promotion? Human-facing entry: <code>/Users/lindaly/CCB/Conflux-Agent/tasks/BMW/Latest.md</code></div>
 
   <div class="card">
